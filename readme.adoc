@@ -1,0 +1,13 @@
+## Quarkiverse devops
+
+Work in progress - Private github repository to manage permissions across quarkiverse using terraform.
+
+To use:
+
+1) install terraform
+
+2)  export TF_VAR_gh_org=quarkiverse TF_VAR_gh_token=<github token>
+
+3) terraform plan
+
+Output will show you the differences.
