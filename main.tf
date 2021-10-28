@@ -10,7 +10,7 @@ terraform {
     organization = "quarkiverse"
 
     workspaces {
-      name = "quarkiverse"
+      name = "quarkiverse-devops"
     }
   }
 
