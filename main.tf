@@ -6,6 +6,14 @@ terraform {
     }
   }
 
+  backend "remote" {
+    organization = "quarkiverse"
+
+    workspaces {
+      name = "quarkiverse-devops"
+    }
+  }
+
   required_version = "~> 1.0.5"
 }
 
