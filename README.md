@@ -32,6 +32,8 @@ resource "github_team" "quarkus_UNIQUE_NAME" {
   name                      = "quarkiverse-DASHED-NAME"
   description               = "Quarkiverse team for the Sentry Logging extension"
   create_default_maintainer = false
+  privacy                   = "closed"
+
 }
 
 # Add team to repository
@@ -43,7 +45,7 @@ resource "github_team_repository" "quarkus_UNIQUE_NAME" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_UNIQUE_NAME" {
-  for_each = { for tm in ["gsmet"] : tm => tm }
+  for_each = { for tm in ["GITHUB_ID"] : tm => tm }
   team_id  = github_team.quarkus_UNIQUE_NAME.id
   username = each.value
   role = "maintainer"
@@ -54,7 +56,7 @@ Where:
 
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)
 - `DASHED_NAME`: the same extension name using dashes (`-`) as separator (eg. `logging-sentry`)
-
+- `GITHUB_ID`: the Github user names that will have maintain access to the repository
 
 - Run `terraform plan` to check if the execution plan is expected.
 - Submit a Pull Request with the changes
