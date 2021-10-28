@@ -22,7 +22,7 @@ resource "github_team_repository" "quarkus_logging_sentry" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_logging_sentry" {
-  for_each = { for tm in ["gsmet"] : tm => tm }
+  for_each = { for tm in ["gsmet","ia3andy"] : tm => tm }
   team_id  = github_team.quarkus_logging_sentry.id
   username = each.value
   role = "maintainer"
