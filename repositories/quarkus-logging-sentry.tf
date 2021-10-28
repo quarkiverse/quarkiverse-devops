@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_logging_sentry" {
   name = "quarkus-logging-sentry"
-  description = "Quarkus Extension for Batch Applications."
+  description = "Quarkus extension for Sentry, a self-hosted or cloud-based error monitoring solution"
   delete_branch_on_merge = true
   topics = ["quarkus-extension"]
 }
