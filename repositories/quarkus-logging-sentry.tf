@@ -10,7 +10,7 @@ resource "github_repository" "quarkus_logging_sentry" {
 resource "github_team" "quarkus_logging_sentry" {
   name                      = "quarkiverse-logging-sentry"
   description               = "Quarkiverse team for the Sentry Logging extension"
-  create_default_maintainer = true
+  create_default_maintainer = false
 }
 
 # Add team to repository
