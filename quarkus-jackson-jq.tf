@@ -5,7 +5,7 @@ resource "github_repository" "quarkus_jackson_jq" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics = ["quarkus-extension"]
+  topics                 = ["quarkus-extension"]
 }
 
 # Create team

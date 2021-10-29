@@ -6,7 +6,7 @@ resource "github_repository" "quarkus_xmlsec" {
   has_issues             = true
   vulnerability_alerts   = true
 
-  topics                 = ["quarkus-extension"]
+  topics = ["quarkus-extension"]
 }
 
 # Create team
