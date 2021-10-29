@@ -16,7 +16,7 @@ IMPORTANT: Because the VCS is the single source of truth, you can't apply terraf
 
 New repositories are submitted via Pull Requests to the root directory in this repository:
 
-- Add a new `.tf` script in the root directory with the following structure: 
+1. Add a new `.tf` script in the root directory with the following structure: 
 
 ```terraform
 # Create repository
@@ -51,13 +51,10 @@ resource "github_team_membership" "quarkus_UNIQUE_NAME" {
   role = "maintainer"
 }
 ```
-
-Where:
-
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)
 - `DASHED_NAME`: the same extension name using dashes (`-`) as separator (eg. `logging-sentry`)
 - `GITHUB_ID`: the Github user names that will have maintain access to the repository
 
-- Run `terraform plan` to check if the execution plan is expected.
-- Submit a Pull Request with the changes
-- When the PR is merged, a job will be run in [Terraform cloud](https://app.terraform.io/app/quarkiverse/workspaces/quarkiverse-devops/runs) applying the changes
+2. Run `terraform plan` to check if the execution plan is expected.
+3. Submit a Pull Request with the changes
+4. When the PR is merged, a job will be run in [Terraform cloud](https://app.terraform.io/app/quarkiverse/workspaces/quarkiverse-devops/runs) applying the changes
