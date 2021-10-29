@@ -23,7 +23,3 @@ provider "github" {}
 data "github_user" "self" {
   username = ""
 }
-
-module "repositories" {
-  source = "./repositories"
-}

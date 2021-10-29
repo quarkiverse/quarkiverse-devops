@@ -14,9 +14,9 @@ IMPORTANT: Because the VCS is the single source of truth, you can't apply terraf
 
 ## Workflow for new repositories
 
-New repositories are submitted via Pull Requests to the `repositories/` directory in this repository:
+New repositories are submitted via Pull Requests to the root directory in this repository:
 
-- Add a new `.tf` script in the `repositories` directory with the following structure: 
+- Add a new `.tf` script in the root directory with the following structure: 
 
 ```terraform
 # Create repository
