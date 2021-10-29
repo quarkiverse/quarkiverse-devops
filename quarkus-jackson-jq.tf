@@ -3,7 +3,9 @@ resource "github_repository" "quarkus_jackson_jq" {
   name                   = "quarkus-jackson-jq"
   description            = "Quarkus extension for the Jackson JQ library"
   delete_branch_on_merge = true
-  topics                 = ["quarkus-extension"]
+  has_issues             = true
+  vulnerability_alerts   = true
+  topics = ["quarkus-extension"]
 }
 
 # Create team

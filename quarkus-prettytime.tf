@@ -3,6 +3,8 @@ resource "github_repository" "quarkus_prettytime" {
   name                   = "quarkus-prettytime"
   description            = "Quarkus Extension for Social Style Date and Time Formatting"
   delete_branch_on_merge = true
+  has_issues             = true
+  vulnerability_alerts   = true
   topics                 = ["quarkus-extension"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
