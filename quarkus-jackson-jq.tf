@@ -1,0 +1,30 @@
+# Create repository
+resource "github_repository" "quarkus_jackson_jq" {
+  name                   = "quarkus-jackson-jq"
+  description            = "Quarkus extension for the Jackson JQ library"
+  delete_branch_on_merge = true
+  topics                 = ["quarkus-extension"]
+}
+
+# Create team
+resource "github_team" "quarkus_jackson_jq" {
+  name                      = "quarkiverse-jackson-jq"
+  description               = "Quarkiverse team for the Jackson JQ extension"
+  create_default_maintainer = false
+  privacy                   = "closed"
+}
+
+# Add team to repository
+resource "github_team_repository" "quarkus_jackson_jq" {
+  team_id    = github_team.quarkus_jackson_jq.id
+  repository = github_repository.quarkus_jackson_jq.name
+  permission = "maintain"
+}
+
+# Add users to the team
+resource "github_team_membership" "quarkus_jackson_jq" {
+  for_each = { for tm in ["ricardozanini", "aloubyansky"] : tm => tm }
+  team_id  = github_team.quarkus_jackson_jq.id
+  username = each.value
+  role     = "maintainer"
+}
