@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_opencv" {
   name                   = "quarkus-opencv"
-  description            = "opencv Quarkus Extension"
+  description            = "OpenCV extension for Quarkus"
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
