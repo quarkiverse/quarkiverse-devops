@@ -1,10 +1,11 @@
 # Create repository
 resource "github_repository" "quarkus_unleash" {
   name                   = "quarkus-unleash"
-  description            = "Quarkus Extension for Social Style Date and Time Formatting"
+  description            = "Unleash is a open source feature flag & toggle system"
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
+  homepage_url           = "https://github.com/Unleash/unleash"
   topics                 = ["quarkus-extension"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
