@@ -6,7 +6,7 @@ resource "github_repository" "quarkus_micrometer_registry" {
   has_issues             = true
   vulnerability_alerts   = true
   homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-micrometer-registry/dev/"
-  topics                 = ["quarkus-extension"]
+  topics                 = ["hacktoberfest", "quarkus-extension"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
   template {
