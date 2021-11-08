@@ -30,3 +30,15 @@ resource "github_team_membership" "quarkus_cucumber" {
   username = each.value
   role     = "maintainer"
 }
+
+# Create main branch
+resource "github_branch" "quarkus_cucumber" {
+  repository = github_repository.quarkus_cucumber.name
+  branch     = "main"
+}
+
+# Set default branch
+resource "github_branch_default" "quarkus_cucumber" {
+  repository = github_repository.quarkus_cucumber.name
+  branch     = github_branch.quarkus_cucumber.branch
+}
