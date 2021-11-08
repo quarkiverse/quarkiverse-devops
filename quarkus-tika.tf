@@ -14,6 +14,7 @@ resource "github_team" "quarkus_tika" {
   description               = "Quarkiverse team for the Tika extension"
   create_default_maintainer = false
   privacy                   = "closed"
+  parent_team_id            = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
