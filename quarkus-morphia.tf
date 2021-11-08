@@ -14,6 +14,7 @@ resource "github_team" "quarkus_morphia" {
   description               = "Quarkiverse team for the Morphia extension"
   create_default_maintainer = false
   privacy                   = "closed"
+  parent_team_id            = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

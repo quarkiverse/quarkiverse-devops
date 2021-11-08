@@ -14,6 +14,7 @@ resource "github_team" "quarkus_reactive_messaging_http" {
   description               = "Quarkiverse team for the Reactive Messaging HTTP extension"
   create_default_maintainer = false
   privacy                   = "closed"
+  parent_team_id            = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

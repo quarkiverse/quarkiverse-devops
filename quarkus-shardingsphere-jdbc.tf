@@ -14,6 +14,7 @@ resource "github_team" "quarkus_shardingsphere_jdbc" {
   description               = "Quarkiverse team for the Sharding Sphere JDBC extension"
   create_default_maintainer = false
   privacy                   = "closed"
+  parent_team_id            = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

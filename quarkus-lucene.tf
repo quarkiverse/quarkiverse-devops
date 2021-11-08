@@ -20,6 +20,7 @@ resource "github_team" "quarkus_lucene" {
   description               = "Quarkiverse team for the lucene extension"
   create_default_maintainer = false
   privacy                   = "closed"
+  parent_team_id            = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

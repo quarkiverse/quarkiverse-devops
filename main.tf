@@ -23,3 +23,8 @@ provider "github" {}
 data "github_user" "self" {
   username = ""
 }
+
+# Return quarkiverse-members team ID
+data "github_team" "quarkiverse_members" {
+  slug = "quarkiverse-members"
+}
