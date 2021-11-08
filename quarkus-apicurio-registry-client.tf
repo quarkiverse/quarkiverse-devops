@@ -36,3 +36,15 @@ resource "github_team_membership" "quarkus_apicurio_registry_client" {
   username = each.value
   role     = "maintainer"
 }
+
+# Create main branch
+resource "github_branch" "quarkus_apicurio_registry_client" {
+  repository = github_repository.quarkus_apicurio_registry_client.name
+  branch     = "master"
+}
+
+# Set default branch
+resource "github_branch_default" "quarkus_apicurio_registry_client" {
+  repository = github_repository.quarkus_apicurio_registry_client.name
+  branch     = github_branch.quarkus_apicurio_registry_client.branch
+}
