@@ -72,3 +72,5 @@ resource "github_branch_default" "quarkus_UNIQUE_NAME" {
 2. Run `terraform plan` to check if the execution plan is expected.
 3. Submit a Pull Request with the changes
 4. When the PR is merged, a job will be run in [Terraform cloud](https://app.terraform.io/app/quarkiverse/workspaces/quarkiverse-devops/runs) applying the changes
+
+If you need any other configuration, check the [GitHub Provider](https://registry.terraform.io/providers/integrations/github/latest/docs) documentation in the Terraform website.
