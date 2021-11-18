@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_zeebe" {
   name                   = "quarkus-zeebe"
   description            = "Camunda Zeebe Quarkus extension"
+  homepage_url           = "https://camunda.com/de/products/cloud/"
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
