@@ -21,12 +21,12 @@ New repositories are submitted via Pull Requests to the root directory in this r
 ```terraform
 # Create repository
 resource "github_repository" "quarkus_UNIQUE_NAME" {
-  name = "quarkus-DASHED-NAME"
-  description = "A cool description"
+  name                   = "quarkus-DASHED-NAME"
+  description            = "A cool description"
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true  
-  topics = ["quarkus-extension"]
+  vulnerability_alerts   = true
+  topics                 = ["quarkus-extension"]
 }
 
 # Create team
@@ -50,7 +50,7 @@ resource "github_team_membership" "quarkus_UNIQUE_NAME" {
   for_each = { for tm in ["GITHUB_ID"] : tm => tm }
   team_id  = github_team.quarkus_UNIQUE_NAME.id
   username = each.value
-  role = "maintainer"
+  role     = "maintainer"
 }
 
 # Create main branch
