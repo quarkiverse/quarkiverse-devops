@@ -22,7 +22,7 @@ New repositories are submitted via Pull Requests to the root directory in this r
 # Create repository
 resource "github_repository" "quarkus_UNIQUE_NAME" {
   name = "quarkus-DASHED-NAME"
-  description = "Quarkus extension for Sentry, a self-hosted or cloud-based error monitoring solution"
+  description = "A cool description"
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true  
@@ -32,7 +32,7 @@ resource "github_repository" "quarkus_UNIQUE_NAME" {
 # Create team
 resource "github_team" "quarkus_UNIQUE_NAME" {
   name                      = "quarkiverse-DASHED-NAME"
-  description               = "Quarkiverse team for the Sentry Logging extension"
+  description               = "DASHED-NAME team"
   create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
