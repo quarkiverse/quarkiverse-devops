@@ -28,3 +28,11 @@ data "github_user" "self" {
 data "github_team" "quarkiverse_members" {
   slug = "quarkiverse-members"
 }
+
+locals {
+  # Application IDs installed in the Quarkiverse organization
+  # These applications are enabled on a per-repository basis
+  applications = {
+    stale_bot = "20894091"
+  }
+}
