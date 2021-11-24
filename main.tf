@@ -33,6 +33,7 @@ locals {
   # Application IDs installed in the Quarkiverse organization
   # These applications are enabled on a per-repository basis
   applications = {
-    stale_bot = "20894091"
+    # Stale - https://github.com/marketplace/stale
+    stale = "20894091"
   }
 }

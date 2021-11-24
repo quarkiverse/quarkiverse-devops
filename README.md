@@ -74,3 +74,20 @@ resource "github_branch_default" "quarkus_UNIQUE_NAME" {
 4. When the PR is merged, a job will be run in [Terraform cloud](https://app.terraform.io/app/quarkiverse/workspaces/quarkiverse-devops/runs) applying the changes
 
 If you need any other configuration, check the [GitHub Provider](https://registry.terraform.io/providers/integrations/github/latest/docs) documentation in the Terraform website.
+
+## Installing applications
+
+Terraform scripts allow you to install applications only if they are already installed in the Quarkiverse organization. 
+You can see the list of installed applications here: https://github.com/quarkiverse/quarkiverse-devops/blob/main/main.tf#L35
+
+For example, if you want to enable [Stale](https://github.com/marketplace/stale) in your repository, add the following snippet to the .tf file:
+
+```terraform
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
+  for_each = { for app in [local.applications.stale_bot] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_UNIQUE_NAME.name
+}
+```
