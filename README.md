@@ -77,15 +77,16 @@ If you need any other configuration, check the [GitHub Provider](https://registr
 
 ## Installing applications
 
-Terraform scripts allow you to install applications only if they are already installed in the Quarkiverse organization. 
-You can see the list of installed applications here: https://github.com/quarkiverse/quarkiverse-devops/blob/main/main.tf#L35
+Terraform scripts [allow you to install applications](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/app_installation_repository) only if they are already installed in the Quarkiverse organization. 
+
+Check the [list of installed applications](https://github.com/organizations/quarkiverse/settings/installations) in the organization and add the corresponding [local](https://github.com/quarkiverse/quarkiverse-devops/blob/main/main.tf#L35) to your `github_app_installation_repository` resource
 
 For example, if you want to enable [Stale](https://github.com/marketplace/stale) in your repository, add the following snippet to the .tf file:
 
 ```terraform
 # Enable apps in repository
 resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
-  for_each = { for app in [local.applications.stale_bot] : app => app }
+  for_each = { for app in [local.applications.stale] : app => app }
   # The installation id of the app (in the organization).
   installation_id = each.value
   repository      = github_repository.quarkus_UNIQUE_NAME.name
