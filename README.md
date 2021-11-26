@@ -52,18 +52,6 @@ resource "github_team_membership" "quarkus_UNIQUE_NAME" {
   username = each.value
   role     = "maintainer"
 }
-
-# Create main branch
-resource "github_branch" "quarkus_UNIQUE_NAME" {
-  repository = github_repository.quarkus_UNIQUE_NAME.name
-  branch     = "main"
-}
-
-# Set main branch as default
-resource "github_branch_default" "quarkus_UNIQUE_NAME" {
-  repository = github_repository.quarkus_UNIQUE_NAME.name
-  branch     = github_branch.quarkus_UNIQUE_NAME.branch
-}
 ```
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)
 - `DASHED_NAME`: the same extension name using dashes (`-`) as separator (eg. `logging-sentry`)
