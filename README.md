@@ -6,6 +6,11 @@ Terraform scripts are executed in the [Terraform Cloud]( https://app.terraform.i
 ## Planning the execution
 
 - Login to the Terraform Cloud using `terraform login`
+- Export the following environment variables:
+```bash
+export GITHUB_OWNER=quarkiverse 
+export GITHUB_TOKEN=$(git config github.token)
+```
 - Run `terraform init` to initialize the repository
 - Run `terraform plan` to visualize the execution plan
 
