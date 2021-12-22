@@ -26,7 +26,7 @@ resource "github_team_repository" "quarkus_vault" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_vault" {
-  for_each = { for tm in ["vsevel", "sberyozkin"] : tm => tm }
+  for_each = { for tm in ["vsevel", "sberyozkin", "kdubb"] : tm => tm }
   team_id  = github_team.quarkus_vault.id
   username = each.value
   role     = "maintainer"
