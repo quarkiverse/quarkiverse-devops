@@ -6,6 +6,12 @@ resource "github_repository" "quarkus_doma" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["java", "sql", "orm", "annotation-processing", "quarkus-extension", "domaframework"]
+  lifecycle {
+    ignore_changes = [
+      # Workaround for integrations/terraform-provider-github#1037.
+      branches,
+    ]
+  }
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
   template {

@@ -7,6 +7,12 @@ resource "github_repository" "quarkus_unleash" {
   vulnerability_alerts   = true
   homepage_url           = "https://github.com/Unleash/unleash"
   topics                 = ["quarkus-extension"]
+  lifecycle {
+    ignore_changes = [
+      # Workaround for integrations/terraform-provider-github#1037.
+      branches,
+    ]
+  }
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
   template {

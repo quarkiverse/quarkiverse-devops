@@ -6,6 +6,12 @@ resource "github_repository" "quarkus_jberet" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["java", "batch", "jsr-352", "quarkus-extension", "jberet"]
+  lifecycle {
+    ignore_changes = [
+      # Workaround for integrations/terraform-provider-github#1037.
+      branches,
+    ]
+  }
 }
 
 # Create team
