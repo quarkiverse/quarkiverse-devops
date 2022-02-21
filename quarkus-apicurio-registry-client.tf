@@ -38,7 +38,7 @@ resource "github_team_repository" "quarkus_apicurio_registry_client" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_apicurio_registry_client" {
-  for_each = { for tm in ["famartinrh"] : tm => tm }
+  for_each = { for tm in ["famarting"] : tm => tm }
   team_id  = github_team.quarkus_apicurio_registry_client.id
   username = each.value
   role     = "maintainer"
