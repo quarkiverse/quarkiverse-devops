@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_file_vault" {
   name                   = "quarkus-file-vault"
-  description            = "A cool description"
+  description            = "Credentials Provider which extracts secrets from Java KeyStore"
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
