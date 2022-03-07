@@ -1,10 +1,9 @@
 name: "Terraform"
 
 on:
-#   push:
-#     branches:
-#       - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   terraform:
@@ -17,7 +16,6 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          # terraform_version: 0.13.0:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Terraform Format
@@ -41,7 +39,7 @@ jobs:
       - uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
         env:
-          PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
+          PLAN: "${{ steps.plan.outputs.stdout }}"
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -52,7 +50,7 @@ jobs:
 
             <details><summary>Show Plan</summary>
 
-            \`\`\`\n
+            \`\`\`terraform\n
             ${process.env.PLAN}
             \`\`\`
 
@@ -70,7 +68,3 @@ jobs:
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
-
-#      - name: Terraform Apply
-#        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-#        run: terraform apply -auto-approve
