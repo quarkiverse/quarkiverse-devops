@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_jjwt_jackson" {
   name                   = "quarkus-jjwt-jackson"
   description            = "Quarkus extension for Java JWT"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true

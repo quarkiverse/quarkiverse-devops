@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_helm" {
   name                   = "quarkus-helm"
   description            = "Quarkus Extension to generate the Helm artifacts"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

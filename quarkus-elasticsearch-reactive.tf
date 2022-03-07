@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_elasticsearch_reactive" {
   name                   = "quarkus-elasticsearch-reactive"
   description            = "Quarkus Elastic Search Reactive extension"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

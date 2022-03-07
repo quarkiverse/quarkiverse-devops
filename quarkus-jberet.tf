@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_jberet" {
   name                   = "quarkus-jberet"
   description            = "Quarkus Extension for Batch Applications."
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

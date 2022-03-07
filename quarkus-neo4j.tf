@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_neo4j" {
   name                   = "quarkus-neo4j"
   description            = "Quarkus Neo4j extension"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

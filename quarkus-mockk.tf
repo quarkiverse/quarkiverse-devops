@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_mockk" {
   name                   = "quarkus-mockk"
   description            = "Mockk Quarkus Extension"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

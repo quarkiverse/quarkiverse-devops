@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_logging_splunk" {
   name                   = "quarkus-logging-splunk"
   description            = "Quarkus extension to be able to send logs to a Splunk HTTP Event Collector"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_github_app" {
   name                   = "quarkus-github-app"
   description            = "Develop your GitHub Apps in Java with Quarkus."
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true

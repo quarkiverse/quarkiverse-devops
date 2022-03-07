@@ -28,6 +28,7 @@ New repositories are submitted via Pull Requests to the root directory in this r
 resource "github_repository" "quarkus_UNIQUE_NAME" {
   name                   = "quarkus-DASHED-NAME"
   description            = "A cool description"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

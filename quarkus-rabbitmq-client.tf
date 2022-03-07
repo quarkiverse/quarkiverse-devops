@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_rabbitmq_client" {
   name                   = "quarkus-rabbitmq-client"
   description            = "Quarkus extension supporting RabbitMQ"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

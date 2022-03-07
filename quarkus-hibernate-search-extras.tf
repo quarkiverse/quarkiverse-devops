@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_hibernate_search_extras" {
   name                   = "quarkus-hibernate-search-extras"
   description            = "Quarkus Hibernate Search Extras extensions"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

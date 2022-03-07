@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_xmlsec" {
   name                   = "quarkus-xmlsec"
   description            = "Quarkus XML Security extension"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

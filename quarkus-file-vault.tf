@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_file_vault" {
   name                   = "quarkus-file-vault"
   description            = "Credentials Provider which extracts secrets from Java KeyStore"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

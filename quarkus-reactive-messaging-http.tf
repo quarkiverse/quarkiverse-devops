@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_reactive_messaging_http" {
   name                   = "quarkus-reactive-messaging-http"
   description            = "Connect to HTTP or Web Socket and expose HTTP or Web Socket endpoints for Reactive Messaging"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_jna" {
   name                   = "quarkus-jna"
   description            = "Java Native Access (JNA) Quarkus Extension - https://github.com/java-native-access/jna"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_artemis" {
   name                   = "quarkus-artemis"
   description            = "Quarkus Artemis extensions"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

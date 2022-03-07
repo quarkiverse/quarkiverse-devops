@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_hivemq_client" {
   name                   = "quarkus-hivemq-client"
   description            = "Quarkus HiveMQ Client extension"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

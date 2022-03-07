@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_github_api" {
   name                   = "quarkus-github-api"
   description            = "Quarkus extension for the Hub4j GitHub API"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true

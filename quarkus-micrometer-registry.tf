@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_micrometer_registry" {
   name                   = "quarkus-micrometer-registry"
   description            = "Quarkus extensions that pull together required/related dependencies for optional micrometer registries."
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

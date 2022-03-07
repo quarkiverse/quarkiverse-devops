@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_unleash" {
   name                   = "quarkus-unleash"
   description            = "Unleash is a open source feature flag & toggle system"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

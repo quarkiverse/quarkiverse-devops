@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_datadog_opentracing" {
   name                   = "quarkus-datadog-opentracing"
   description            = "Quarkus Datadog Tracing"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

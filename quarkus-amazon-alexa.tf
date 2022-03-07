@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_amazon_alexa" {
   name                   = "quarkus-amazon-alexa"
   description            = "Quarkus Amazon Alexa extension"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

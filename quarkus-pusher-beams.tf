@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_pusher_beams" {
   name                   = "quarkus-pusher-beams"
   description            = "Pusher beams is a notification solution (saas) to send notifications to Android, iOS, Web clients (single/grouped notification, topic based notification, authenticated clients notifications)"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_logging_manager" {
   name                   = "quarkus-logging-manager"
   description            = "Quarkus extension that allows you to view the log online and change log levels using a UI"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true

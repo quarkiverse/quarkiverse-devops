@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_maven_resolver" {
   name                   = "quarkus-maven-resolver"
   description            = "An extension providing a Maven resolver implementation from the Quarkus core bootstrap project"
+  archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
