@@ -12,6 +12,7 @@ quarkus-elasticsearch-reactive.tf           @quarkiverse/quarkiverse-elasticsear
 quarkus-file-vault.tf                       @quarkiverse/quarkiverse-file-vault
 quarkus-freemarker.tf                       @quarkiverse/quarkiverse-freemarker
 quarkus-github-api.tf                       @quarkiverse/quarkiverse-github-api
+quarkus-github-action.tf                    @quarkiverse/quarkiverse-github-action
 quarkus-github-app.tf                       @quarkiverse/quarkiverse-github-app
 quarkus-google-cloud-services.tf            @quarkiverse/quarkiverse-google-cloud-services
 quarkus-helm.tf                             @quarkiverse/quarkiverse-helm
