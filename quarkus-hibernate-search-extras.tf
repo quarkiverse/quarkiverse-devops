@@ -38,3 +38,11 @@ resource "github_team_membership" "quarkus_hibernate_search_extras" {
   username = each.value
   role     = "maintainer"
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_hibernate_search_extras" {
+  for_each = { for app in [local.applications.lgtm] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_hibernate_search_extras.name
+}
