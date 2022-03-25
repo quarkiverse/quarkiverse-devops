@@ -14,7 +14,6 @@ export GITHUB_TOKEN=$(git config github.token)
 - Run `terraform init` to initialize the repository
 - Run `terraform plan` to visualize the execution plan
 
-
 IMPORTANT: Because the VCS is the single source of truth, you can't apply terraform scripts manually using `terraform apply`. 
 
 ## Workflow for new repositories
