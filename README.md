@@ -18,7 +18,9 @@ IMPORTANT: Because the VCS is the single source of truth, you can't apply terraf
 
 ## Workflow for new repositories
 
-New repositories are submitted via Pull Requests to the root directory in this repository:
+New repositories are submitted via Pull Requests to the root directory in this repository.
+
+IMPORTANT: The branch must be created in the same repository, it won't work in a separate fork (@quarkiverse/quarkiverse-members should be able to create new branches there)
 
 1. Add a new `.tf` script in the root directory with the following structure: 
 
