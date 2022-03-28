@@ -38,7 +38,7 @@ resource "github_team_membership" "quarkus_openapi_generator" {
   username = each.value
   role     = "maintainer"
 }
-  
+
 # Enable apps in repository
 resource "github_app_installation_repository" "quarkus_openapi_generator" {
   for_each = { for app in [local.applications.lgtm] : app => app }
