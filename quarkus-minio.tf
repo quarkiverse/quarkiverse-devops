@@ -44,7 +44,7 @@ resource "github_team_membership" "quarkus_minio" {
   username = each.value
   role     = "maintainer"
 }
-  
+
 # Enable apps in repository
 resource "github_app_installation_repository" "quarkus_minio" {
   for_each = { for app in [local.applications.lgtm] : app => app }
