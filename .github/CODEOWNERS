@@ -29,6 +29,7 @@ quarkus-jooq.tf                             @quarkiverse/quarkiverse-jooq
 quarkus-jsch.tf                             @quarkiverse/quarkiverse-jsch
 quarkus-kerberos.tf                         @quarkiverse/quarkiverse-kerberos
 quarkus-logging-cloudwatch.tf               @quarkiverse/quarkiverse-logging-cloudwatch
+quarkus-logging-kafka.tf                    @quarkiverse/quarkiverse-logging-kafka
 quarkus-logging-json.tf                     @quarkiverse/quarkiverse-logging-json
 quarkus-logging-logback.tf                  @quarkiverse/quarkiverse-logging-logback
 quarkus-logging-manager.tf                  @quarkiverse/quarkiverse-logging-manager
