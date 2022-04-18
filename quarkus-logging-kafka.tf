@@ -17,7 +17,7 @@ resource "github_repository" "quarkus_logging_kafka" {
 
 # Create team
 resource "github_team" "quarkus_logging_kafka" {
-  name                      = "quarkus-logging-kafka"
+  name                      = "quarkiverse-logging-kafka"
   description               = "Quarkiverse team for the logging-kafka extension"
   create_default_maintainer = false
   privacy                   = "closed"
