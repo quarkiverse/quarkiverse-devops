@@ -6,6 +6,7 @@ quarkus-artemis.tf                          @quarkiverse/quarkiverse-artemis
 quarkus-config-extensions.tf                @quarkiverse/quarkiverse-config-extensions
 quarkus-cucumber.tf                         @quarkiverse/quarkiverse-cucumber
 quarkus-cxf.tf                              @quarkiverse/quarkiverse-cxf
+quarkus-dapr.tf                             @quarkiverse/quarkiverse-dapr
 quarkus-datadog-opentracing.tf              @quarkiverse/quarkiverse-datadog-opentracing
 quarkus-doma.tf                             @quarkiverse/quarkiverse-doma
 quarkus-elasticsearch-reactive.tf           @quarkiverse/quarkiverse-elasticsearch-reactive
