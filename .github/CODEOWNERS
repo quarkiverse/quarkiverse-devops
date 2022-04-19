@@ -56,6 +56,7 @@ quarkus-rabbitmq-client.tf                  @quarkiverse/quarkiverse-rabbitmq-cl
 quarkus-reactive-messaging-http.tf          @quarkiverse/quarkiverse-reactive-messaging-http
 quarkus-renarde.tf                          @quarkiverse/quarkiverse-renarde
 quarkus-rsocket.tf                          @quarkiverse/quarkiverse-rsocket
+quarkus-sa-token.tf                         @quarkiverse/quarkiverse-sa-token
 quarkus-scala3.tf                           @quarkiverse/quarkiverse-scala
 quarkus-shardingsphere-jdbc.tf              @quarkiverse/quarkiverse-shardingsphere-jdbc
 quarkus-tekton-client.tf                    @quarkiverse/quarkiverse-tekton-client
