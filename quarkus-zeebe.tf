@@ -1,14 +1,14 @@
 # Create repository
 resource "github_repository" "quarkus_zeebe" {
   name                   = "quarkus-zeebe"
-  description            = "Camunda Zeebe Quarkus extension"
-  homepage_url           = "https://camunda.com/de/products/cloud/"
+  description            = "Camunda Platform 8 (Zeebe) Quarkus extension"
+  homepage_url           = "https://camunda.com/platform"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
 
-  topics = ["quarkus-extension"]
+  topics = ["camunda", "quarkus-extension", "zeebe"]
   lifecycle {
     ignore_changes = [
       # Workaround for integrations/terraform-provider-github#1037.
