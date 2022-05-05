@@ -63,6 +63,7 @@ quarkus-scala3.tf                           @quarkiverse/quarkiverse-scala
 quarkus-shardingsphere-jdbc.tf              @quarkiverse/quarkiverse-shardingsphere-jdbc
 quarkus-tekton-client.tf                    @quarkiverse/quarkiverse-tekton-client
 quarkus-tika.tf                             @quarkiverse/quarkiverse-tika
+quarkus-togglz.tf                           @quarkiverse/quarkiverse-togglz
 quarkus-univocity-parsers.tf                @quarkiverse/quarkiverse-univocity-parsers
 quarkus-unleash.tf                          @quarkiverse/quarkiverse-unleash
 quarkus-vault.tf                            @quarkiverse/quarkiverse-vault
