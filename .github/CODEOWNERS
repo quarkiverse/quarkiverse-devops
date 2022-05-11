@@ -1,7 +1,6 @@
 main.tf                                     @quarkiverse/quarkiverse-owners
 quarkus-amazon-alexa.tf                     @quarkiverse/quarkiverse-amazon-alexa
 quarkus-amazon-services.tf                  @quarkiverse/quarkiverse-amazon-services
-quarkus-apicurio-registry-client.tf         @quarkiverse/quarkiverse-apicurio-registry-client
 quarkus-artemis.tf                          @quarkiverse/quarkiverse-artemis
 quarkus-arthas.tf                           @quarkiverse/quarkiverse-arthas
 quarkus-config-extensions.tf                @quarkiverse/quarkiverse-config-extensions
