@@ -38,3 +38,11 @@ resource "github_team_membership" "quarkus_quinoa" {
   username = each.value
   role     = "maintainer"
 }
+
+# Add admin users
+resource "github_repository_collaborator" "quarkus_quinoa" {
+  for_each   = { for tm in ["ia3andy"] : tm => tm }
+  repository = github_repository.quarkus_quinoa.name
+  username   = each.value
+  permission = "admin"
+}
