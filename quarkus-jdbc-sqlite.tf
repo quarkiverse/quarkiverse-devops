@@ -6,7 +6,7 @@ resource "github_repository" "quarkus_jdbc_sqlite" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["jdbc", "sqlite", "quarkus-extension"]
   lifecycle {
     ignore_changes = [
       # Workaround for integrations/terraform-provider-github#1037.
