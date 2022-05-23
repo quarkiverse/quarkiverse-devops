@@ -23,6 +23,7 @@ quarkus-hivemq-client.tf                    @quarkiverse/quarkiverse-hivemq-clie
 quarkus-jackson-jq.tf                       @quarkiverse/quarkiverse-jackson-jq
 quarkus-jberet.tf                           @quarkiverse/quarkiverse-jberet
 quarkus-jdbc-sqlite.tf                      @quarkiverse/quarkiverse-jdbc-sqlite
+quarkus-jef.tf                              @quarkiverse/quarkiverse-jef
 quarkus-jgit.tf                             @quarkiverse/quarkiverse-jgit
 quarkus-jgrapht.tf                          @quarkiverse/quarkiverse-jgrapht
 quarkus-jjwt-jackson.tf                     @quarkiverse/quarkiverse-jjwt-jackson
