@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_apache_pinot" {
-  name                   = "quarkus-apache-pinot"
+  name                   = "quarkus-pinot"
   description            = "Quarkus Apache Pinot extension"
   archive_on_destroy     = true
   delete_branch_on_merge = true
@@ -17,7 +17,7 @@ resource "github_repository" "quarkus_apache_pinot" {
 
 # Create team
 resource "github_team" "quarkus_apache_pinot" {
-  name                      = "quarkiverse-apache-pinot"
+  name                      = "quarkiverse-pinot"
   description               = "Quarkiverse team for the Apache Pinot extension"
   create_default_maintainer = false
   privacy                   = "closed"
