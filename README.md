@@ -65,6 +65,15 @@ resource "github_team_membership" "quarkus_UNIQUE_NAME" {
   username = each.value
   role     = "maintainer"
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
+  for_each = { for app in [local.applications.lgtm] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_UNIQUE_NAME.name
+}
+
 ```
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)
 - `DASHED_NAME`: the same extension name using dashes (`-`) as separator (eg. `logging-sentry`)
