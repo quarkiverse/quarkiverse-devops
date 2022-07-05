@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_reactive_messaging_http" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_reactive_messaging_http" {
-  for_each = { for tm in ["michalszynkiewicz"] : tm => tm }
+  for_each = { for tm in ["michalszynkiewicz", "ricardozanini"] : tm => tm }
   team_id  = github_team.quarkus_reactive_messaging_http.id
   username = each.value
   role     = "maintainer"
