@@ -22,6 +22,7 @@ quarkus-hibernate-types.tf                  @quarkiverse/quarkiverse-hibernate-t
 quarkus-hivemq-client.tf                    @quarkiverse/quarkiverse-hivemq-client
 quarkus-jackson-jq.tf                       @quarkiverse/quarkiverse-jackson-jq
 quarkus-jberet.tf                           @quarkiverse/quarkiverse-jberet
+quarkus-jdbi.tf                             @quarkiverse/quarkiverse-jdbi
 quarkus-jdbc-sqlite.tf                      @quarkiverse/quarkiverse-jdbc-sqlite
 quarkus-jef.tf                              @quarkiverse/quarkiverse-jef
 quarkus-jgit.tf                             @quarkiverse/quarkiverse-jgit
