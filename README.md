@@ -29,6 +29,7 @@ IMPORTANT: The branch must be created in the same repository, it won't work in a
 resource "github_repository" "quarkus_UNIQUE_NAME" {
   name                   = "quarkus-DASHED-NAME"
   description            = "A cool description"
+  homepage_url           = "https://some-url/"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
