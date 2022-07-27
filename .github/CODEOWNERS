@@ -1,4 +1,5 @@
 main.tf                                     @quarkiverse/quarkiverse-owners
+quarkus-apistax.tf                          @quarkiverse/quarkiverse-apistax
 quarkus-amazon-alexa.tf                     @quarkiverse/quarkiverse-amazon-alexa
 quarkus-amazon-services.tf                  @quarkiverse/quarkiverse-amazon-services
 quarkus-artemis.tf                          @quarkiverse/quarkiverse-artemis
