@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_logging_cloudwatch" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_logging_cloudwatch" {
-  for_each = { for tm in ["pilhuhn", "bennetelli"] : tm => tm }
+  for_each = { for tm in ["pilhuhn", "bennetelli", "gwenneg"] : tm => tm }
   team_id  = github_team.quarkus_logging_cloudwatch.id
   username = each.value
   role     = "maintainer"
