@@ -59,7 +59,6 @@ quarkus-pinot.tf                            @quarkiverse/quarkiverse-pinot
 quarkus-pooled-jms.tf                       @quarkiverse/quarkiverse-pooled-jms
 quarkus-prettytime.tf                       @quarkiverse/quarkiverse-prettytime
 quarkus-pusher-beams.tf                     @quarkiverse/quarkiverse-pusher-beams
-quarkus-qson.tf                             @quarkiverse/quarkiverse-qson
 quarkus-quinoa.tf                           @quarkiverse/quarkiverse-quinoa
 quarkus-rabbitmq-client.tf                  @quarkiverse/quarkiverse-rabbitmq-client
 quarkus-reactive-messaging-http.tf          @quarkiverse/quarkiverse-reactive-messaging-http
