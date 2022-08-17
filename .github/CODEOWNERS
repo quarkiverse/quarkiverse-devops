@@ -26,6 +26,7 @@ quarkus-jackson-jq.tf                       @quarkiverse/quarkiverse-jackson-jq
 quarkus-jberet.tf                           @quarkiverse/quarkiverse-jberet
 quarkus-jdbi.tf                             @quarkiverse/quarkiverse-jdbi
 quarkus-jdbc-sqlite.tf                      @quarkiverse/quarkiverse-jdbc-sqlite
+quarkus-jdbc-clickhouse.tf                  @quarkiverse/quarkiverse-jdbc-clickhouse
 quarkus-jef.tf                              @quarkiverse/quarkiverse-jef
 quarkus-jgit.tf                             @quarkiverse/quarkiverse-jgit
 quarkus-jgrapht.tf                          @quarkiverse/quarkiverse-jgrapht
