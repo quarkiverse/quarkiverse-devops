@@ -53,6 +53,7 @@ quarkus-morphia.tf                          @quarkiverse/quarkiverse-morphia
 quarkus-mybatis.tf                          @quarkiverse/quarkiverse-mybatis
 quarkus-neo4j.tf                            @quarkiverse/quarkiverse-neo4j
 quarkus-ngrok.tf                            @quarkiverse/quarkiverse-ngrok
+quarkus-omnifaces.tf                        @quarkiverse/quarkiverse-omnifaces
 quarkus-openapi-generator.tf                @quarkiverse/quarkiverse-openapi-generator
 quarkus-opencv.tf                           @quarkiverse/quarkiverse-opencv
 quarkus-operator-sdk.tf                     @quarkiverse/quarkiverse-operator-sdk
