@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_jdbc_clickhouse" {
   name                   = "quarkus-jdbc-clickhouse"
-  description            = "Basic ClickHouse driver for Quarkus with Agroal and native mode support"
+  description            = "ClickHouse driver for Quarkus with Agroal and native mode support"
   homepage_url           = "https://clickhouse.com/clickhouse"
   archive_on_destroy     = true
   delete_branch_on_merge = true
