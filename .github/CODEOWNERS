@@ -56,6 +56,7 @@ quarkus-ngrok.tf                            @quarkiverse/quarkiverse-ngrok
 quarkus-omnifaces.tf                        @quarkiverse/quarkiverse-omnifaces
 quarkus-openapi-generator.tf                @quarkiverse/quarkiverse-openapi-generator
 quarkus-opencv.tf                           @quarkiverse/quarkiverse-opencv
+quarkus-openfga-client.tf                   @quarkiverse/quarkiverse-openfga-client
 quarkus-operator-sdk.tf                     @quarkiverse/quarkiverse-operator-sdk
 quarkus-pinot.tf                            @quarkiverse/quarkiverse-pinot
 quarkus-pooled-jms.tf                       @quarkiverse/quarkiverse-pooled-jms
