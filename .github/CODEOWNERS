@@ -76,4 +76,5 @@ quarkus-univocity-parsers.tf                @quarkiverse/quarkiverse-univocity-p
 quarkus-unleash.tf                          @quarkiverse/quarkiverse-unleash
 quarkus-vault.tf                            @quarkiverse/quarkiverse-vault
 quarkus-xmlsec.tf                           @quarkiverse/quarkiverse-xmlsec
+quarkus-zanzibar.tf                         @quarkiverse/quarkiverse-zanzibar
 quarkus-zeebe.tf                            @quarkiverse/quarkiverse-zeebe
