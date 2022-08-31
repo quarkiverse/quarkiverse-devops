@@ -1,12 +1,13 @@
 # Create repository
 resource "github_repository" "quarkus_openfga_client" {
   name                   = "quarkus-openfga-client"
-  description            = "OpenFGA Quarkus extension"
+  description            = "Quarkus extension for OpenFGA support"
+  homepage_url           = "https://openfga.dev"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["openfga", "zanzibar", "quarkus-extension"]
   lifecycle {
     ignore_changes = [
       # Workaround for integrations/terraform-provider-github#1037.

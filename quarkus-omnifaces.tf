@@ -1,13 +1,13 @@
 # Create repository
 resource "github_repository" "quarkus_omnifaces" {
   name                   = "quarkus-omnifaces"
-  description            = "Quarkus OmniFaces extension"
+  description            = "Quarkus OmniFaces Extension"
   homepage_url           = "https://omnifaces.org/"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["faces", "jsf", "omnifaces", "quarkus-extension"]
   lifecycle {
     ignore_changes = [
       # Workaround for integrations/terraform-provider-github#1037.
