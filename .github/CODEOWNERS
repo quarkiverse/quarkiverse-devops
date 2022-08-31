@@ -4,6 +4,7 @@ quarkus-amazon-alexa.tf                     @quarkiverse/quarkiverse-amazon-alex
 quarkus-amazon-services.tf                  @quarkiverse/quarkiverse-amazon-services
 quarkus-artemis.tf                          @quarkiverse/quarkiverse-artemis
 quarkus-arthas.tf                           @quarkiverse/quarkiverse-arthas
+quarkus-cert-manager.tf                     @quarkiverse/quarkiverse-cert-manager
 quarkus-config-extensions.tf                @quarkiverse/quarkiverse-config-extensions
 quarkus-cucumber.tf                         @quarkiverse/quarkiverse-cucumber
 quarkus-cxf.tf                              @quarkiverse/quarkiverse-cxf
