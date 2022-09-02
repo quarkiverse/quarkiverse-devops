@@ -52,3 +52,12 @@ resource "github_app_installation_repository" "quarkus_prettytime" {
   installation_id = each.value
   repository      = github_repository.quarkus_prettytime.name
 }
+
+# Protect main branch
+resource "github_branch_protection" "quarkus_prettytime" {
+  repository_id = github_repository.quarkus_prettytime.id
+  pattern       = "main"
+  required_status_checks {
+    contexts = ["build"]
+  }
+}

@@ -75,6 +75,16 @@ resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
   repository      = github_repository.quarkus_UNIQUE_NAME.name
 }
 
+# Protect main branch
+resource "github_branch_protection" "quarkus_UNIQUE_NAME" {
+  repository_id = github_repository.quarkus_UNIQUE_NAME.id
+  pattern       = "main"
+  # Require PR build
+  required_status_checks {
+    contexts = ["build"]
+  }
+}
+
 ```
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)
 - `DASHED_NAME`: the same extension name using dashes (`-`) as separator (eg. `logging-sentry`)
