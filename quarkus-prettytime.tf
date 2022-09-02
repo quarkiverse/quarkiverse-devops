@@ -45,14 +45,6 @@ resource "github_team_membership" "quarkus_prettytime" {
   role     = "maintainer"
 }
 
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_prettytime" {
-  for_each = { for app in [local.applications.lgtm] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_prettytime.name
-}
-
 # Protect main branch
 resource "github_branch_protection" "quarkus_prettytime" {
   repository_id = github_repository.quarkus_prettytime.id
