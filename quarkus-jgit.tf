@@ -51,6 +51,14 @@ resource "github_branch_default" "quarkus_jgit" {
   branch     = github_branch.quarkus_jgit.branch
 }
 
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_jgit" {
+  for_each = { for app in [local.applications.lgtm] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_jgit.name
+}
+
 # Protect main branch
 resource "github_branch_protection" "quarkus_jgit" {
   repository_id = github_repository.quarkus_jgit.id
