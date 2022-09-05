@@ -80,3 +80,4 @@ quarkus-vault.tf                            @quarkiverse/quarkiverse-vault
 quarkus-xmlsec.tf                           @quarkiverse/quarkiverse-xmlsec
 quarkus-zanzibar.tf                         @quarkiverse/quarkiverse-zanzibar
 quarkus-zeebe.tf                            @quarkiverse/quarkiverse-zeebe
+quarkus-zookeeper-client.tf                 @quarkiverse/quarkiverse-zookeeper-client
