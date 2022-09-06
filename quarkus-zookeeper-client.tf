@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_zookeeper_client" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["quarkus-extension", "client", "zookeeper"]
   lifecycle {
     ignore_changes = [
       # Workaround for integrations/terraform-provider-github#1037.
