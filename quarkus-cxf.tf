@@ -48,16 +48,10 @@ resource "github_team_membership" "quarkus_cxf" {
   role     = "maintainer"
 }
 
-# Create main branch
-resource "github_branch" "quarkus_cxf" {
-  repository = github_repository.quarkus_cxf.name
-  branch     = "main"
-}
-
 # Set default branch
 resource "github_branch_default" "quarkus_cxf" {
   repository = github_repository.quarkus_cxf.name
-  branch     = github_branch.quarkus_cxf.branch
+  branch     = "main"
 }
 
 # Enable apps in repository
