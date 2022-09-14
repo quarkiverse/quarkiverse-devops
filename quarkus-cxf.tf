@@ -51,7 +51,7 @@ resource "github_team_membership" "quarkus_cxf" {
 # Create main branch
 resource "github_branch" "quarkus_cxf" {
   repository = github_repository.quarkus_cxf.name
-  branch     = "master"
+  branch     = "main"
 }
 
 # Set default branch
