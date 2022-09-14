@@ -45,11 +45,3 @@ resource "github_team_membership" "quarkus_prettytime" {
   role     = "maintainer"
 }
 
-# Protect main branch
-resource "github_branch_protection" "quarkus_prettytime" {
-  repository_id = github_repository.quarkus_prettytime.id
-  pattern       = "main"
-  required_status_checks {
-    contexts = ["build"]
-  }
-}

@@ -50,12 +50,3 @@ resource "github_branch_default" "quarkus_jgit" {
   repository = github_repository.quarkus_jgit.name
   branch     = github_branch.quarkus_jgit.branch
 }
-
-# Protect main branch
-resource "github_branch_protection" "quarkus_jgit" {
-  repository_id = github_repository.quarkus_jgit.id
-  pattern       = "main"
-  required_status_checks {
-    contexts = ["build"]
-  }
-}
