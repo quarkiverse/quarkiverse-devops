@@ -46,6 +46,7 @@ quarkus-logging-sentry.tf                   @quarkiverse/quarkiverse-logging-sen
 quarkus-logging-splunk.tf                   @quarkiverse/quarkiverse-logging-splunk
 quarkus-lucene.tf                           @quarkiverse/quarkiverse-lucene
 quarkus-maven-resolver.tf                   @quarkiverse/quarkiverse-maven-resolver
+quarkus-mfa.tf                              @quarkiverse/quarkiverse-mfa
 quarkus-micrometer-registry.tf              @quarkiverse/quarkiverse-micrometer-registry
 quarkus-microprofile.tf                     @quarkiverse/quarkiverse-microprofile
 quarkus-minio.tf                            @quarkiverse/quarkiverse-minio
