@@ -12,6 +12,7 @@ quarkus-cucumber.tf                         @quarkiverse/quarkiverse-cucumber
 quarkus-cxf.tf                              @quarkiverse/quarkiverse-cxf
 quarkus-dapr.tf                             @quarkiverse/quarkiverse-dapr
 quarkus-datadog-opentracing.tf              @quarkiverse/quarkiverse-datadog-opentracing
+quarkus-discord4j.tf                        @quarkiverse/quarkiverse-discord4j
 quarkus-doma.tf                             @quarkiverse/quarkiverse-doma
 quarkus-eddi.tf                             @quarkiverse/quarkiverse-eddi
 quarkus-elasticsearch-reactive.tf           @quarkiverse/quarkiverse-elasticsearch-reactive
