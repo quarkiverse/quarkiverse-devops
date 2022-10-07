@@ -9,12 +9,6 @@ resource "github_repository" "quarkus_github_action" {
   vulnerability_alerts   = true
   homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-github-action/dev/index.html"
   topics                 = ["quarkus-extension"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team

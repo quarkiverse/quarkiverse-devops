@@ -7,12 +7,6 @@ resource "github_repository" "quarkus_pooled_jms" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "jms", "messaging"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team

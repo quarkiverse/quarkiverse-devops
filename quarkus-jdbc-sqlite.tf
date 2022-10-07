@@ -7,12 +7,6 @@ resource "github_repository" "quarkus_jdbc_sqlite" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["jdbc", "sqlite", "quarkus-extension"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team
