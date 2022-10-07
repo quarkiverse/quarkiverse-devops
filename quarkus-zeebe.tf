@@ -9,12 +9,6 @@ resource "github_repository" "quarkus_zeebe" {
   vulnerability_alerts   = true
 
   topics = ["camunda", "quarkus-extension", "zeebe"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team

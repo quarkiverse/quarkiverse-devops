@@ -9,12 +9,6 @@ resource "github_repository" "quarkus_zanzibar" {
   vulnerability_alerts   = true
 
   topics = ["quarkus-extension", "zanzibar"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team

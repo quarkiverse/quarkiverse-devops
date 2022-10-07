@@ -7,12 +7,6 @@ resource "github_repository" "quarkus_openapi_generator" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["openapi", "openapi-generator", "openapi-specification", "rest", "rest-client", "quarkus-extension"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team

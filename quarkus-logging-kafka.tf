@@ -7,12 +7,6 @@ resource "github_repository" "quarkus_logging_kafka" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["kafka", "logging", "quarkus", "quarkus-extension", "observability", "otel"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team

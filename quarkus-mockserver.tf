@@ -8,12 +8,6 @@ resource "github_repository" "quarkus_mockserver" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "mockserver"]
-  lifecycle {
-    ignore_changes = [
-      # Workaround for integrations/terraform-provider-github#1037.
-      branches,
-    ]
-  }
 }
 
 # Create team
