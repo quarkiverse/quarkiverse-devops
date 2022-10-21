@@ -4,6 +4,8 @@ resource "github_repository" "quarkus_pact" {
   description            = "Pact is a widely-recommended framework for consumer-driven contract testing."
   homepage_url           = "https://pact.io/"
   archive_on_destroy     = true
+  allow_merge_commit     = false
+  allow_squash_merge     = false
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
