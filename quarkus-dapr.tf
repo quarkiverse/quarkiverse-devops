@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_dapr" {
   name                   = "quarkus-dapr"
   description            = "The Distributed Application Runtime (Dapr) provides APIs that simplify microservice connectivity"
   homepage_url           = "https://dapr.io/"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

@@ -30,6 +30,7 @@ resource "github_repository" "quarkus_UNIQUE_NAME" {
   name                   = "quarkus-DASHED-NAME"
   description            = "A cool description"
   homepage_url           = "https://some-url/"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

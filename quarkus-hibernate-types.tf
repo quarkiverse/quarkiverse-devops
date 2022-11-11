@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_hibernate_types" {
   name                   = "quarkus-hibernate-types"
   description            = "Quarkus Extension based on Hibernate Types (https://github.com/vladmihalcea/hibernate-types)"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
