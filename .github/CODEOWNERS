@@ -4,6 +4,7 @@ quarkus-amazon-services.tf                  @quarkiverse/quarkiverse-amazon-serv
 quarkus-apistax.tf                          @quarkiverse/quarkiverse-apistax
 quarkus-artemis.tf                          @quarkiverse/quarkiverse-artemis
 quarkus-arthas.tf                           @quarkiverse/quarkiverse-arthas
+quarkus-asyncapi.tf                         @quarkiverse/quarkiverse-asyncapi
 quarkus-authzed-client.tf                   @quarkiverse/quarkiverse-authzed-client
 quarkus-azure-services.tf                   @quarkiverse/quarkiverse-azure-services
 quarkus-cert-manager.tf                     @quarkiverse/quarkiverse-cert-manager
