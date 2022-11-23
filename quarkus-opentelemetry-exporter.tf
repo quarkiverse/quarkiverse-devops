@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_opentelemetry_exporter" {
   name                   = "quarkus-opentelemetry-exporter"
   description            = "Quarkus extensions related with additional OpenTelemetry exporters"
+  allow_merge_commit     = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
