@@ -1,12 +1,12 @@
 # Create repository
 resource "github_repository" "quarkus_quinoa" {
   name                   = "quarkus-quinoa"
-  description            = "Quinoa is a Quarkus extension which eases the development, the build and serving of single page apps (built with NodeJS: React, Angular, …) alongside Quarkus . It is possible to use it with a Quarkus backend in a single project."
+  description            = "Quinoa is a Quarkus extension which eases the development, the build and serving of single page apps (built with NodeJS: React, Angular, …) alongside Quarkus . It is possible to use it with a Quarkus backend in a single project"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["angular", "frontend", "quarkus", "react", "vue", "web", "quarkus-extension"]
 }
 
 # Create team
