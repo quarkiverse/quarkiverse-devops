@@ -28,7 +28,7 @@ resource "github_team_repository" "quarkus_jpastreamer" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_jpastreamer" {
-  for_each = { for tm in ["julgus", "minborg", "dreifeldt"] : tm => tm }
+  for_each = { for tm in ["julgus", "minborg"] : tm => tm }
   team_id  = github_team.quarkus_jpastreamer.id
   username = each.value
   role     = "maintainer"
