@@ -34,7 +34,7 @@ resource "github_team_repository" "quarkus_hibernate_types" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_hibernate_types" {
-  for_each = { for tm in ["andrejpetras"] : tm => tm }
+  for_each = { for tm in ["andrejpetras", "wglanzer"] : tm => tm }
   team_id  = github_team.quarkus_hibernate_types.id
   username = each.value
   role     = "maintainer"
