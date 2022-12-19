@@ -6,6 +6,7 @@ resource "github_repository" "quarkus_systemd_notify" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
+  has_projects           = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "systemd-notify", "quarkus", "linux", "systemd"]
 }
