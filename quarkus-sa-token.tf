@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_sa_token" {
   name                   = "quarkus-sa-token"
   description            = "A lightweight Java permission authentication framework, which mainly solves a series of permission related problems such as login authentication, permission authentication, SSO, OAuth2.0, and micro-service authentication"
   homepage_url           = "https://sa-token.dev33.cn/"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

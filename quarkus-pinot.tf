@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_apache_pinot" {
   name                   = "quarkus-pinot"
   description            = "Quarkus Apache Pinot extension"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

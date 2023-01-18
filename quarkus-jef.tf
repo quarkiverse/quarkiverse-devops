@@ -5,6 +5,7 @@ resource "github_repository" "quarkus_jef" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
+  has_discussions        = true
   vulnerability_alerts   = true
   topics                 = ["1-wire", "i2c", "serial", "spi", "quarkus-extension"]
 }

@@ -5,6 +5,7 @@ resource "github_repository" "quarkus_openapi_generator" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
+  has_discussions        = true
   vulnerability_alerts   = true
   topics                 = ["openapi", "openapi-generator", "openapi-specification", "rest", "rest-client", "quarkus-extension"]
 }

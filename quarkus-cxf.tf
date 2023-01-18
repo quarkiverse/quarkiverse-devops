@@ -7,8 +7,8 @@ resource "github_repository" "quarkus_cxf" {
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true
-  #has_discussions        = true
-  vulnerability_alerts = true
+  has_discussions        = true
+  vulnerability_alerts   = true
 
   topics = ["quarkus-extension"]
 

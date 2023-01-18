@@ -6,6 +6,7 @@ resource "github_repository" "quarkus_github_app" {
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true
+  has_discussions        = true
   vulnerability_alerts   = true
   homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-github-app/dev/index.html"
   topics                 = ["quarkus-extension"]
