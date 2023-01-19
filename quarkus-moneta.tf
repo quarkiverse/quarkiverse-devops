@@ -15,7 +15,7 @@ resource "github_repository" "quarkus_moneta" {
 resource "github_team" "quarkus_moneta" {
   name                      = "quarkiverse-moneta"
   description               = "moneta team"
-  create_default_maintainer = true
+  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }
