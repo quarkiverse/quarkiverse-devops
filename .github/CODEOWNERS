@@ -56,6 +56,7 @@ quarkus-microprofile.tf                     @quarkiverse/quarkiverse-microprofil
 quarkus-minio.tf                            @quarkiverse/quarkiverse-minio
 quarkus-mockk.tf                            @quarkiverse/quarkiverse-mockk
 quarkus-mockserver.tf                       @quarkiverse/quarkiverse-mockserver
+quarkus-moneta.tf                           @quarkiverse/quarkiverse-moneta
 quarkus-morphia.tf                          @quarkiverse/quarkiverse-morphia
 quarkus-mybatis.tf                          @quarkiverse/quarkiverse-mybatis
 quarkus-neo4j.tf                            @quarkiverse/quarkiverse-neo4j
