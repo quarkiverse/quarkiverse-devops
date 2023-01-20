@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_pact" {
   name                   = "quarkus-pact"
-  description            = "Pact is a widely-recommended framework for consumer-driven contract testing."
+  description            = "Pact is a widely-recommended framework for consumer-driven contract testing. This Quarkus extension gives the best Pact integration with Quarkus. "
   homepage_url           = "https://pact.io/"
   archive_on_destroy     = true
   allow_merge_commit     = false
