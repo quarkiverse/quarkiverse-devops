@@ -63,12 +63,12 @@ resource "github_team_membership" "quarkus_UNIQUE_NAME" {
 }
 
 # Enable apps in repository
-resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
-  for_each = { for app in [local.applications.stale] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_UNIQUE_NAME.name
-}
+#resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
+#  for_each = { for app in [local.applications.stale] : app => app }
+#  # The installation id of the app (in the organization).
+#  installation_id = each.value
+#  repository      = github_repository.quarkus_UNIQUE_NAME.name
+#}
 
 ```
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)

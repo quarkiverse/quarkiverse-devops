@@ -33,8 +33,6 @@ locals {
   # Application IDs installed in the Quarkiverse organization
   # These applications are enabled on a per-repository basis
   applications = {
-    # Stale - https://github.com/marketplace/stale
-    stale = "20894091"
     # LGTM - https://github.com/marketplace/lgtm
     lgtm = "24341616"
   }
