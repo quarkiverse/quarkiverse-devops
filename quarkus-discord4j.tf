@@ -33,11 +33,3 @@ resource "github_team_membership" "quarkus_discord4j" {
   username = each.value
   role     = "maintainer"
 }
-
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_discord4j" {
-  for_each = { for app in [local.applications.stale] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_discord4j.name
-}
