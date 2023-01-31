@@ -28,7 +28,7 @@ resource "github_team_repository" "quarkus_openapi_generator" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_openapi_generator" {
-  for_each = { for tm in ["ricardozanini", "evacchi", "fjtirado", "hbelmiro"] : tm => tm }
+  for_each = { for tm in ["ricardozanini", "evacchi", "fjtirado", "hbelmiro", "carlesarnal"] : tm => tm }
   team_id  = github_team.quarkus_openapi_generator.id
   username = each.value
   role     = "maintainer"
