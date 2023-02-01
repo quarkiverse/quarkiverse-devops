@@ -75,6 +75,7 @@ quarkus-prettytime.tf                       @quarkiverse/quarkiverse-prettytime
 quarkus-pusher-beams.tf                     @quarkiverse/quarkiverse-pusher-beams
 quarkus-quinoa.tf                           @quarkiverse/quarkiverse-quinoa
 quarkus-rabbitmq-client.tf                  @quarkiverse/quarkiverse-rabbitmq-client
+quarkus-reactive-h2-client                  @quarkiverse/quarkiverse-reactive-h2-client
 quarkus-reactive-messaging-http.tf          @quarkiverse/quarkiverse-reactive-messaging-http
 quarkus-renarde.tf                          @quarkiverse/quarkiverse-renarde
 quarkus-rsocket.tf                          @quarkiverse/quarkiverse-rsocket
