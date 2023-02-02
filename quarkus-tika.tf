@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_tika" {
   name                   = "quarkus-tika"
   description            = "Quarkus Tika extension"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
