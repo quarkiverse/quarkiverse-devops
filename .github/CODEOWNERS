@@ -70,6 +70,7 @@ quarkus-opentelemetry-exporter.tf           @quarkiverse/quarkiverse-opentelemet
 quarkus-operator-sdk.tf                     @quarkiverse/quarkiverse-operator-sdk
 quarkus-pact.tf                             @quarkiverse/quarkiverse-pact
 quarkus-pinot.tf                            @quarkiverse/quarkiverse-pinot
+quarkus-poi.tf                              @quarkiverse/quarkiverse-poi
 quarkus-pooled-jms.tf                       @quarkiverse/quarkiverse-pooled-jms
 quarkus-prettytime.tf                       @quarkiverse/quarkiverse-prettytime
 quarkus-pusher-beams.tf                     @quarkiverse/quarkiverse-pusher-beams
