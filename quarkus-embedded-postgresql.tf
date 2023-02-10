@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_embedded_postgresql" {
   name                   = "quarkus-embedded-postgresql"
-  description            = "A cool description"
+  description            = "Allowing you to unit test with a PostgreSQL DB without requiring end users to install and set up a database cluster"
   homepage_url           = "https://github.com/zonkyio/embedded-postgres"
   allow_update_branch    = true
   archive_on_destroy     = true
