@@ -17,6 +17,7 @@ quarkus-discord4j.tf                        @quarkiverse/quarkiverse-discord4j
 quarkus-doma.tf                             @quarkiverse/quarkiverse-doma
 quarkus-eddi.tf                             @quarkiverse/quarkiverse-eddi
 quarkus-elasticsearch-reactive.tf           @quarkiverse/quarkiverse-elasticsearch-reactive
+quarkus-embedded-postgresql.tf              @quarkiverse/quarkiverse-embedded-postgresql
 quarkus-file-vault.tf                       @quarkiverse/quarkiverse-file-vault
 quarkus-freemarker.tf                       @quarkiverse/quarkiverse-freemarker
 quarkus-github-api.tf                       @quarkiverse/quarkiverse-github-api
