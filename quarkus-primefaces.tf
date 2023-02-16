@@ -1,14 +1,14 @@
 # Create repository
 resource "github_repository" "quarkus_primefaces" {
   name                   = "quarkus-primefaces"
-  description            = "PrimeFaces is a popular open source framework for JavaServer Faces"
-  homepage_url           = "https://primefaces.org"
+  description            = "Ultimate Component Suite for JavaServer Faces (JSF)"
+  homepage_url           = "https://github.com/primefaces/primefaces"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "primefaces", "jsf"]
+  topics                 = ["quarkus-extension", "primefaces", "jsf", "faces", "myfaces", "web"]
 }
 
 # Create team
@@ -29,7 +29,7 @@ resource "github_team_repository" "quarkus_primefaces" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_primefaces" {
-  for_each = { for tm in ["melloware"] : tm => tm }
+  for_each = { for tm in ["melloware", "tandraschko", "jepsar"] : tm => tm }
   team_id  = github_team.quarkus_primefaces.id
   username = each.value
   role     = "maintainer"
