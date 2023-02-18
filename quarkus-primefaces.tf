@@ -1,14 +1,14 @@
 # Create repository
 resource "github_repository" "quarkus_primefaces" {
   name                   = "quarkus-primefaces"
-  description            = "Ultimate Component Suite for JavaServer Faces (JSF)"
+  description            = "PrimeFaces Faces (JSF) Quarkus Extension"
   homepage_url           = "https://github.com/primefaces/primefaces"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "primefaces", "jsf", "faces", "myfaces", "web"]
+  topics                 = ["quarkus-extension", "primefaces", "jsf", "faces", "myfaces", "web", "primefaces-extensions"]
 }
 
 # Create team
