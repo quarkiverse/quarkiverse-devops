@@ -30,6 +30,7 @@ quarkus-hibernate-search-extras.tf          @quarkiverse/quarkiverse-hibernate-s
 quarkus-hibernate-types.tf                  @quarkiverse/quarkiverse-hibernate-types
 quarkus-hivemq-client.tf                    @quarkiverse/quarkiverse-hivemq-client
 quarkus-jackson-jq.tf                       @quarkiverse/quarkiverse-jackson-jq
+quarkus-jasperreports.tf                    @quarkiverse/quarkiverse-jasperreports
 quarkus-jberet.tf                           @quarkiverse/quarkiverse-jberet
 quarkus-jdbi.tf                             @quarkiverse/quarkiverse-jdbi
 quarkus-jdbc-sqlite.tf                      @quarkiverse/quarkiverse-jdbc-sqlite
