@@ -35,5 +35,7 @@ locals {
   applications = {
     # LGTM - https://github.com/marketplace/lgtm
     lgtm = "24341616"
+    # Renovate - https://github.com/marketplace/renovate
+    renovate = "34650047"
   }
 }
