@@ -80,6 +80,7 @@ quarkus-pusher-beams.tf                     @quarkiverse/quarkiverse-pusher-beam
 quarkus-quinoa.tf                           @quarkiverse/quarkiverse-quinoa
 quarkus-rabbitmq-client.tf                  @quarkiverse/quarkiverse-rabbitmq-client
 quarkus-reactive-h2-client                  @quarkiverse/quarkiverse-reactive-h2-client
+quarkus-reactive-mysql-pool-client          @quarkiverse/quarkiverse-reactive-mysql-pool-client
 quarkus-reactive-messaging-http.tf          @quarkiverse/quarkiverse-reactive-messaging-http
 quarkus-renarde.tf                          @quarkiverse/quarkiverse-renarde
 quarkus-rsocket.tf                          @quarkiverse/quarkiverse-rsocket
