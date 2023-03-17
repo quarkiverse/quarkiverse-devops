@@ -78,6 +78,7 @@ quarkus-prettytime.tf                       @quarkiverse/quarkiverse-prettytime
 quarkus-primefaces.tf                       @quarkiverse/quarkiverse-primefaces
 quarkus-pusher-beams.tf                     @quarkiverse/quarkiverse-pusher-beams
 quarkus-quinoa.tf                           @quarkiverse/quarkiverse-quinoa
+quarkus-qute-server-pages.tf                @quarkiverse/quarkiverse-qute-server-pages
 quarkus-rabbitmq-client.tf                  @quarkiverse/quarkiverse-rabbitmq-client
 quarkus-reactive-h2-client                  @quarkiverse/quarkiverse-reactive-h2-client
 quarkus-reactive-mysql-pool-client          @quarkiverse/quarkiverse-reactive-mysql-pool-client
