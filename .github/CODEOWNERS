@@ -39,6 +39,7 @@ quarkus-jef.tf                              @quarkiverse/quarkiverse-jef
 quarkus-jgit.tf                             @quarkiverse/quarkiverse-jgit
 quarkus-jgrapht.tf                          @quarkiverse/quarkiverse-jgrapht
 quarkus-jjwt-jackson.tf                     @quarkiverse/quarkiverse-jjwt-jackson
+quarkus-jnosql.tf                           @quarkiverse/quarkiverse-jnosql
 quarkus-jooq.tf                             @quarkiverse/quarkiverse-jooq
 quarkus-jpastreamer.tf                      @quarkiverse/quarkiverse-jpastreamer
 quarkus-jsch.tf                             @quarkiverse/quarkiverse-jsch
