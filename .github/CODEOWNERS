@@ -29,6 +29,7 @@ quarkus-helm.tf                             @quarkiverse/quarkiverse-helm
 quarkus-hibernate-search-extras.tf          @quarkiverse/quarkiverse-hibernate-search-extras
 quarkus-hibernate-types.tf                  @quarkiverse/quarkiverse-hibernate-types
 quarkus-hivemq-client.tf                    @quarkiverse/quarkiverse-hivemq-client
+quarkus-itext.tf                            @quarkiverse/quarkiverse-itext
 quarkus-jackson-jq.tf                       @quarkiverse/quarkiverse-jackson-jq
 quarkus-jasperreports.tf                    @quarkiverse/quarkiverse-jasperreports
 quarkus-jberet.tf                           @quarkiverse/quarkiverse-jberet
