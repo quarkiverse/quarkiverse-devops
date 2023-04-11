@@ -8,7 +8,7 @@ resource "github_repository" "quarkus_itext" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "itext", "pdf", "reader", "writer"]
+  topics                 = ["quarkus-extension", "itext", "pdf", "reader", "writer", "graalvm"]
 }
 
 # Create team

@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_primefaces" {
   name                   = "quarkus-primefaces"
-  description            = "PrimeFaces Faces (JSF) Quarkus Extension"
+  description            = "Quarkus PrimeFaces Faces (JSF) Extension"
   homepage_url           = "https://github.com/primefaces/primefaces"
   allow_update_branch    = true
   archive_on_destroy     = true
