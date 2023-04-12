@@ -8,6 +8,7 @@ quarkus-arthas.tf                           @quarkiverse/quarkiverse-arthas
 quarkus-asyncapi.tf                         @quarkiverse/quarkiverse-asyncapi
 quarkus-authzed-client.tf                   @quarkiverse/quarkiverse-authzed-client
 quarkus-azure-services.tf                   @quarkiverse/quarkiverse-azure-services
+quarkus-bucket4j.tf                         @quarkiverse/quarkiverse-bucket4j
 quarkus-cert-manager.tf                     @quarkiverse/quarkiverse-cert-manager
 quarkus-config-extensions.tf                @quarkiverse/quarkiverse-config-extensions
 quarkus-cucumber.tf                         @quarkiverse/quarkiverse-cucumber
