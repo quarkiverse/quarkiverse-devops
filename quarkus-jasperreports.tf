@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_jasperreports" {
   name                   = "quarkus-jasperreports"
   description            = "Print reports created using JasperReports using the Java API"
-  homepage_url           = "http://jasperreports.sourceforge.net/"
+  homepage_url           = "https://community.jaspersoft.com/project/jasperreports-library"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
