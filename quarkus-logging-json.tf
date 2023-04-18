@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_logging_json" {
   name                   = "quarkus-logging-json"
   description            = "Quarkus logging extension outputting the logging in json."
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

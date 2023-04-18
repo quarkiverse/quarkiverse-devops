@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_omnifaces" {
   name                   = "quarkus-omnifaces"
   description            = "Quarkus OmniFaces Extension"
   homepage_url           = "https://omnifaces.org/"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

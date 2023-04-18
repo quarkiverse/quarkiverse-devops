@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_quinoa" {
   name                   = "quarkus-quinoa"
   description            = "Quinoa is a Quarkus extension which eases the development, the build and serving of single page apps (built with NodeJS: React, Angular, …) alongside Quarkus . It is possible to use it with a Quarkus backend in a single project"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
