@@ -37,7 +37,7 @@ resource "github_team_repository" "quarkus_cxf" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_cxf" {
-  for_each = { for tm in ["dufoli", "Dufgui", "shumonsharif", "ppalaga", "famod"] : tm => tm }
+  for_each = { for tm in ["Dufgui", "shumonsharif", "ppalaga", "famod"] : tm => tm }
   team_id  = github_team.quarkus_cxf.id
   username = each.value
   role     = "maintainer"
