@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_web_assets" {
-  name                   = "quarkus-web-assets"
+  name                   = "quarkus-web-bundler"
   description            = "Provide processing and helpers for your web-app media (JS, CSS, SCSS)."
   archive_on_destroy     = true
   delete_branch_on_merge = true
