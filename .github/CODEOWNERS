@@ -61,7 +61,7 @@ quarkus-micrometer-registry.tf              @quarkiverse/quarkiverse-micrometer-
 quarkus-microprofile.tf                     @quarkiverse/quarkiverse-microprofile
 quarkus-minio.tf                            @quarkiverse/quarkiverse-minio
 quarkus-mockk.tf                            @quarkiverse/quarkiverse-mockk
-quarkus-mockserver.tf                       @quarkiverse/quarkiverse-mockserver
+quarkus-mockerver.tf                       @quarkiverse/quarkiverse-mockserver
 quarkus-moneta.tf                           @quarkiverse/quarkiverse-moneta
 quarkus-morphia.tf                          @quarkiverse/quarkiverse-morphia
 quarkus-mybatis.tf                          @quarkiverse/quarkiverse-mybatis
@@ -99,7 +99,7 @@ quarkus-togglz.tf                           @quarkiverse/quarkiverse-togglz
 quarkus-univocity-parsers.tf                @quarkiverse/quarkiverse-univocity-parsers
 quarkus-unleash.tf                          @quarkiverse/quarkiverse-unleash
 quarkus-vault.tf                            @quarkiverse/quarkiverse-vault
-quarkus-webmedia.tf                         @quarkiverse/quarkiverse-web-bundler
+quarkus-web-bundler.tf                      @quarkiverse/quarkiverse-web-bundler
 quarkus-wiremock.tf                         @quarkiverse/quarkiverse-wiremock
 quarkus-xmlsec.tf                           @quarkiverse/quarkiverse-xmlsec
 quarkus-zanzibar.tf                         @quarkiverse/quarkiverse-zanzibar
