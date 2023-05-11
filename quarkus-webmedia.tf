@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_web_assets" {
-  name                   = "quarkus-web-assets"
+  name                   = "quarkus-web-bundler"
   description            = "Provide processing and helpers for your web-app media (JS, CSS, SCSS)."
   archive_on_destroy     = true
   delete_branch_on_merge = true
@@ -11,7 +11,7 @@ resource "github_repository" "quarkus_web_assets" {
 
 # Create team
 resource "github_team" "quarkus_web_assets" {
-  name                      = "quarkiverse-web-assets"
+  name                      = "quarkiverse-web-bundler"
   description               = "web-assets team"
   create_default_maintainer = false
   privacy                   = "closed"
