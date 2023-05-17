@@ -1,12 +1,12 @@
 # Create repository
 resource "github_repository" "quarkus_web_assets" {
   name                   = "quarkus-web-bundler"
-  description            = "Provide processing and helpers for your web-app media (JS, CSS, SCSS)."
+  description            = "Creating full-stack Web Apps is fast and simple with this extension. Zero config bundling for your web-app scripts (js, jsx, ts, tsx), dependencies (jquery, react, htmx, ...) and styles (css, scss, sass)."
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "frontend", "renarde"]
+  topics                 = ["quarkus-extension", "frontend", "web", "full-stack", "js", "scss", "sass", "bundle", "esbuild", "mvnpm", "webjars", "typescript", "javascript", "assets"]
 }
 
 # Create team
