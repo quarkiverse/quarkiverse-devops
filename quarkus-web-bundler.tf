@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_web_assets" {
   name                   = "quarkus-web-bundler"
-  description            = "Creating full-stack Web Apps is fast and simple with this extension. Zero config bundling for your web-app scripts (js, jsx, ts, tsx), dependencies (jquery, react, htmx, ...) and styles (css, scss, sass)."
+  description            = "Create full-stack web apps quickly and easily with this Quarkus extension. It offers zero-configuration bundling for your web app scripts (JS, JSX, TS, TSX), dependencies (jQuery, React, htmx, etc.), and styles (CSS, SCSS, SASS)."
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
