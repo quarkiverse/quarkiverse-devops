@@ -32,3 +32,16 @@ resource "github_team_membership" "quarkus_azure_services" {
   username = each.value
   role     = "maintainer"
 }
+
+# Create CI environment secrets
+resource "github_actions_environment_secret" "quarkus_azure_services" {
+  for_each = {
+    "AZURE_CLIENT_ID"       = "foo"
+    "AZURE_TENANT_ID"       = "bar"
+    "AZURE_SUBSCRIPTION_ID" = "blah"
+  }
+  repository      = github_repository.quarkus_azure_services.name
+  environment     = "ci"
+  secret_name     = each.key
+  plaintext_value = each.value
+}
