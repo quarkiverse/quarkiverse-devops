@@ -40,3 +40,18 @@ resource "github_app_installation_repository" "quarkus_hibernate_search_extras" 
   installation_id = each.value
   repository      = github_repository.quarkus_hibernate_search_extras.name
 }
+
+# Enable branch protection so that we can use auto-merge (see https://github.com/quarkiverse/quarkiverse/issues/106)
+resource "github_branch_protection" "quarkus_hibernate_search_extras_main" {
+  repository_id = github_repository.quarkus_hibernate_search_extras.node_id
+
+  pattern                         = "main"
+  enforce_admins                  = false
+  allows_deletions                = false
+  require_conversation_resolution = true
+
+  required_status_checks {
+    strict   = false
+    contexts = ["build"]
+  }
+}
