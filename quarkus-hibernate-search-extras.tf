@@ -50,6 +50,11 @@ resource "github_branch_protection" "quarkus_hibernate_search_extras_main" {
   allows_deletions                = false
   require_conversation_resolution = true
 
+  push_restrictions = [
+    github_team.quarkus_hibernate_search_extras.node_id,
+    "/actions-user"
+  ]
+
   required_status_checks {
     strict   = false
     contexts = ["build"]
