@@ -7,6 +7,7 @@ resource "github_repository" "quarkus_hibernate_search_extras" {
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension"]
+  allow_auto_merge       = true
 }
 
 # Create team
