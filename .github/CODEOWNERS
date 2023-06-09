@@ -92,6 +92,7 @@ quarkus-rsocket.tf                          @quarkiverse/quarkiverse-rsocket
 quarkus-sa-token.tf                         @quarkiverse/quarkiverse-sa-token
 quarkus-scala3.tf                           @quarkiverse/quarkiverse-scala
 quarkus-shardingsphere-jdbc.tf              @quarkiverse/quarkiverse-shardingsphere-jdbc
+quarkus-sshd.tf                             @quarkiverse/quarkiverse-sshd
 quarkus-systemd-notify.tf                   @quarkiverse/quarkiverse-systemd-notify
 quarkus-tekton-client.tf                    @quarkiverse/quarkiverse-tekton-client
 quarkus-tika.tf                             @quarkiverse/quarkiverse-tika
