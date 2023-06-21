@@ -2,8 +2,6 @@ name: "Terraform"
 
 on:
   pull_request:
-    paths:
-      - terraform-scripts/**
     branches:
       - main
       
@@ -12,9 +10,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  terraform_only_check:
+    if: github.repository_owner == 'quarkiverse'
+    name: Check for Terraform Scripts only change
+    outputs:
+      tf_only: ${{ steps.files.outputs.any_changed }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - id: files
+        name: Get changed files
+        uses: tj-actions/changed-files@v36
+        with:
+          files: terraform-scripts/**
+
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
+    if: (github.repository_owner == 'quarkiverse') && (needs.terraform_only_check.outputs.tf_only == 'true')
+    needs:
+      - terraform_only_check
     defaults:
       run:
         working-directory: ./terraform-scripts
