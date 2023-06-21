@@ -2,6 +2,8 @@ name: "Terraform"
 
 on:
   pull_request:
+    paths:
+      - terraform-scripts/**
     branches:
       - main
       
