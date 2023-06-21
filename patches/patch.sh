@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#set -o xtrace
-
 BRANCH_NAME=
 PR_TITLE=
 PR_BODY=
