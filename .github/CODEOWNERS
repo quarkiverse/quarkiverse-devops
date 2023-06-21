@@ -61,7 +61,7 @@ terraform-scripts/quarkus-micrometer-registry.tf              @quarkiverse/quark
 terraform-scripts/quarkus-microprofile.tf                     @quarkiverse/quarkiverse-microprofile
 terraform-scripts/quarkus-minio.tf                            @quarkiverse/quarkiverse-minio
 terraform-scripts/quarkus-mockk.tf                            @quarkiverse/quarkiverse-mockk
-terraform-scripts/quarkus-mockerver.tf                       @quarkiverse/quarkiverse-mockserver
+terraform-scripts/quarkus-mockerver.tf                        @quarkiverse/quarkiverse-mockserver
 terraform-scripts/quarkus-moneta.tf                           @quarkiverse/quarkiverse-moneta
 terraform-scripts/quarkus-morphia.tf                          @quarkiverse/quarkiverse-morphia
 terraform-scripts/quarkus-mybatis.tf                          @quarkiverse/quarkiverse-mybatis
@@ -106,4 +106,3 @@ terraform-scripts/quarkus-xmlsec.tf                           @quarkiverse/quark
 terraform-scripts/quarkus-zanzibar.tf                         @quarkiverse/quarkiverse-zanzibar
 terraform-scripts/quarkus-zeebe.tf                            @quarkiverse/quarkiverse-zeebe
 terraform-scripts/quarkus-zookeeper-client.tf                 @quarkiverse/quarkiverse-zookeeper-client
-terraform-scripts/
