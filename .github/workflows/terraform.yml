@@ -18,6 +18,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          sparse-checkout: terraform-scripts
+
+      - name: Change to Terraform Scripts directory
+        run: cd terraform-scripts
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
