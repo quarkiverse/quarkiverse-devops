@@ -6,14 +6,16 @@ BRANCH_NAME=
 PR_TITLE=
 PR_BODY=
 JBANG_SCRIPT=
+FILTER_REPOS=.
 
 # This script is used to patch all Quarkiverse repositories
-while getopts "b:t:m:j:" OPT; do
+while getopts "b:t:m:j:f:" OPT; do
   case "$OPT" in
   "b") BRANCH_NAME=$OPTARG ;;
   "t") PR_TITLE=$OPTARG ;;
   "m") PR_BODY=$OPTARG ;;
   "j") JBANG_SCRIPT=$OPTARG ;;
+  "f") FILTER_REPOS=$OPTARG ;;
   "?") exit -1 ;;
   esac
 done
@@ -48,7 +50,7 @@ echo "Working in temp directory $WORK_DIR"
 cd $WORK_DIR
 
 # Iterate through all Quarkiverse repositories and apply the patch
-gh repo list quarkiverse --jq '.[].nameWithOwner' --topic quarkus-extension --json nameWithOwner --no-archived -L 1000 |  sort | while read repo; do
+gh repo list quarkiverse --jq '.[].nameWithOwner' --topic quarkus-extension --json nameWithOwner --no-archived -L 1000 |  sort | grep $FILTER_REPOS | while read repo; do
   cd $WORK_DIR
   echo -e "\n-> Processing $repo"
   # Clone the repository

@@ -19,20 +19,21 @@ It requires the following tools to be installed and configured:
 ## Usage
 
 ```bash
-./patch.sh -b {1} -t {2} -m {3} -j {4}
+./patch.sh -b {1} -t {2} -m {3} -j {4} -f {5}
 ```
 
 Where the parameters are:
 
 - `-b` - The branch to create the PR from
 - `-t` - The PR title
-- `-m`  - The PR body
+- `-m` - The PR body
 - `-j` - The JBang script to run
+- `-f` - A filter for the repositories to patch. If not specified, all repositories will be patched.
 
 Example:
 
 ```bash
-./patch.sh -b add_scm -t "Include \`scm\` info" -m "This includes the \`scm\` tag in the project parent" -j $(pwd)/AddScm.java
+./patch.sh -b add_scm -t "Include \`scm\` info" -m "This includes the \`scm\` tag in the project parent" -j $(pwd)/AddScm.java -f github
 ```
 
 A `pull-requests.txt` will be created with the list of pull-requests created in this process.
