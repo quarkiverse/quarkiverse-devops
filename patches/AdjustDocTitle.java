@@ -26,7 +26,7 @@ public class AdjustDocTitle {
             }
             String title = data.get("title");
             if (title.startsWith("Quarkus ")) {
-                data.put("title", title.substring("Quarkus ".length()));
+                data.put("title", title.substring("Quarkus ".length()).trim());
                 try (var writer = new FileWriter(antoraFile)) {
                     yaml.dump(data, writer);
                 }
