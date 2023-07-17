@@ -89,7 +89,7 @@ jobs:
             <details><summary>Validation Output</summary>
 
             \`\`\`\n
-            ${{ env.PLAN_RESULTS }}
+            ${{ steps.validate.outputs.stdout }}
             \`\`\`
 
             </details>
@@ -99,7 +99,7 @@ jobs:
             <details><summary>Show Plan</summary>
 
             \`\`\`\n
-            ${process.env.PLAN}
+            ${env.PLAN_RESULTS}
             \`\`\`
 
             </details>
