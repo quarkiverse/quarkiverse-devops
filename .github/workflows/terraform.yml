@@ -99,7 +99,7 @@ jobs:
             <details><summary>Show Plan</summary>
 
             \`\`\`\n
-            ${env.PLAN_RESULTS}
+            ${{ env.PLAN_RESULTS }}
             \`\`\`
 
             </details>
