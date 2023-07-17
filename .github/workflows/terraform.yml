@@ -64,34 +64,28 @@ jobs:
         run: terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after"
         continue-on-error: true
 
-      - uses: actions/github-script@v6.4.1
-        if: github.event_name == 'pull_request'
-        env:
-          PLAN: "${{ steps.plan.outputs.stdout }}"
+      - name: Update PR status comment
+        uses: actions-cool/maintain-one-comment@v3.0.0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
-            #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
-            #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
-            #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            #### Terraform Format and Style 🖌 ${{ steps.fmt.outcome }}
+            #### Terraform Initialization ⚙️ ${{ steps.init.outcome }}
+            #### Terraform Validation 🤖 ${{ steps.validate.outcome }}
+            #### Terraform Plan 📖 ${{ steps.plan.outcome }}
 
             <details><summary>Show Plan</summary>
 
-            \`\`\`terraform\n
+            ```terraform
             ${process.env.PLAN}
-            \`\`\`
+            ```
 
             </details>
 
-            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
-
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: output
-            })
+            *Pusher: @${{ github.actor }}, Action: ${{ github.event_name }}*;
+            <!-- Sticky Pull Request Comment -->
+          body-include: '<!-- Sticky Pull Request Comment -->'
+          number: ${{ github.event.number }}
 
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
