@@ -32,6 +32,8 @@ jobs:
     if: (github.repository_owner == 'quarkiverse') && (needs.terraform_only_check.outputs.tf_only == 'true')
     needs:
       - terraform_only_check
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     defaults:
       run:
         working-directory: ./terraform-scripts
@@ -91,7 +93,6 @@ jobs:
       - name: Post Plan
         uses: robburger/terraform-pr-commenter@v1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           EXPAND_SUMMARY_DETAILS: 'true' # Override global environment variable; expand details just for this step
         with:
           commenter_type: plan
