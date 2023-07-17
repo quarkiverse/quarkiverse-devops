@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_google_cloud_services" {
   has_issues             = true
   vulnerability_alerts   = true
   has_wiki               = true
-  homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-google-cloud-services/main"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-google-cloud-services/main/index.html"
   topics                 = ["gcp", "hacktoberfest", "quarkus", "quarkus-extension"]
 }
 

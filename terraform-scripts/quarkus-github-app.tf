@@ -8,7 +8,7 @@ resource "github_repository" "quarkus_github_app" {
   has_projects           = true
   has_discussions        = true
   vulnerability_alerts   = true
-  homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-github-app/dev/index.html"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-github-app/dev/index.html"
   topics                 = ["quarkus-extension"]
 }
 

@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_github_action" {
   has_issues             = true
   has_projects           = true
   vulnerability_alerts   = true
-  homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-github-action/dev/index.html"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-github-action/dev/index.html"
   topics                 = ["quarkus-extension"]
 }
 

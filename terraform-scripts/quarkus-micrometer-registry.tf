@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_micrometer_registry" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  homepage_url           = "https://quarkiverse.github.io/quarkiverse-docs/quarkus-micrometer-registry/dev/"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-micrometer-registry/dev/index.html"
   topics                 = ["hacktoberfest", "quarkus-extension"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
