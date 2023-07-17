@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_prettytime" {
   name                   = "quarkus-prettytime"
   description            = "Quarkus Extension for Social Style Date and Time Formatting"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-prettytime/dev/index.html"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
