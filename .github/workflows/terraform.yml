@@ -61,7 +61,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         if: github.event_name == 'pull_request'
-        run: terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after"
+        run: echo "terraform_plan=$(terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after)" >> $GITHUB_OUTPUT
         continue-on-error: true
 
       - name: Update PR status comment
@@ -69,20 +69,20 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           body: |
-            #### Terraform Format and Style 🖌 ${{ steps.fmt.outcome }}
-            #### Terraform Initialization ⚙️ ${{ steps.init.outcome }}
-            #### Terraform Validation 🤖 ${{ steps.validate.outcome }}
-            #### Terraform Plan 📖 ${{ steps.plan.outcome }}
+            #### Terraform Format and Style 🖌 *${{ steps.fmt.outcome }}*
+            #### Terraform Initialization ⚙️ *${{ steps.init.outcome }}*
+            #### Terraform Validation 🤖 *${{ steps.validate.outcome }}*
+            #### Terraform Plan 📖 *${{ steps.plan.outcome }}*
 
             <details><summary>Show Plan</summary>
 
             ```terraform
-            ${process.env.PLAN}
+            ${{steps.plan.outputs.terraform_plan}}
             ```
 
             </details>
 
-            *Pusher: @${{ github.actor }}, Action: ${{ github.event_name }}*;
+            *Pusher: @${{ github.actor }}, Action: `${{ github.event_name }}`*;
             <!-- Sticky Pull Request Comment -->
           body-include: '<!-- Sticky Pull Request Comment -->'
           number: ${{ github.event.number }}
