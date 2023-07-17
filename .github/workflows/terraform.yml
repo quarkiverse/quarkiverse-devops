@@ -61,13 +61,14 @@ jobs:
       - name: Terraform Plan
         id: plan
         if: github.event_name == 'pull_request'
-        run: terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after"
+        run: |
+          echo 'PLAN_RESULTS<<EOF' >> $GITHUB_ENV
+          terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after" >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
         continue-on-error: true
 
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
-        env:
-          PLAN: "${{ steps.plan.outputs.stdout }}"
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -88,7 +89,7 @@ jobs:
             <details><summary>Validation Output</summary>
 
             \`\`\`\n
-            ${{ steps.validate.outputs.stdout }}
+            ${{ env.PLAN_RESULTS }}
             \`\`\`
 
             </details>
