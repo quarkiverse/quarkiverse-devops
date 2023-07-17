@@ -64,7 +64,7 @@ jobs:
         run: terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after"
         continue-on-error: true
 
-      - uses: actions/github-script@v2.1.0
+      - uses: actions/github-script@v6.4.1
         if: github.event_name == 'pull_request'
         env:
           PLAN: "${{ steps.plan.outputs.stdout }}"
