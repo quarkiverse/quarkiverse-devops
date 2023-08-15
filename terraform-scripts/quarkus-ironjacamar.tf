@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_ironjacamar" {
   name                   = "quarkus-ironjacamar"
   description            = "IronJacamar is an implementation of the Jakarta Connector Architecture specification"
-  homepage_url           = "https://some-url/"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-ironjacamar/dev/index.html"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
