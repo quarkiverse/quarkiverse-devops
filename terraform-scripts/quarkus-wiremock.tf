@@ -28,7 +28,7 @@ resource "github_team_repository" "quarkus_wiremock" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_wiremock" {
-  for_each = { for tm in ["Spanjer1"] : tm => tm }
+  for_each = { for tm in ["Spanjer1", "chberger"] : tm => tm }
   team_id  = github_team.quarkus_wiremock.id
   username = each.value
   role     = "maintainer"
