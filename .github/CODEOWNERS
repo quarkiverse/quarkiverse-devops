@@ -76,6 +76,7 @@ terraform-scripts/quarkus-opentelemetry-exporter.tf           @quarkiverse/quark
 terraform-scripts/quarkus-operator-sdk.tf                     @quarkiverse/quarkiverse-operator-sdk
 terraform-scripts/quarkus-pact.tf                             @quarkiverse/quarkiverse-pact
 terraform-scripts/quarkus-pinot.tf                            @quarkiverse/quarkiverse-pinot
+terraform-scripts/quarkus-playwright.tf                       @quarkiverse/quarkiverse-playwright
 terraform-scripts/quarkus-poi.tf                              @quarkiverse/quarkiverse-poi
 terraform-scripts/quarkus-pooled-jms.tf                       @quarkiverse/quarkiverse-pooled-jms
 terraform-scripts/quarkus-prettytime.tf                       @quarkiverse/quarkiverse-prettytime
