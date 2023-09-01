@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_moneta" {
   name                   = "quarkus-moneta"
-  description            = "Quarkus JSR 354 Java Money Extension"
+  description            = "Integrate JavaMoney (JSR 354) into Quarkus for JDK and native builds."
   homepage_url           = "https://javamoney.github.io/ri.html"
   allow_update_branch    = true
   archive_on_destroy     = true
