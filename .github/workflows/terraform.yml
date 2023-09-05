@@ -22,7 +22,7 @@ jobs:
 
       - id: files
         name: Get changed files
-        uses: tj-actions/changed-files@v38
+        uses: tj-actions/changed-files@v39
         with:
           files: terraform-scripts/**
 
