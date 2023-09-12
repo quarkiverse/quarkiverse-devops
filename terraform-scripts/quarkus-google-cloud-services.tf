@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_google_cloud_services" {
   name                   = "quarkus-google-cloud-services"
   description            = "Google Cloud Services Quarkus Extensions"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
