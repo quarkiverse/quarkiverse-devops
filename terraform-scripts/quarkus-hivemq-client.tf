@@ -27,7 +27,7 @@ resource "github_team_repository" "quarkus_hivemq_client" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_hivemq_client" {
-  for_each = { for tm in ["masini"] : tm => tm }
+  for_each = { for tm in ["masini", "pjgg", "codepitbull", "gutmox", "ayagsan"] : tm => tm }
   team_id  = github_team.quarkus_hivemq_client.id
   username = each.value
   role     = "maintainer"
