@@ -42,3 +42,10 @@ resource "github_app_installation_repository" "quarkus_openapi_generator" {
   installation_id = each.value
   repository      = github_repository.quarkus_openapi_generator.name
 }
+
+# Add an admin collaborator to this repository
+resource "github_repository_collaborator" "quarkus_openapi_generator" {
+  repository = github_repository.quarkus_openapi_generator.name
+  username   = "ricardozanini"
+  permission = "admin"
+}
