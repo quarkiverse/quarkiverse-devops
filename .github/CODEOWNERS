@@ -55,6 +55,7 @@ terraform-scripts/quarkus-logging-manager.tf                  @quarkiverse/quark
 terraform-scripts/quarkus-logging-sentry.tf                   @quarkiverse/quarkiverse-logging-sentry
 terraform-scripts/quarkus-logging-splunk.tf                   @quarkiverse/quarkiverse-logging-splunk
 terraform-scripts/quarkus-lucene.tf                           @quarkiverse/quarkiverse-lucene
+terraform-scripts/quarkus-mailpit.tf                          @quarkiverse/quarkiverse-mailpit
 terraform-scripts/quarkus-maven-resolver.tf                   @quarkiverse/quarkiverse-maven-resolver
 terraform-scripts/quarkus-mfa.tf                              @quarkiverse/quarkiverse-mfa
 terraform-scripts/quarkus-micrometer-registry.tf              @quarkiverse/quarkiverse-micrometer-registry
