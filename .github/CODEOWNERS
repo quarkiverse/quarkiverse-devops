@@ -33,6 +33,7 @@ terraform-scripts/quarkus-hibernate-types.tf                  @quarkiverse/quark
 terraform-scripts/quarkus-hivemq-client.tf                    @quarkiverse/quarkiverse-hivemq-client
 terraform-scripts/quarkus-itext.tf                            @quarkiverse/quarkiverse-itext
 terraform-scripts/quarkus-jackson-jq.tf                       @quarkiverse/quarkiverse-jackson-jq
+terraform-scripts/quarkus-jaeger.tf                           @quarkiverse/quarkiverse-jaeger
 terraform-scripts/quarkus-jasperreports.tf                    @quarkiverse/quarkiverse-jasperreports
 terraform-scripts/quarkus-jberet.tf                           @quarkiverse/quarkiverse-jberet
 terraform-scripts/quarkus-jdbi.tf                             @quarkiverse/quarkiverse-jdbi
