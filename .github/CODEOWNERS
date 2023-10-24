@@ -95,6 +95,7 @@ terraform-scripts/quarkus-renarde.tf                          @quarkiverse/quark
 terraform-scripts/quarkus-rsocket.tf                          @quarkiverse/quarkiverse-rsocket
 terraform-scripts/quarkus-sa-token.tf                         @quarkiverse/quarkiverse-sa-token
 terraform-scripts/quarkus-scala3.tf                           @quarkiverse/quarkiverse-scala
+terraform-scripts/quarkus-semantic-kernel.tf                  @quarkiverse/quarkiverse-semantic-kernel
 terraform-scripts/quarkus-shardingsphere-jdbc.tf              @quarkiverse/quarkiverse-shardingsphere-jdbc
 terraform-scripts/quarkus-smallrye-opentracing.tf             @quarkiverse/quarkiverse-smallrye-opentracing
 terraform-scripts/quarkus-sshd.tf                             @quarkiverse/quarkiverse-sshd
