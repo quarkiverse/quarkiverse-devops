@@ -8,7 +8,7 @@ resource "github_repository" "quarkus_semantic_kernel" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "AI", "Artificial Intelligence", "OpenAI", "Azure OpenAI", "Hugging Face"]
+  topics                 = ["quarkus-extension", "ai", "artificial-intelligence", "openai", "azure-openai", "hugging-face"]
 }
 
 # Create team
