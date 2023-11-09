@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_qute_server_pages" {
-  name                   = "quarkus-qute-server-pages"
+  name                   = "quarkus-qute-web"
   description            = "Automatically expose Qute templates via HTTP"
   allow_update_branch    = true
   archive_on_destroy     = true
@@ -12,8 +12,8 @@ resource "github_repository" "quarkus_qute_server_pages" {
 
 # Create team
 resource "github_team" "quarkus_qute_server_pages" {
-  name                      = "quarkiverse-qute-server-pages"
-  description               = "qute-server-pages team"
+  name                      = "quarkiverse-qute-web"
+  description               = "qute-web team"
   create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id

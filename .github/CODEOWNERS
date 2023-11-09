@@ -86,7 +86,7 @@ terraform-scripts/quarkus-prettytime.tf                       @quarkiverse/quark
 terraform-scripts/quarkus-primefaces.tf                       @quarkiverse/quarkiverse-primefaces
 terraform-scripts/quarkus-pusher-beams.tf                     @quarkiverse/quarkiverse-pusher-beams
 terraform-scripts/quarkus-quinoa.tf                           @quarkiverse/quarkiverse-quinoa
-terraform-scripts/quarkus-qute-server-pages.tf                @quarkiverse/quarkiverse-qute-server-pages
+terraform-scripts/quarkus-qute-web.tf                         @quarkiverse/quarkiverse-qute-web
 terraform-scripts/quarkus-rabbitmq-client.tf                  @quarkiverse/quarkiverse-rabbitmq-client
 terraform-scripts/quarkus-reactive-h2-client                  @quarkiverse/quarkiverse-reactive-h2-client
 terraform-scripts/quarkus-reactive-mysql-pool-client          @quarkiverse/quarkiverse-reactive-mysql-pool-client
