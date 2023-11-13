@@ -32,3 +32,11 @@ resource "github_team_membership" "quarkus_langchain4j" {
   username = each.value
   role     = "maintainer"
 }
+
+# Add admin users
+resource "github_repository_collaborator" "quarkus_langchain4j" {
+  for_each   = { for tm in ["geoand", "cescoffier"] : tm => tm }
+  repository = github_repository.quarkus_langchain4j.name
+  username   = each.value
+  permission = "admin"
+}
