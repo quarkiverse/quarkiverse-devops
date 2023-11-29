@@ -11,6 +11,7 @@ terraform-scripts/quarkus-authzed-client.tf                   @quarkiverse/quark
 terraform-scripts/quarkus-azure-services.tf                   @quarkiverse/quarkiverse-azure-services
 terraform-scripts/quarkus-bucket4j.tf                         @quarkiverse/quarkiverse-bucket4j
 terraform-scripts/quarkus-cert-manager.tf                     @quarkiverse/quarkiverse-cert-manager
+terraform-scripts/quarkus-code-server.tf                      @quarkiverse/quarkiverse-code-server
 terraform-scripts/quarkus-config-extensions.tf                @quarkiverse/quarkiverse-config-extensions
 terraform-scripts/quarkus-cucumber.tf                         @quarkiverse/quarkiverse-cucumber
 terraform-scripts/quarkus-cxf.tf                              @quarkiverse/quarkiverse-cxf
