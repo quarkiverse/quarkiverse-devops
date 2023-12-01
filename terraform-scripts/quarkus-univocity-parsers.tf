@@ -33,11 +33,3 @@ resource "github_team_membership" "quarkus_univocity_parsers" {
   username = each.value
   role     = "maintainer"
 }
-
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_univocity_parsers" {
-  for_each = { for app in [local.applications.lgtm] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_univocity_parsers.name
-}
