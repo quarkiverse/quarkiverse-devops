@@ -29,7 +29,7 @@ resource "github_team_repository" "quarkus_embedded_postgresql" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_embedded_postgresql" {
-  for_each = { for tm in ["fjtirado", "cristianonicolai"] : tm => tm }
+  for_each = { for tm in ["fjtirado", "cristianonicolai", "melloware"] : tm => tm }
   team_id  = github_team.quarkus_embedded_postgresql.id
   username = each.value
   role     = "maintainer"
