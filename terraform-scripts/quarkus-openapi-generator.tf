@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_openapi_generator" {
   name                   = "quarkus-openapi-generator"
-  description            = "OpenApi Generator - REST Client Generator"
+  description            = "OpenAPI Generator - REST Client Generator"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
