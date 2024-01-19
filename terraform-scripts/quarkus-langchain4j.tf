@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_langchain4j" {
   name                   = "quarkus-langchain4j"
   description            = "Quarkus Langchain4j extension"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-langchain4j/dev/index.html"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
