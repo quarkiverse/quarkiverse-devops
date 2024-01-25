@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_ngrok" {
   name                   = "quarkus-ngrok"
   description            = "ngrok is a globally distributed reverse proxy fronting your web services running in any cloud or private network, or your machine"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-ngrok/dev/index.html"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
