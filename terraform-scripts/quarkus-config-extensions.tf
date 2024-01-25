@@ -44,3 +44,11 @@ resource "github_branch_default" "quarkus_config_extensions" {
   repository = github_repository.quarkus_config_extensions.name
   branch     = github_branch.quarkus_config_extensions.branch
 }
+
+# Add admin users
+resource "github_repository_collaborator" "quarkus_config_extensions" {
+  for_each   = { for tm in ["radcortez"] : tm => tm }
+  repository = github_repository.quarkus_config_extensions.name
+  username   = each.value
+  permission = "admin"
+}
