@@ -39,10 +39,10 @@ public class RemoveCrazyMax {
                 int index = indexOpt.getAsInt();
                 lines.add(index + 1, "          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}");
             }
-            indexOpt = IntStream.range(0, lines.size()).filter(i -> lines.get(i).endsWith("- uses: actions/checkout@v3")).findFirst();
+            indexOpt = IntStream.range(0, lines.size()).filter(i -> lines.get(i).contains("- uses: actions/checkout")).findFirst();
             if (indexOpt.isPresent()) {
                 int index = indexOpt.getAsInt();
-                lines.set(index, lines.get(index).replace("v3", "v4"));
+                lines.set(index, lines.get(index).replaceAll("checkout@v[0-9]", "checkout@v4"));
             }
             Files.write(workflowFile, lines, StandardCharsets.UTF_8);
         }
