@@ -4,6 +4,8 @@ resource "github_repository" "quarkus_kiota" {
   description            = "Generate client SDKs using Kiota from OpenAPI descriptions"
   homepage_url           = "https://github.com/microsoft/kiota"
   allow_update_branch    = true
+  allow_merge_commit     = false
+  allow_rebase_merge     = false
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
