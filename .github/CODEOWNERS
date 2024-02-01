@@ -10,6 +10,7 @@ terraform-scripts/quarkus-arthas.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-asyncapi.tf                           @quarkiverse/quarkiverse-asyncapi
 terraform-scripts/quarkus-authzed-client.tf                     @quarkiverse/quarkiverse-authzed-client
 terraform-scripts/quarkus-azure-services.tf                     @quarkiverse/quarkiverse-azure-services
+terraform-scripts/quarkus-bon-jova-rockstar.tf                  @quarkiverse/quarkiverse-bon-jova-rockstar
 terraform-scripts/quarkus-bucket4j.tf                           @quarkiverse/quarkiverse-bucket4j
 terraform-scripts/quarkus-cert-manager.tf                       @quarkiverse/quarkiverse-cert-manager
 terraform-scripts/quarkus-code-server.tf                        @quarkiverse/quarkiverse-code-server
