@@ -30,3 +30,7 @@ override.tf.json
 
 .idea/
 .DS_Store
+
+# Eclipse
+.project
+.settings/
