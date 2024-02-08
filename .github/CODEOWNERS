@@ -118,7 +118,6 @@ terraform-scripts/quarkus-unleash.tf                            @quarkiverse/qua
 terraform-scripts/quarkus-vault.tf                              @quarkiverse/quarkiverse-vault
 terraform-scripts/quarkus-web-bundler.tf                        @quarkiverse/quarkiverse-web-bundler
 terraform-scripts/quarkus-wiremock.tf                           @quarkiverse/quarkiverse-wiremock
-terraform-scripts/quarkus-xmlsec.tf                             @quarkiverse/quarkiverse-xmlsec
 terraform-scripts/quarkus-zanzibar.tf                           @quarkiverse/quarkiverse-zanzibar
 terraform-scripts/quarkus-zeebe.tf                              @quarkiverse/quarkiverse-zeebe
 terraform-scripts/quarkus-zookeeper-client.tf                   @quarkiverse/quarkiverse-zookeeper-client
