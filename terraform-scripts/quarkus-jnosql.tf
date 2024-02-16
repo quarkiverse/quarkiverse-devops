@@ -29,7 +29,7 @@ resource "github_team_repository" "quarkus_jnosql" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_jnosql" {
-  for_each = { for tm in ["amoscatelli"] : tm => tm }
+  for_each = { for tm in ["amoscatelli", "otaviojava"] : tm => tm }
   team_id  = github_team.quarkus_jnosql.id
   username = each.value
   role     = "maintainer"
