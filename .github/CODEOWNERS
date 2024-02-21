@@ -77,6 +77,7 @@ terraform-scripts/quarkus-morphia.tf                            @quarkiverse/qua
 terraform-scripts/quarkus-mybatis.tf                            @quarkiverse/quarkiverse-mybatis
 terraform-scripts/quarkus-neo4j.tf                              @quarkiverse/quarkiverse-neo4j
 terraform-scripts/quarkus-ngrok.tf                              @quarkiverse/quarkiverse-ngrok
+terraform-scripts/quarkus-oidc-proxy.tf                         @quarkiverse/quarkiverse-oidc-proxy
 terraform-scripts/quarkus-omnifaces.tf                          @quarkiverse/quarkiverse-omnifaces
 terraform-scripts/quarkus-openapi-generator.tf                  @quarkiverse/quarkiverse-openapi-generator
 terraform-scripts/quarkus-opencv.tf                             @quarkiverse/quarkiverse-opencv
