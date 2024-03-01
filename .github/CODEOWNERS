@@ -73,6 +73,7 @@ terraform-scripts/quarkus-minio.tf                              @quarkiverse/qua
 terraform-scripts/quarkus-mockk.tf                              @quarkiverse/quarkiverse-mockk
 terraform-scripts/quarkus-mockerver.tf                          @quarkiverse/quarkiverse-mockserver
 terraform-scripts/quarkus-moneta.tf                             @quarkiverse/quarkiverse-moneta
+terraform-scripts/quarkus-mongock.tf                            @quarkiverse/quarkiverse-mongock
 terraform-scripts/quarkus-morphia.tf                            @quarkiverse/quarkiverse-morphia
 terraform-scripts/quarkus-mybatis.tf                            @quarkiverse/quarkiverse-mybatis
 terraform-scripts/quarkus-neo4j.tf                              @quarkiverse/quarkiverse-neo4j
