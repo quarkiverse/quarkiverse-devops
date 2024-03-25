@@ -35,6 +35,7 @@ terraform-scripts/quarkus-helm.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-hibernate-search-extras.tf            @quarkiverse/quarkiverse-hibernate-search-extras
 terraform-scripts/quarkus-hibernate-types.tf                    @quarkiverse/quarkiverse-hibernate-types
 terraform-scripts/quarkus-hivemq-client.tf                      @quarkiverse/quarkiverse-hivemq-client
+terraform-scripts/quarkus-homeassistant.tf                      @quarkiverse/quarkiverse-homeassistant
 terraform-scripts/quarkus-itext.tf                              @quarkiverse/quarkiverse-itext
 terraform-scripts/quarkus-jackson-jq.tf                         @quarkiverse/quarkiverse-jackson-jq
 terraform-scripts/quarkus-jaeger.tf                             @quarkiverse/quarkiverse-jaeger
