@@ -2,6 +2,7 @@ terraform-scripts/main.tf                                       @quarkiverse/qua
 terraform-scripts/quarkus-amazon-alexa.tf                       @quarkiverse/quarkiverse-amazon-alexa
 terraform-scripts/quarkus-amazon-services.tf                    @quarkiverse/quarkiverse-amazon-services
 terraform-scripts/quarkus-antivirus.tf                          @quarkiverse/quarkiverse-antivirus
+terraform-scripts/quarkus-antora.tf                             @quarkiverse/quarkiverse-antora
 terraform-scripts/quarkus-angus-mail.tf                         @quarkiverse/quarkiverse-angus-mail
 terraform-scripts/quarkus-apistax.tf                            @quarkiverse/quarkiverse-apistax
 terraform-scripts/quarkus-arangodb-client.tf                    @quarkiverse/quarkiverse-arangodb-client
