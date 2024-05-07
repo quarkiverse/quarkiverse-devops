@@ -114,6 +114,7 @@ terraform-scripts/quarkus-shedlock.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-smallrye-opentracing.tf               @quarkiverse/quarkiverse-smallrye-opentracing
 terraform-scripts/quarkus-snappy.tf                             @quarkiverse/quarkiverse-snappy
 terraform-scripts/quarkus-sshd.tf                               @quarkiverse/quarkiverse-sshd
+terraform-scripts/quarkus-statiq.tf                             @quarkiverse/quarkiverse-statiq
 terraform-scripts/quarkus-systemd-notify.tf                     @quarkiverse/quarkiverse-systemd-notify
 terraform-scripts/quarkus-tekton-client.tf                      @quarkiverse/quarkiverse-tekton-client
 terraform-scripts/quarkus-tika.tf                               @quarkiverse/quarkiverse-tika
