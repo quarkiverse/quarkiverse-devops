@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_zanzibar" {
   name                   = "quarkus-zanzibar"
   description            = "Zanzibar style fine grained authorization"
   homepage_url           = "https://zanzibar.academy"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
