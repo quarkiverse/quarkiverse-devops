@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_easy_retrofit" {
   name                   = "quarkus-easy-retrofit"
-  description            = "easy-retrofit-client provides an annotation based configuration to create Retrofit instances, and enhances general functionality through more annotations."
+  description            = "Provides an annotation based configuration to create Retrofit instances and enhances general functionality through more annotations."
   homepage_url           = "https://github.com/liuziyuan/easy-retrofit"
   allow_update_branch    = true
   archive_on_destroy     = true
