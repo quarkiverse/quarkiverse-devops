@@ -80,6 +80,7 @@ terraform-scripts/quarkus-moneta.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-mongock.tf                            @quarkiverse/quarkiverse-mongock
 terraform-scripts/quarkus-morphia.tf                            @quarkiverse/quarkiverse-morphia
 terraform-scripts/quarkus-mybatis.tf                            @quarkiverse/quarkiverse-mybatis
+terraform-scripts/quarkus-nagios.tf                             @quarkiverse/quarkiverse-nagios
 terraform-scripts/quarkus-neo4j.tf                              @quarkiverse/quarkiverse-neo4j
 terraform-scripts/quarkus-ngrok.tf                              @quarkiverse/quarkiverse-ngrok
 terraform-scripts/quarkus-oidc-proxy.tf                         @quarkiverse/quarkiverse-oidc-proxy
