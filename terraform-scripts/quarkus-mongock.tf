@@ -29,7 +29,7 @@ resource "github_team_repository" "quarkus_mongock" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_mongock" {
-  for_each = { for tm in ["janknobloch"] : tm => tm }
+  for_each = { for tm in ["janknobloch", "tms0"] : tm => tm }
   team_id  = github_team.quarkus_mongock.id
   username = each.value
   role     = "maintainer"
