@@ -28,7 +28,7 @@ resource "github_team_repository" "quarkus_authzed_client" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_authzed_client" {
-  for_each = { for tm in ["iocanel"] : tm => tm }
+  for_each = { for tm in ["iocanel", "kdubb"] : tm => tm }
   team_id  = github_team.quarkus_authzed_client.id
   username = each.value
   role     = "maintainer"
