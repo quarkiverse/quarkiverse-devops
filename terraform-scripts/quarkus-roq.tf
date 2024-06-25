@@ -1,5 +1,5 @@
 # Create repository
-resource "github_repository" "quarkus_roq" {
+resource "github_repository" "quarkus_statiq" {
   name                   = "quarkus-roq"
   description            = "An extension to generate/publish static pages from your Quarkus web-app"
   allow_update_branch    = true
@@ -12,7 +12,7 @@ resource "github_repository" "quarkus_roq" {
 }
 
 # Create team
-resource "github_team" "quarkus_roq" {
+resource "github_team" "quarkus_statiq" {
   name                      = "quarkiverse-roq"
   description               = "roq team"
   create_default_maintainer = false
@@ -21,16 +21,16 @@ resource "github_team" "quarkus_roq" {
 }
 
 # Add team to repository
-resource "github_team_repository" "quarkus_roq" {
-  team_id    = github_team.quarkus_roq.id
-  repository = github_repository.quarkus_roq.name
+resource "github_team_repository" "quarkus_statiq" {
+  team_id    = github_team.quarkus_statiq.id
+  repository = github_repository.quarkus_statiq.name
   permission = "maintain"
 }
 
 # Add users to the team
-resource "github_team_membership" "quarkus_roq" {
+resource "github_team_membership" "quarkus_statiq" {
   for_each = { for tm in ["ia3andy", "melloware", "mcruzdev"] : tm => tm }
-  team_id  = github_team.quarkus_roq.id
+  team_id  = github_team.quarkus_statiq.id
   username = each.value
   role     = "maintainer"
 }
