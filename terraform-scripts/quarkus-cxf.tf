@@ -43,12 +43,6 @@ resource "github_team_membership" "quarkus_cxf" {
   role     = "maintainer"
 }
 
-# Set default branch
-resource "github_branch_default" "quarkus_cxf" {
-  repository = github_repository.quarkus_cxf.name
-  branch     = "main"
-}
-
 # Enable apps in repository
 resource "github_app_installation_repository" "quarkus_cxf" {
   for_each = { for app in [local.applications.lgtm, local.applications.renovate] : app => app }

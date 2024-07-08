@@ -33,15 +33,3 @@ resource "github_team_membership" "quarkus_jgit" {
   username = each.value
   role     = "maintainer"
 }
-
-# Create main branch
-resource "github_branch" "quarkus_jgit" {
-  repository = github_repository.quarkus_jgit.name
-  branch     = "main"
-}
-
-# Set main branch as default
-resource "github_branch_default" "quarkus_jgit" {
-  repository = github_repository.quarkus_jgit.name
-  branch     = github_branch.quarkus_jgit.branch
-}
