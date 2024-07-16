@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_json_rpc" {
-  name                   = "quarkus-json-prc"
+  name                   = "quarkus-json-rpc"
   description            = "JsonRPC over WebSocket services with Quarkus"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-json-rpc/dev/"
   allow_update_branch    = true
