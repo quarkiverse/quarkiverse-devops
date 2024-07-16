@@ -30,7 +30,7 @@ resource "github_team_repository" "quarkus_json_rpc" {
 # Add users to the team
 resource "github_team_membership" "quarkus_json_rpc" {
   for_each = { for tm in ["phillip-kruger", "tecarter94"] : tm => tm }
-  team_id  = github_team.quarkus_nagios.id
+  team_id  = github_team.quarkus_json_rpc.id
   username = each.value
   role     = "maintainer"
 }
