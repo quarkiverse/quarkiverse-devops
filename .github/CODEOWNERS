@@ -56,6 +56,7 @@ terraform-scripts/quarkus-jnosql.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-jooq.tf                               @quarkiverse/quarkiverse-jooq
 terraform-scripts/quarkus-jpastreamer.tf                        @quarkiverse/quarkiverse-jpastreamer
 terraform-scripts/quarkus-jsch.tf                               @quarkiverse/quarkiverse-jsch
+terraform-scripts/quarkus-json-rpc.tf 				@quarkiverse/quarkiverse-json-rpc
 terraform-scripts/quarkus-kafka-streams-processor.tf            @quarkiverse/quarkiverse-kafka-streams-processor
 terraform-scripts/quarkus-kerberos.tf                           @quarkiverse/quarkiverse-kerberos
 terraform-scripts/quarkus-kiota.tf                              @quarkiverse/quarkiverse-kiota
