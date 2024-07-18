@@ -4,9 +4,14 @@ resource "github_repository" "quarkus_resteasy_problem" {
   description            = "Unified error responses for Quarkus REST APIs via Problem Details for HTTP APIs (RFC9457 & RFC7807)"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-resteasy-problem/dev"
   allow_update_branch    = true
+  allow_merge_commit     = true
+  allow_rebase_merge     = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
+  has_discussions        = true
+  has_downloads          = true
+  has_wiki               = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "rest-problem", "resteasy", "exception-handling", "rfc7807", "rfc9457"]
 }
