@@ -111,6 +111,7 @@ terraform-scripts/quarkus-reactive-mysql-pool-client            @quarkiverse/qua
 terraform-scripts/quarkus-reactive-messaging-http.tf            @quarkiverse/quarkiverse-reactive-messaging-http
 terraform-scripts/quarkus-reactive-messaging-nats-jetstream.tf  @quarkiverse/quarkiverse-reactive-messaging-nats-jetstream
 terraform-scripts/quarkus-renarde.tf                            @quarkiverse/quarkiverse-renarde
+terraform-scripts/quarkus-resteasy-problem.tf                   @quarkiverse/quarkiverse-resteasy-problem
 terraform-scripts/quarkus-roq.tf                                @quarkiverse/quarkiverse-roq
 terraform-scripts/quarkus-rsocket.tf                            @quarkiverse/quarkiverse-rsocket
 terraform-scripts/quarkus-sa-token.tf                           @quarkiverse/quarkiverse-sa-token
