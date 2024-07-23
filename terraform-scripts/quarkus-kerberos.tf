@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_kerberos" {
   name                   = "quarkus-kerberos"
   description            = "Quarkus Kerberos extension"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
