@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_openfga_client" {
   name                   = "quarkus-openfga-client"
   description            = "Quarkus extension for OpenFGA support"
   homepage_url           = "https://openfga.dev"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
