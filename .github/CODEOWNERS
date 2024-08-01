@@ -97,6 +97,7 @@ terraform-scripts/quarkus-operator-sdk.tf                       @quarkiverse/qua
 terraform-scripts/quarkus-pact.tf                               @quarkiverse/quarkiverse-pact
 terraform-scripts/quarkus-pdfbox.tf                             @quarkiverse/quarkiverse-pdfbox
 terraform-scripts/quarkus-pinot.tf                              @quarkiverse/quarkiverse-pinot
+terraform-scripts/quarkus-playpen.tf                            @quarkiverse/quarkiverse-playpen
 terraform-scripts/quarkus-playwright.tf                         @quarkiverse/quarkiverse-playwright
 terraform-scripts/quarkus-poi.tf                                @quarkiverse/quarkiverse-poi
 terraform-scripts/quarkus-pooled-jms.tf                         @quarkiverse/quarkiverse-pooled-jms
