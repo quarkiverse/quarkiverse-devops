@@ -1,14 +1,14 @@
 # Create repository
 resource "github_repository" "quarkus_mailpit" {
   name                   = "quarkus-mailpit"
-  description            = "An email and SMTP testing tool with API for developers"
+  description            = "Email and SMTP testing tool with API for developers"
   homepage_url           = "https://github.com/axllent/mailpit"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["quarkus-extension", "email", "smtp-server"]
 }
 
 # Create team
