@@ -6,6 +6,7 @@ terraform-scripts/quarkus-antora.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-angus-mail.tf                         @quarkiverse/quarkiverse-angus-mail
 terraform-scripts/quarkus-apistax.tf                            @quarkiverse/quarkiverse-apistax
 terraform-scripts/quarkus-arangodb-client.tf                    @quarkiverse/quarkiverse-arangodb-client
+terraform-scripts/quarkus-argocd.tf                             @quarkiverse/quarkiverse-argocd
 terraform-scripts/quarkus-artemis.tf                            @quarkiverse/quarkiverse-artemis
 terraform-scripts/quarkus-arthas.tf                             @quarkiverse/quarkiverse-arthas
 terraform-scripts/quarkus-asyncapi.tf                           @quarkiverse/quarkiverse-asyncapi
