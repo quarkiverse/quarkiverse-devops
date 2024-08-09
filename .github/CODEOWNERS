@@ -59,7 +59,7 @@ terraform-scripts/quarkus-jnosql.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-jooq.tf                               @quarkiverse/quarkiverse-jooq
 terraform-scripts/quarkus-jpastreamer.tf                        @quarkiverse/quarkiverse-jpastreamer
 terraform-scripts/quarkus-jsch.tf                               @quarkiverse/quarkiverse-jsch
-terraform-scripts/quarkus-json-rpc.tf 				@quarkiverse/quarkiverse-json-rpc
+terraform-scripts/quarkus-json-rpc.tf 				            @quarkiverse/quarkiverse-json-rpc
 terraform-scripts/quarkus-kafka-streams-processor.tf            @quarkiverse/quarkiverse-kafka-streams-processor
 terraform-scripts/quarkus-kerberos.tf                           @quarkiverse/quarkiverse-kerberos
 terraform-scripts/quarkus-kiota.tf                              @quarkiverse/quarkiverse-kiota
@@ -127,6 +127,7 @@ terraform-scripts/quarkus-snappy.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-sshd.tf                               @quarkiverse/quarkiverse-sshd
 terraform-scripts/quarkus-systemd-notify.tf                     @quarkiverse/quarkiverse-systemd-notify
 terraform-scripts/quarkus-tekton-client.tf                      @quarkiverse/quarkiverse-tekton-client
+terraform-scripts/quarkus-temporal.tf                           @quarkiverse/quarkiverse-temporal
 terraform-scripts/quarkus-tika.tf                               @quarkiverse/quarkiverse-tika
 terraform-scripts/quarkus-togglz.tf                             @quarkiverse/quarkiverse-togglz
 terraform-scripts/quarkus-unleash.tf                            @quarkiverse/quarkiverse-unleash
