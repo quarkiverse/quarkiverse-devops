@@ -37,7 +37,7 @@ resource "github_team_repository" "quarkus_operator_sdk" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_operator_sdk" {
-  for_each = { for tm in ["metacosm", "csviri"] : tm => tm }
+  for_each = { for tm in ["metacosm", "xstefank"] : tm => tm }
   team_id  = github_team.quarkus_operator_sdk.id
   username = each.value
   role     = "maintainer"
