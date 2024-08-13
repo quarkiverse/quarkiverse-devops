@@ -50,6 +50,7 @@ terraform-scripts/quarkus-jberet.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-jdbi.tf                               @quarkiverse/quarkiverse-jdbi
 terraform-scripts/quarkus-jdbc-sqlite.tf                        @quarkiverse/quarkiverse-jdbc-sqlite
 terraform-scripts/quarkus-jdbc-clickhouse.tf                    @quarkiverse/quarkiverse-jdbc-clickhouse
+terraform-scripts/quarkus-jdiameter.tf                          @quarkiverse/quarkiverse-jdiameter
 terraform-scripts/quarkus-jef.tf                                @quarkiverse/quarkiverse-jef
 terraform-scripts/quarkus-jgit.tf                               @quarkiverse/quarkiverse-jgit
 terraform-scripts/quarkus-jgrapht.tf                            @quarkiverse/quarkiverse-jgrapht
