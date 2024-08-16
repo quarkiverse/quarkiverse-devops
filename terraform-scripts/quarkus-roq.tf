@@ -9,6 +9,15 @@ resource "github_repository" "quarkus_statiq" {
   has_projects           = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog"]
+
+  pages {
+    build_type = "workflow"
+    source {
+      branch = "main"
+      path   = "/"
+    }
+  }
+
 }
 
 # Create team
