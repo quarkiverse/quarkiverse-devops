@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_authzed_client" {
   name                   = "quarkus-authzed-client"
   description            = "An extension for connecting to authzed instances from Quarkus applications"
   homepage_url           = "https://docs.authzed.com/reference/api"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true

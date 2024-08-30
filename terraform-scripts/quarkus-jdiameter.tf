@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_jdiameter" {
   name                   = "quarkus-jdiameter"
   description            = "Quarkus JDiameter extension - Diameter protocol support"
-  homepage_url           = "https://docs.quarkiverse.io/quarkus-jdiameter/dev"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-jdiameter/2.0.0"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
