@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_neo4j" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["quarkus-extension","graph-database","graph","neo4j"]
 }
 
 # Create team
