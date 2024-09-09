@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_jdbc_sqlite" {
   name                   = "quarkus-jdbc-sqlite"
   description            = "Basic SQLite driver for Quarkus with Agroal and native mode support"
   archive_on_destroy     = true
+  allow_update_branch    = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
