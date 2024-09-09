@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_statiq" {
   name                   = "quarkus-roq"
   description            = "An extension to generate/publish static pages from your Quarkus web-app"
+  homepage_url           = "https://pages.quarkiverse.io/quarkus-roq/"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
