@@ -76,6 +76,7 @@ terraform-scripts/quarkus-logging-splunk.tf                     @quarkiverse/qua
 terraform-scripts/quarkus-lucene.tf                             @quarkiverse/quarkiverse-lucene
 terraform-scripts/quarkus-mailpit.tf                            @quarkiverse/quarkiverse-mailpit
 terraform-scripts/quarkus-maven-resolver.tf                     @quarkiverse/quarkiverse-maven-resolver
+terraform-scripts/quarkus-mdns.tf                               @quarkiverse/quarkiverse-mdns
 terraform-scripts/quarkus-mfa.tf                                @quarkiverse/quarkiverse-mfa
 terraform-scripts/quarkus-micrometer-registry.tf                @quarkiverse/quarkiverse-micrometer-registry
 terraform-scripts/quarkus-microprofile.tf                       @quarkiverse/quarkiverse-microprofile
