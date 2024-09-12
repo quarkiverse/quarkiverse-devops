@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_mdns" {
   name                   = "quarkus-mdns"
-  description            = "Quarkus mDNS extension - Multicast Domain Name System"
+  description            = "Quarkus mDNS - Multicast Domain Name System"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-mdns/dev/"
   allow_update_branch    = true
   archive_on_destroy     = true
