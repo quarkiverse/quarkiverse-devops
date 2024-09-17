@@ -68,7 +68,7 @@ gh repo list quarkiverse --jq '.[].nameWithOwner' --topic quarkus-extension --js
       # Invoke formatter
       mvn clean process-sources
       # Commit the changes
-      git commit -m "$PR_TITLE" -a
+      git add . && git commit -m "$PR_TITLE"
       # Push the changes
       git push origin $BRANCH_NAME
       # Create the pull-request
