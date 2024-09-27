@@ -2,13 +2,13 @@
 resource "github_repository" "quarkus_easy_retrofit" {
   name                   = "quarkus-easy-retrofit"
   description            = "Provides an annotation based configuration to create Retrofit instances and enhances general functionality through more annotations."
-  homepage_url           = "https://github.com/liuziyuan/easy-retrofit"
+  homepage_url           = "https://github.com/easyretrofit"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "http-client", "retrofit"]
+  topics                 = ["quarkus-extension", "http-client", "retrofit2"]
 }
 
 # Create team
