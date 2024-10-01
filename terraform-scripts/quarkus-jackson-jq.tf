@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_jackson_jq" {
   name                   = "quarkus-jackson-jq"
   description            = "Quarkus extension for the Jackson JQ library"
+  allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
