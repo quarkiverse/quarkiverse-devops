@@ -29,7 +29,7 @@ resource "github_team_repository" "quarkus_jasperreports" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_jasperreports" {
-  for_each = { for tm in ["Postremus"] : tm => tm }
+  for_each = { for tm in ["Postremus", "melloware"] : tm => tm }
   team_id  = github_team.quarkus_jasperreports.id
   username = each.value
   role     = "maintainer"
