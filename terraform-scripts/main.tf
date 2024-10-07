@@ -33,8 +33,6 @@ locals {
   # Application IDs installed in the Quarkiverse organization
   # These applications are enabled on a per-repository basis
   applications = {
-    # LGTM - https://github.com/marketplace/lgtm
-    lgtm = "24341616"
     # Renovate - https://github.com/marketplace/renovate
     renovate = "34650047"
   }
