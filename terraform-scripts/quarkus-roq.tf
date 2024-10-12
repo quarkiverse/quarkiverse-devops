@@ -9,7 +9,7 @@ resource "github_repository" "quarkus_statiq" {
   has_issues             = true
   has_projects           = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog"]
+  topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
   pages {
     build_type = "workflow"
