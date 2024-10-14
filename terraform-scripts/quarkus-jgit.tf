@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_jgit" {
   name                   = "quarkus-jgit"
   description            = "JGit is a lightweight, pure Java library implementing the Git version control system"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-jgit/dev/"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
