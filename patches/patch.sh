@@ -77,7 +77,7 @@ gh repo list quarkiverse --jq '.[].nameWithOwner' --topic quarkus-extension --js
       echo "No changes in $repo"
     fi
   else
-    echo "No changes in $repo"
+    echo "No changes in $repo, branch $BRANCH_NAME already exists"
   fi
 done
 
