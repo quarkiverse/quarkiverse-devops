@@ -34,3 +34,11 @@ resource "github_team_membership" "quarkus_playpen" {
   username = each.value
   role     = "maintainer"
 }
+
+# Create quay.io repository
+resource "quay_repository" "quarkus_playpen" {
+  name        = "quarkus-playpen"
+  description = "Live local development on a deployed k8s service"
+  visibility  = "public"
+  namespace   = data.quay_organization.quarkiverse.name
+}
