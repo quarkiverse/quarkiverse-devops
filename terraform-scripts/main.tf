@@ -4,10 +4,6 @@ terraform {
       source  = "integrations/github"
       version = "~> 6.0"
     }
-    quay = {
-      source  = "enthought/quay"
-      version = "~> 0.5.1"
-    }
   }
 
   backend "remote" {
@@ -23,10 +19,6 @@ terraform {
 
 provider "github" {}
 
-provider "quay" {
-  url = "https://quay.io"
-}
-
 # Retrieve information about the currently (PAT) authenticated user
 data "github_user" "self" {
   username = ""
@@ -35,10 +27,6 @@ data "github_user" "self" {
 # Return quarkiverse-members team ID
 data "github_team" "quarkiverse_members" {
   slug = "quarkiverse-members"
-}
-
-data "quay_organization" "quarkiverse" {
-  name = "quarkiverse"
 }
 
 locals {
