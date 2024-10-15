@@ -1,14 +1,14 @@
 # Create repository
 resource "github_repository" "quarkus_itext" {
   name                   = "quarkus-itext"
-  description            = "Create and manipulate PDFs on the fly"
-  homepage_url           = "https://github.com/albfernandez/itext2"
+  description            = "Create and manipulate PDFs on the fly with iText/OpenPDF"
+  homepage_url           = "https://github.com/LibrePDF/OpenPDF"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "itext", "pdf", "reader", "writer", "graalvm"]
+  topics                 = ["quarkus-extension", "itext", "pdf", "reader", "writer", "openpdf"]
 }
 
 # Create team
