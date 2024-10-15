@@ -99,17 +99,3 @@ resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
   repository      = github_repository.quarkus_UNIQUE_NAME.name
 }
 ```
-
-## Provisioning Quay.io repositories
-
-To provision Quay.io repositories, add the following snippet to the .tf file:
-
-```terraform
-# Create Quay.io repository
-resource "quay_repository" "quarkus_UNIQUE_NAME" {
-  name        = "quarkus-DASHED-NAME"
-  description = "Quarkus UNIQUE_NAME extension"
-  namespace   = data.quay_organization.quarkiverse.name
-  visibility  = "public"
-}
-```
