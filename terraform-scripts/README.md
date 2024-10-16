@@ -62,6 +62,36 @@ resource "github_team_membership" "quarkus_UNIQUE_NAME" {
   role     = "maintainer"
 }
 
+# Protect main branch using a ruleset
+resource "github_repository_ruleset" "quarkus_UNIQUE_NAME" {
+  name        = "main"
+  repository  = github_repository.quarkus_UNIQUE_NAME.name
+  target      = "branch"
+  enforcement = "active"
+
+  conditions {
+    ref_name {
+      include = ["~DEFAULT_BRANCH"]
+      exclude = []
+    }
+  }
+
+  bypass_actors {
+    actor_id    = data.github_app.quarkiverse_ci.id
+    actor_type  = "Integration"
+    bypass_mode = "always"
+  }
+
+  rules {
+    # Prevent force push
+    non_fast_forward = true
+    # Require pull request reviews before merging
+    pull_request {
+
+    }
+  }
+}
+
 # Enable apps in repository
 #resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
 #  for_each = { for app in [local.applications.stale] : app => app }
@@ -99,3 +129,41 @@ resource "github_app_installation_repository" "quarkus_UNIQUE_NAME" {
   repository      = github_repository.quarkus_UNIQUE_NAME.name
 }
 ```
+## Protecting branches
+
+You can protect branches using the `github_repository_ruleset` resource. For example, to protect the `main` branch preventing force pushes and requiring Pull Requests reviews, you can add the following snippet to the .tf file:
+
+```terraform
+# Protect main branch using a ruleset
+resource "github_repository_ruleset" "quarkus_UNIQUE_NAME" {
+  name        = "main"
+  repository  = github_repository.quarkus_UNIQUE_NAME.name
+  target      = "branch"
+  enforcement = "active"
+
+  conditions {
+    ref_name {
+      include = ["~DEFAULT_BRANCH"]
+      exclude = []
+    }
+  }
+
+  bypass_actors {
+    actor_id    = data.github_app.quarkiverse_ci.id
+    actor_type  = "Integration"
+    bypass_mode = "always"
+  }
+
+  rules {
+    # Prevent force push
+    non_fast_forward = true
+    # Require pull request reviews before merging
+    pull_request {
+
+    }
+  }
+}
+```
+
+> [!TIP]
+> Because when releasing the sources need to be changed, it's important to add the `quarkiverse-ci` app as a bypass actor in every ruleset created. 
