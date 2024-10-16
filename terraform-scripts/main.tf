@@ -29,6 +29,10 @@ data "github_team" "quarkiverse_members" {
   slug = "quarkiverse-members"
 }
 
+data "github_app" "quarkiverse_ci" {
+  slug = "quarkiverse-ci"
+}
+
 locals {
   # Application IDs installed in the Quarkiverse organization
   # These applications are enabled on a per-repository basis
