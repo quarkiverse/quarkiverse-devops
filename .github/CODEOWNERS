@@ -49,9 +49,10 @@ terraform-scripts/quarkus-jackson-jq.tf                         @quarkiverse/qua
 terraform-scripts/quarkus-jaeger.tf                             @quarkiverse/quarkiverse-jaeger
 terraform-scripts/quarkus-jasperreports.tf                      @quarkiverse/quarkiverse-jasperreports
 terraform-scripts/quarkus-jberet.tf                             @quarkiverse/quarkiverse-jberet
-terraform-scripts/quarkus-jdbi.tf                               @quarkiverse/quarkiverse-jdbi
-terraform-scripts/quarkus-jdbc-sqlite.tf                        @quarkiverse/quarkiverse-jdbc-sqlite
 terraform-scripts/quarkus-jdbc-clickhouse.tf                    @quarkiverse/quarkiverse-jdbc-clickhouse
+terraform-scripts/quarkus-jdbc-singlestore.tf                   @quarkiverse/quarkiverse-jdbc-singlestore
+terraform-scripts/quarkus-jdbc-sqlite.tf                        @quarkiverse/quarkiverse-jdbc-sqlite
+terraform-scripts/quarkus-jdbi.tf                               @quarkiverse/quarkiverse-jdbi
 terraform-scripts/quarkus-jdiameter.tf                          @quarkiverse/quarkiverse-jdiameter
 terraform-scripts/quarkus-jef.tf                                @quarkiverse/quarkiverse-jef
 terraform-scripts/quarkus-jgit.tf                               @quarkiverse/quarkiverse-jgit
