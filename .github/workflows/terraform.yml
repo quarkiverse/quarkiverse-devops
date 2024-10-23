@@ -1,20 +1,37 @@
 name: "Terraform"
 
 on:
-  workflow_run:
-    workflows: [ "Check Terraform Scripts" ]
-    types:
-      - completed
-
+  pull_request:
+    branches:
+      - main
+      
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  terraform_only_check:
+    if: github.repository_owner == 'quarkiverse'
+    name: Check for Terraform Scripts only change
+    outputs:
+      tf_only: ${{ steps.files.outputs.any_changed == 'true' || steps.files.outputs.any_deleted == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - id: files
+        name: Get changed files
+        uses: tj-actions/changed-files@v42
+        with:
+          files: terraform-scripts/**
+
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
-    if: (github.repository_owner == 'quarkiverse')
+    if: (github.repository_owner == 'quarkiverse') && (needs.terraform_only_check.outputs.tf_only == 'true')
+    needs:
+      - terraform_only_check
     defaults:
       run:
         working-directory: ./terraform-scripts
@@ -43,6 +60,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
+        if: github.event_name == 'pull_request'
         run: |
           echo 'PLAN_RESULTS<<EOF' >> $GITHUB_ENV
           terraform plan -no-color | grep -v "Refreshing state...\|Reading...\|Read complete after" >> $GITHUB_ENV
@@ -50,6 +68,7 @@ jobs:
         continue-on-error: true
 
       - uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
