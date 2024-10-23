@@ -8,6 +8,7 @@ resource "github_repository" "quarkus_statiq" {
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true
+  has_discussions        = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
