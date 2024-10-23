@@ -1,0 +1,21 @@
+name: "Check Terraform Scripts"
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'terraform-scripts/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  terraform_only_check:
+    name: Check for Terraform Scripts only change
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if owner is not quarkiverse
+        if: github.repository_owner != 'quarkiverse'
+        run: exit 1
