@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_logging_splunk" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_logging_splunk" {
-  for_each = { for tm in ["vietk", "rquinio1A"] : tm => tm }
+  for_each = { for tm in ["vietk", "rquinio1A", "edeweerd1A", "flazarus1A", "lmartella1"] : tm => tm }
   team_id  = github_team.quarkus_logging_splunk.id
   username = each.value
   role     = "maintainer"
