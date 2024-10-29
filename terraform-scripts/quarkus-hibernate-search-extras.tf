@@ -34,7 +34,7 @@ resource "github_team_membership" "quarkus_hibernate_search_extras" {
 }
 
 # Add outside collaborators to the repository
-resource "github_repository_collaborator" "quarkus_github_app" {
+resource "github_repository_collaborator" "quarkus_hibernate_search_extras" {
   for_each   = { for tm in ["yrodiere"] : tm => tm }
   repository = github_repository.quarkus_hibernate_search_extras.name
   username   = each.value
