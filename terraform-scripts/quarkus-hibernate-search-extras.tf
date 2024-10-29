@@ -27,10 +27,18 @@ resource "github_team_repository" "quarkus_hibernate_search_extras" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_hibernate_search_extras" {
-  for_each = { for tm in ["yrodiere"] : tm => tm }
+  for_each = { for tm in ["marko-bekhta"] : tm => tm }
   team_id  = github_team.quarkus_hibernate_search_extras.id
   username = each.value
   role     = "maintainer"
+}
+
+# Add outside collaborators to the repository
+resource "github_repository_collaborator" "quarkus_hibernate_search_extras" {
+  for_each   = { for tm in ["yrodiere"] : tm => tm }
+  repository = github_repository.quarkus_hibernate_search_extras.name
+  username   = each.value
+  permission = "push"
 }
 
 # Enable apps in repository
