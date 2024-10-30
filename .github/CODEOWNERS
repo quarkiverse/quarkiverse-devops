@@ -13,6 +13,7 @@ terraform-scripts/quarkus-asyncapi.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-authzed-client.tf                     @quarkiverse/quarkiverse-authzed-client
 terraform-scripts/quarkus-azure-services.tf                     @quarkiverse/quarkiverse-azure-services
 terraform-scripts/quarkus-backstage.tf                          @quarkiverse/quarkiverse-backstage
+terraform-scripts/quarkus-barcode.tf                            @quarkiverse/quarkiverse-barcode
 terraform-scripts/quarkus-bon-jova-rockstar.tf                  @quarkiverse/quarkiverse-bon-jova-rockstar
 terraform-scripts/quarkus-bucket4j.tf                           @quarkiverse/quarkiverse-bucket4j
 terraform-scripts/quarkus-business-score.tf                     @quarkiverse/quarkiverse-business-score
