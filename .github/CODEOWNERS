@@ -33,6 +33,7 @@ terraform-scripts/quarkus-eddi.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-embedded-postgresql.tf                @quarkiverse/quarkiverse-embedded-postgresql
 terraform-scripts/quarkus-file-vault.tf                         @quarkiverse/quarkiverse-file-vault
 terraform-scripts/quarkus-freemarker.tf                         @quarkiverse/quarkiverse-freemarker
+terraform-scripts/quarkus-fury.tf                               @quarkiverse/quarkiverse-fury
 terraform-scripts/quarkus-fx.tf                                 @quarkiverse/quarkiverse-fx
 terraform-scripts/quarkus-github-api.tf                         @quarkiverse/quarkiverse-github-api
 terraform-scripts/quarkus-github-action.tf                      @quarkiverse/quarkiverse-github-action
