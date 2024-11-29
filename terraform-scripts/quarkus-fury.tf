@@ -1,14 +1,20 @@
 # Create repository
 resource "github_repository" "quarkus_fury" {
-  name                   = "quarkus-fury"
-  description            = "A blazingly fast multi-language serialization framework powered by JIT and zero-copy."
-  homepage_url           = "https://docs.quarkiverse.io/quarkus-fury/dev"
-  allow_update_branch    = true
-  archive_on_destroy     = true
-  delete_branch_on_merge = true
-  has_issues             = true
-  vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "fury", "serialization"]
+  name                        = "quarkus-fury"
+  description                 = "A blazingly fast multi-language serialization framework powered by JIT and zero-copy."
+  homepage_url                = "https://docs.quarkiverse.io/quarkus-fury/dev"
+  allow_update_branch         = true
+  allow_merge_commit          = false
+  allow_rebase_merge          = false
+  archive_on_destroy          = true
+  delete_branch_on_merge      = true
+  has_issues                  = true
+  vulnerability_alerts        = true
+  topics                      = ["quarkus-extension", "fury", "serialization"]
+  merge_commit_message        = "PR_BODY"
+  merge_commit_title          = "PR_TITLE"
+  squash_merge_commit_message = "PR_BODY"
+  squash_merge_commit_title   = "PR_TITLE"
 }
 
 # Create team
