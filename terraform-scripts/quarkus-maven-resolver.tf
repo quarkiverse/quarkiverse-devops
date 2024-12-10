@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_maven_resolver" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_maven_resolver" {
-  for_each = { for tm in ["aloubyansky", "gastaldi"] : tm => tm }
+  for_each = { for tm in ["aloubyansky"] : tm => tm }
   team_id  = github_team.quarkus_maven_resolver.id
   username = each.value
   role     = "maintainer"
