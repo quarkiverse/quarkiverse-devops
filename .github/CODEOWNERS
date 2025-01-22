@@ -82,6 +82,7 @@ terraform-scripts/quarkus-lucene.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-mailpit.tf                            @quarkiverse/quarkiverse-mailpit
 terraform-scripts/quarkus-maven-resolver.tf                     @quarkiverse/quarkiverse-maven-resolver
 terraform-scripts/quarkus-mcp-server.tf                         @quarkiverse/quarkiverse-mcp-server
+terraform-scripts/quarkus-mcp-servers.tf                        @quarkiverse/quarkiverse-mcp-servers
 terraform-scripts/quarkus-mdns.tf                               @quarkiverse/quarkiverse-mdns
 terraform-scripts/quarkus-mfa.tf                                @quarkiverse/quarkiverse-mfa
 terraform-scripts/quarkus-micrometer-registry.tf                @quarkiverse/quarkiverse-micrometer-registry
