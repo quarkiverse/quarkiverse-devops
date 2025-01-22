@@ -6,6 +6,7 @@ resource "github_repository" "quarkus_infinispan_embedded" {
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
+  has_discussions        = true
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "infinispan", "infinispan-embedded", "caching", "distributed-caching"]
