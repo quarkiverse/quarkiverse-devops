@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_statiq" {
   name                   = "quarkus-roq"
-  description            = "An extension to generate/publish static pages from your Quarkus web-app"
+  description            = "The Roq Static Site Generator allows to easily create a static website or blog using Quarkus super-powers."
   homepage_url           = "https://pages.quarkiverse.io/quarkus-roq/"
   allow_update_branch    = true
   archive_on_destroy     = true
