@@ -135,6 +135,7 @@ terraform-scripts/quarkus-shardingsphere-jdbc.tf                @quarkiverse/qua
 terraform-scripts/quarkus-shedlock.tf                           @quarkiverse/quarkiverse-shedlock
 terraform-scripts/quarkus-smallrye-opentracing.tf               @quarkiverse/quarkiverse-smallrye-opentracing
 terraform-scripts/quarkus-snappy.tf                             @quarkiverse/quarkiverse-snappy
+terraform-scripts/quarkus-sqlite4j.tf                           @quarkiverse/quarkiverse-sqlite4j
 terraform-scripts/quarkus-sshd.tf                               @quarkiverse/quarkiverse-sshd
 terraform-scripts/quarkus-systemd-notify.tf                     @quarkiverse/quarkiverse-systemd-notify
 terraform-scripts/quarkus-tekton-client.tf                      @quarkiverse/quarkiverse-tekton-client
