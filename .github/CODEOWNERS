@@ -54,6 +54,7 @@ terraform-scripts/quarkus-jberet.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-jdbc-clickhouse.tf                    @quarkiverse/quarkiverse-jdbc-clickhouse
 terraform-scripts/quarkus-jdbc-singlestore.tf                   @quarkiverse/quarkiverse-jdbc-singlestore
 terraform-scripts/quarkus-jdbc-sqlite.tf                        @quarkiverse/quarkiverse-jdbc-sqlite
+terraform-scripts/quarkus-jdbc-sqlite4j.tf                      @quarkiverse/quarkiverse-jdbc-sqlite4j
 terraform-scripts/quarkus-jdbi.tf                               @quarkiverse/quarkiverse-jdbi
 terraform-scripts/quarkus-jdiameter.tf                          @quarkiverse/quarkiverse-jdiameter
 terraform-scripts/quarkus-jef.tf                                @quarkiverse/quarkiverse-jef
@@ -135,7 +136,6 @@ terraform-scripts/quarkus-shardingsphere-jdbc.tf                @quarkiverse/qua
 terraform-scripts/quarkus-shedlock.tf                           @quarkiverse/quarkiverse-shedlock
 terraform-scripts/quarkus-smallrye-opentracing.tf               @quarkiverse/quarkiverse-smallrye-opentracing
 terraform-scripts/quarkus-snappy.tf                             @quarkiverse/quarkiverse-snappy
-terraform-scripts/quarkus-sqlite4j.tf                           @quarkiverse/quarkiverse-sqlite4j
 terraform-scripts/quarkus-sshd.tf                               @quarkiverse/quarkiverse-sshd
 terraform-scripts/quarkus-systemd-notify.tf                     @quarkiverse/quarkiverse-systemd-notify
 terraform-scripts/quarkus-tekton-client.tf                      @quarkiverse/quarkiverse-tekton-client
