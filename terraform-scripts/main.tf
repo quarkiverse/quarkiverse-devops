@@ -34,7 +34,7 @@ data "github_app" "quarkiverse_ci" {
 }
 
 locals {
-  # Application IDs installed in the Quarkiverse organization
+  # Installation IDs installed in the Quarkiverse organization
   # These applications are enabled on a per-repository basis
   applications = {
     # LGTM - https://github.com/marketplace/lgtm
@@ -52,6 +52,6 @@ locals {
     # https://github.com/release-engineering/Sync2Jira/
     # https://github.com/fedora-infra/webhook-to-fedora-messaging/
     # https://issues.redhat.com/projects/GHQKIVERSE
-    sync2jira_redhat = "1137195"
+    sync2jira_redhat = "60685343"
   }
 }
