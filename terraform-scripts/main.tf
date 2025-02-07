@@ -41,5 +41,17 @@ locals {
     lgtm = "24341616"
     # Renovate - https://github.com/marketplace/renovate
     renovate = "34650047"
+    # This enables a webhook to send events from these repositories
+    # to Fedora Messaging,
+    # which is used by a separately configured Sync2Jira instance
+    # to replicate GitHub issues to issues.redhat.com.
+    # The point is to allow Red Hat engineers to use this internally
+    # to prioritize their work.
+    # Only public information is shared.
+    # See:
+    # https://github.com/release-engineering/Sync2Jira/
+    # https://github.com/fedora-infra/webhook-to-fedora-messaging/
+    # https://issues.redhat.com/projects/GHQKIVERSE
+    sync2jira_redhat = "1137195"
   }
 }
