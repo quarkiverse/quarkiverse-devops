@@ -40,5 +40,5 @@ resource "github_team_membership" "quarkus_operator_sdk" {
   for_each = { for tm in ["metacosm", "xstefank"] : tm => tm }
   team_id  = github_team.quarkus_operator_sdk.id
   username = each.value
-  role     = "maintainer"
+  role     = "admin"
 }
