@@ -42,3 +42,11 @@ resource "github_team_membership" "quarkus_operator_sdk" {
   username = each.value
   role     = "maintainer"
 }
+
+# Add admin users
+resource "github_repository_collaborator" "quarkus_operator_sdk" {
+  for_each   = { for tm in ["metacosm", "xstefank"] : tm => tm }
+  repository = github_repository.quarkus_operator_sdk.name
+  username   = each.value
+  permission = "admin"
+}
