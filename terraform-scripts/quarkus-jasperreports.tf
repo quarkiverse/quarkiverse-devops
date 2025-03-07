@@ -9,7 +9,7 @@ resource "github_repository" "quarkus_jasperreports" {
   has_issues             = true
   has_discussions        = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "jasperreports", "hacktoberfest"]
+  topics                 = ["quarkus-extension", "jasperreports"]
 }
 
 # Create team
