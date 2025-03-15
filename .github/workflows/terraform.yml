@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - main
-      
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -22,9 +22,9 @@ jobs:
 
       - id: files
         name: Get changed files
-        uses: tj-actions/changed-files@v42
-        with:
-          files: terraform-scripts/**
+        run:
+          # Output if any Terraform script changed
+          echo "tf_only=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E 'terraform-scripts/.*\.tf' | wc -l)" >> "$GITHUB_OUTPUT"
 
   terraform:
     name: "Terraform"
@@ -53,7 +53,7 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init
-      
+
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
