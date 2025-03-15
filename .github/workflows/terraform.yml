@@ -14,17 +14,14 @@ jobs:
     if: github.repository_owner == 'quarkiverse'
     name: Check for Terraform Scripts only change
     outputs:
-      tf_only: ${{ steps.files.outputs.any_changed == 'true' || steps.files.outputs.any_deleted == 'true' }}
+      tf_only: ${{ steps.files.outputs.tf_only }}
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v4
-
       - id: files
-        name: Get changed files
-        run:
-          # Output if any Terraform script changed
-          echo "tf_only=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E 'terraform-scripts/.*\.tf' | wc -l)" >> "$GITHUB_OUTPUT"
+        name: Changed files in terraform-scripts?
+        run: echo "tf_only=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^terraform-scripts/' || true)" >> $GITHUB_OUTPUT
 
   terraform:
     name: "Terraform"
