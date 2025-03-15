@@ -8,7 +8,7 @@ resource "github_repository" "quarkus_prettytime" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["quarkus-extension", "prettytime"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
   template {
