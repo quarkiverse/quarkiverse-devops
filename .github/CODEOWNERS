@@ -104,6 +104,7 @@ terraform-scripts/quarkus-oidc-proxy.tf                         @quarkiverse/qua
 terraform-scripts/quarkus-omnifaces.tf                          @quarkiverse/quarkiverse-omnifaces
 terraform-scripts/quarkus-open-feature.tf                       @quarkiverse/quarkiverse-open-feature
 terraform-scripts/quarkus-openapi-generator.tf                  @quarkiverse/quarkiverse-openapi-generator
+terraform-scripts/quarkus-openapi-problems.tf                   @quarkiverse/quarkiverse-openapi-problems
 terraform-scripts/quarkus-opencv.tf                             @quarkiverse/quarkiverse-opencv
 terraform-scripts/quarkus-openfga-client.tf                     @quarkiverse/quarkiverse-openfga-client
 terraform-scripts/quarkus-opensearch.tf                         @quarkiverse/quarkiverse-opensearch
