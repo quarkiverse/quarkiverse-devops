@@ -31,6 +31,7 @@ terraform-scripts/quarkus-doma.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-easy-retrofit.tf                      @quarkiverse/quarkiverse-easy-retrofit
 terraform-scripts/quarkus-eddi.tf                               @quarkiverse/quarkiverse-eddi
 terraform-scripts/quarkus-embedded-postgresql.tf                @quarkiverse/quarkiverse-embedded-postgresql
+terraform-scripts/quarkus-fluentjdbc.tf                         @quarkiverse/quarkiverse-fluentjdbc
 terraform-scripts/quarkus-file-vault.tf                         @quarkiverse/quarkiverse-file-vault
 terraform-scripts/quarkus-freemarker.tf                         @quarkiverse/quarkiverse-freemarker
 terraform-scripts/quarkus-fury.tf                               @quarkiverse/quarkiverse-fury
