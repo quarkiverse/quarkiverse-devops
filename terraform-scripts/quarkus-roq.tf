@@ -13,6 +13,7 @@ resource "github_repository" "quarkus_statiq" {
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
   pages {
+    cname      = "iamroq.com"
     build_type = "workflow"
     source {
       branch = "main"
