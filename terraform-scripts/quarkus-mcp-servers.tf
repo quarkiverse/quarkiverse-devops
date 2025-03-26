@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_mcp_servers" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["mcp"]
+  topics                 = ["mcp", "quarkus-app"]
 }
 
 # Create team
