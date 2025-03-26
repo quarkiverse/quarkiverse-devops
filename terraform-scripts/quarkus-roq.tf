@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_statiq" {
   name                   = "quarkus-roq"
   description            = "The Roq Static Site Generator allows to easily create a static website or blog using Quarkus super-powers."
-  homepage_url           = "https://pages.quarkiverse.io/quarkus-roq/"
+  homepage_url           = "https://iamroq.com"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
@@ -13,6 +13,7 @@ resource "github_repository" "quarkus_statiq" {
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
   pages {
+    cname      = "iamroq.com"
     build_type = "workflow"
     source {
       branch = "main"
@@ -44,4 +45,12 @@ resource "github_team_membership" "quarkus_statiq" {
   team_id  = github_team.quarkus_statiq.id
   username = each.value
   role     = "maintainer"
+}
+
+# Add admin users
+resource "github_repository_collaborator" "quarkus_statiq" {
+  for_each   = { for tm in ["ia3andy"] : tm => tm }
+  repository = github_repository.quarkus_statiq.name
+  username   = each.value
+  permission = "admin"
 }
