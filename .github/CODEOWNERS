@@ -110,6 +110,7 @@ terraform-scripts/quarkus-openfga-client.tf                     @quarkiverse/qua
 terraform-scripts/quarkus-opensearch.tf                         @quarkiverse/quarkiverse-opensearch
 terraform-scripts/quarkus-opentelemetry-exporter.tf             @quarkiverse/quarkiverse-opentelemetry-exporter
 terraform-scripts/quarkus-operator-sdk.tf                       @quarkiverse/quarkiverse-operator-sdk
+terraform-scripts/quarkus-oras.tf                               @quarkiverse/quarkiverse-oras
 terraform-scripts/quarkus-pact.tf                               @quarkiverse/quarkiverse-pact
 terraform-scripts/quarkus-pdfbox.tf                             @quarkiverse/quarkiverse-pdfbox
 terraform-scripts/quarkus-pinot.tf                              @quarkiverse/quarkiverse-pinot
