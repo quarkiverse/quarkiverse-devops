@@ -35,6 +35,18 @@ resource "github_team_membership" "quarkus_oras" {
   role     = "maintainer"
 }
 
+# Create main branch
+resource "github_branch" "main" {
+  repository = github_repository.quarkus_oras.name
+  branch     = "main"
+}
+
+# Set main as default branch
+resource "github_branch_default" "main" {
+  repository = github_repository.quarkus_oras.name
+  branch     = github_branch.main.branch
+}
+
 # Protect main branch using a ruleset
 resource "github_repository_ruleset" "quarkus_oras" {
   name        = "main"
