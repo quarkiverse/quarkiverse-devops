@@ -121,6 +121,7 @@ terraform-scripts/quarkus-pooled-jms.tf                         @quarkiverse/qua
 terraform-scripts/quarkus-presidio.tf                           @quarkiverse/quarkiverse-presidio
 terraform-scripts/quarkus-prettytime.tf                         @quarkiverse/quarkiverse-prettytime
 terraform-scripts/quarkus-primefaces.tf                         @quarkiverse/quarkiverse-primefaces
+terraform-scripts/quarkus-proxy-wasm.tf                         @quarkiverse/quarkiverse-proxy-wasm
 terraform-scripts/quarkus-pusher-beams.tf                       @quarkiverse/quarkiverse-pusher-beams
 terraform-scripts/quarkus-quinoa.tf                             @quarkiverse/quarkiverse-quinoa
 terraform-scripts/quarkus-qute-web.tf                           @quarkiverse/quarkiverse-qute-web
