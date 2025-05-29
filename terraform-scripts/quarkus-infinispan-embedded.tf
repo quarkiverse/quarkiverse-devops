@@ -30,7 +30,7 @@ resource "github_team_repository" "quarkus_infinispan_embedded" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_infinispan_embedded" {
-  for_each = { for tm in ["karesti", "wburns", "ryanemerson", "tristantarrant"] : tm => tm }
+  for_each = { for tm in ["karesti", "wburns", "tristantarrant"] : tm => tm }
   team_id  = github_team.quarkus_infinispan_embedded.id
   username = each.value
   role     = "maintainer"
