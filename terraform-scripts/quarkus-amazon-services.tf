@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_amazon_services" {
   name                   = "quarkus-amazon-services"
   description            = "Quarkus Amazon Services extensions"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-amazon-services/dev/index.html"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
