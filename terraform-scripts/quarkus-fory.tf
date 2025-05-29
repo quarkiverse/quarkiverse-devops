@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_fury" {
-  name                        = "quarkus-fury"
+  name                        = "quarkus-fory"
   description                 = "A blazingly fast multi-language serialization framework powered by JIT and zero-copy."
   homepage_url                = "https://docs.quarkiverse.io/quarkus-fury/dev"
   allow_update_branch         = true
@@ -10,7 +10,7 @@ resource "github_repository" "quarkus_fury" {
   delete_branch_on_merge      = true
   has_issues                  = true
   vulnerability_alerts        = true
-  topics                      = ["quarkus-extension", "fury", "serialization"]
+  topics                      = ["quarkus-extension", "fory", "serialization"]
   merge_commit_message        = "PR_BODY"
   merge_commit_title          = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
@@ -19,7 +19,7 @@ resource "github_repository" "quarkus_fury" {
 
 # Create team
 resource "github_team" "quarkus_fury" {
-  name                      = "quarkiverse-fury"
+  name                      = "quarkiverse-fory"
   description               = "fury team"
   create_default_maintainer = false
   privacy                   = "closed"
