@@ -28,6 +28,7 @@ terraform-scripts/quarkus-dapr.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-dashbuilder.tf                        @quarkiverse/quarkiverse-dashbuilder
 terraform-scripts/quarkus-discord4j.tf                          @quarkiverse/quarkiverse-discord4j
 terraform-scripts/quarkus-docker-client.tf                      @quarkiverse/quarkiverse-docker-client
+terraform-scripts/quarkus-docling.tf                            @quarkiverse/quarkiverse-docling
 terraform-scripts/quarkus-doma.tf                               @quarkiverse/quarkiverse-doma
 terraform-scripts/quarkus-easy-retrofit.tf                      @quarkiverse/quarkiverse-easy-retrofit
 terraform-scripts/quarkus-eddi.tf                               @quarkiverse/quarkiverse-eddi
