@@ -29,7 +29,7 @@ resource "github_team_repository" "quarkus_shedlock" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_shedlock" {
-  for_each = { for tm in ["dcdh"] : tm => tm }
+  for_each = { for tm in ["dcdh", "melloware"] : tm => tm }
   team_id  = github_team.quarkus_shedlock.id
   username = each.value
   role     = "maintainer"
