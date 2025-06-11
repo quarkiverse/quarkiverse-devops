@@ -76,9 +76,6 @@ resource "github_repository_ruleset" "quarkus_docling" {
     # Require pull request reviews before merging
     pull_request {
       dismiss_stale_reviews_on_push     = true
-      require_code_owner_review         = true
-      required_review_thread_resolution = true
-      require_last_push_approval        = true
     }
 
     required_status_checks {
