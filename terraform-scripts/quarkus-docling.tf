@@ -68,7 +68,7 @@ resource "github_repository_ruleset" "quarkus_docling" {
 
   bypass_actors {
     actor_type  = "RepositoryRole"
-    actor_id    = "maintain"
+    actor_id    = 2
     bypass_mode = "always"
   }
 
