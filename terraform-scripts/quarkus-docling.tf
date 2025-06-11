@@ -85,8 +85,8 @@ resource "github_repository_ruleset" "quarkus_docling" {
       strict_required_status_checks_policy = true
 
       dynamic "required_check" {
-	for_each = var.os_jvm_combos
-        context = "Build on ${each.value.os} - ${each.value.java_version}"
+        for_each = var.os_jvm_combos
+        context  = "Build on ${each.value.os} - ${each.value.java_version}"
       }
     }
   }
