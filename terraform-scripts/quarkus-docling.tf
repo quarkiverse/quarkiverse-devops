@@ -35,6 +35,17 @@ resource "github_team_membership" "quarkus_docling" {
   role     = "maintainer"
 }
 
+variable "os_jvm_combos" {
+  type = list(object({
+    os           = string
+    java_version = number
+  }))
+  default = [
+    { os = "ubuntu-latest", java_version = 17 },
+    { os = "ubuntu-latest", java_version = 21 }
+  ]
+}
+
 # Protect main branch using a ruleset
 resource "github_repository_ruleset" "quarkus_docling" {
   name        = "main"
@@ -55,12 +66,27 @@ resource "github_repository_ruleset" "quarkus_docling" {
     bypass_mode = "always"
   }
 
+  bypass_actors {
+    actor_type  = "RepositoryRole"
+    actor_id    = 2
+    bypass_mode = "always"
+  }
+
   rules {
-    # Prevent force push
-    non_fast_forward = true
     # Require pull request reviews before merging
     pull_request {
+      dismiss_stale_reviews_on_push = true
+    }
 
+    required_status_checks {
+      strict_required_status_checks_policy = true
+
+      dynamic "required_check" {
+        for_each = var.os_jvm_combos
+        content {
+          context = "Build on ${required_check.value.os} - ${required_check.value.java_version}"
+        }
+      }
     }
   }
 }
