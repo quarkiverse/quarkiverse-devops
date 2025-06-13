@@ -8,6 +8,9 @@ resource "github_repository" "quarkus_docling" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
+  allow_merge_commit     = false
+  allow_rebase_merge     = false
+  allow_auto_merge       = true
   topics                 = ["quarkus-extension", "quarkus", "docling", "ai", "document-processing", "rag", "embedding"]
 }
 
