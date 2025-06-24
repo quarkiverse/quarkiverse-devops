@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_fury" {
   name                        = "quarkus-fory"
   description                 = "A blazingly fast multi-language serialization framework powered by JIT and zero-copy."
-  homepage_url                = "https://docs.quarkiverse.io/quarkus-fury/dev"
+  homepage_url                = "https://docs.quarkiverse.io/quarkus-fory/dev"
   allow_update_branch         = true
   allow_merge_commit          = false
   allow_rebase_merge          = false
