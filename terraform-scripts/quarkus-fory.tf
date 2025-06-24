@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_fury" {
   name                        = "quarkus-fory"
   description                 = "A blazingly fast multi-language serialization framework powered by JIT and zero-copy."
-  homepage_url                = "https://docs.quarkiverse.io/quarkus-fury/dev"
+  homepage_url                = "https://docs.quarkiverse.io/quarkus-fory/dev"
   allow_update_branch         = true
   allow_merge_commit          = false
   allow_rebase_merge          = false
@@ -35,7 +35,7 @@ resource "github_team_repository" "quarkus_fury" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_fury" {
-  for_each = { for tm in ["chaokunyang", "zhfeng"] : tm => tm }
+  for_each = { for tm in ["chaokunyang", "zhfeng", "JiriOndrusek"] : tm => tm }
   team_id  = github_team.quarkus_fury.id
   username = each.value
   role     = "maintainer"
