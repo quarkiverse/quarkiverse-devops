@@ -128,6 +128,7 @@ terraform-scripts/quarkus-quickjs4j.tf                          @quarkiverse/qua
 terraform-scripts/quarkus-quinoa.tf                             @quarkiverse/quarkiverse-quinoa
 terraform-scripts/quarkus-qute-web.tf                           @quarkiverse/quarkiverse-qute-web
 terraform-scripts/quarkus-rabbitmq-client.tf                    @quarkiverse/quarkiverse-rabbitmq-client
+terraform-scripts/quarkus-rage4j.tf                             @quarkiverse/quarkiverse-rage4j
 terraform-scripts/quarkus-reactive-h2-client                    @quarkiverse/quarkiverse-reactive-h2-client
 terraform-scripts/quarkus-reactive-mysql-pool-client            @quarkiverse/quarkiverse-reactive-mysql-pool-client
 terraform-scripts/quarkus-reactive-messaging-http.tf            @quarkiverse/quarkiverse-reactive-messaging-http
