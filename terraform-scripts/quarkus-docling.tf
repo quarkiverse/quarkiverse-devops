@@ -7,6 +7,7 @@ resource "github_repository" "quarkus_docling" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
+  has_discussions        = true
   vulnerability_alerts   = true
   allow_merge_commit     = false
   allow_rebase_merge     = false
