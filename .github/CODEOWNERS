@@ -20,6 +20,7 @@ terraform-scripts/quarkus-bucket4j.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-business-score.tf                     @quarkiverse/quarkiverse-business-score
 terraform-scripts/quarkus-cert-manager.tf                       @quarkiverse/quarkiverse-cert-manager
 terraform-scripts/quarkus-chappie.tf                            @quarkiverse/quarkiverse-chappie
+terraform-scripts/quarkus-ci-extensions.tf                      @quarkiverse/quarkiverse-ci-extensions
 terraform-scripts/quarkus-code-server.tf                        @quarkiverse/quarkiverse-code-server
 terraform-scripts/quarkus-config-extensions.tf                  @quarkiverse/quarkiverse-config-extensions
 terraform-scripts/quarkus-couchbase.tf                          @quarkiverse/quarkiverse-couchbase
