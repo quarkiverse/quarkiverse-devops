@@ -3,6 +3,7 @@ resource "github_repository" "quarkus_operator_sdk" {
   name                   = "quarkus-operator-sdk"
   description            = "Quarkus Extension to create Kubernetes Operators in Java using the Java Operator SDK (https://github.com/java-operator-sdk/java-operator-sdk) project"
   allow_update_branch    = true
+  allow_merge_commit     = false
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
