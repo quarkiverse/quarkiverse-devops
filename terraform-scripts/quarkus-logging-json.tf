@@ -28,7 +28,7 @@ resource "github_team_repository" "quarkus_logging_json" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_logging_json" {
-  for_each = { for tm in ["SlyngDK"] : tm => tm }
+  for_each = { for tm in ["SlyngDK", "melloware"] : tm => tm }
   team_id  = github_team.quarkus_logging_json.id
   username = each.value
   role     = "maintainer"
