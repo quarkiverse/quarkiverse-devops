@@ -45,6 +45,7 @@ terraform-scripts/quarkus-github-action.tf                      @quarkiverse/qua
 terraform-scripts/quarkus-github-app.tf                         @quarkiverse/quarkiverse-github-app
 terraform-scripts/quarkus-google-cloud-services.tf              @quarkiverse/quarkiverse-google-cloud-services
 terraform-scripts/quarkus-groovy.tf                             @quarkiverse/quarkiverse-groovy
+terraform-scripts/quarkus-grpc-zero.tf                          @quarkiverse/quarkiverse-grpc-zero
 terraform-scripts/quarkus-helm.tf                               @quarkiverse/quarkiverse-helm
 terraform-scripts/quarkus-hibernate-search-extras.tf            @quarkiverse/quarkiverse-hibernate-search-extras
 terraform-scripts/quarkus-hibernate-types.tf                    @quarkiverse/quarkiverse-hibernate-types
