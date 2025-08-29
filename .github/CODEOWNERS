@@ -116,7 +116,7 @@ terraform-scripts/quarkus-opentelemetry-exporter.tf             @quarkiverse/qua
 terraform-scripts/quarkus-operator-sdk.tf                       @quarkiverse/quarkiverse-operator-sdk
 terraform-scripts/quarkus-oras.tf                               @quarkiverse/quarkiverse-oras
 terraform-scripts/quarkus-pact.tf                               @quarkiverse/quarkiverse-pact
-terraform-scripts/quarkus-payara-cloud.tf                       @quarkiverse/quarkiverse-payara-cloud
+terraform-scripts/quarkus-payara-qube.tf                        @quarkiverse/quarkiverse-payara-qube
 terraform-scripts/quarkus-pdfbox.tf                             @quarkiverse/quarkiverse-pdfbox
 terraform-scripts/quarkus-pinot.tf                              @quarkiverse/quarkiverse-pinot
 terraform-scripts/quarkus-playpen.tf                            @quarkiverse/quarkiverse-playpen
