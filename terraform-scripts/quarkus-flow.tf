@@ -8,7 +8,7 @@ resource "github_repository" "quarkus_flow" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai"]
+  topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai", "langchain4j"]
 }
 
 # Create team
