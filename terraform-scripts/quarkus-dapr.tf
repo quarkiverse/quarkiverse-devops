@@ -8,7 +8,7 @@ resource "github_repository" "quarkus_dapr" {
   delete_branch_on_merge = true
   has_issues             = true
   vulnerability_alerts   = true
-  topics                 = ["quarkus-extension"]
+  topics                 = ["quarkus-extension", "hacktoberfest"]
 }
 
 # Create team
