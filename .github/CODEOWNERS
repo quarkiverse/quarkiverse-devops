@@ -158,7 +158,6 @@ terraform-scripts/quarkus-tekton.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-tekton-client.tf                      @quarkiverse/quarkiverse-tekton-client
 terraform-scripts/quarkus-temporal.tf                           @quarkiverse/quarkiverse-temporal
 terraform-scripts/quarkus-tika.tf                               @quarkiverse/quarkiverse-tika
-terraform-scripts/quarkus-togglz.tf                             @quarkiverse/quarkiverse-togglz
 terraform-scripts/quarkus-unleash.tf                            @quarkiverse/quarkiverse-unleash
 terraform-scripts/quarkus-vault.tf                              @quarkiverse/quarkiverse-vault
 terraform-scripts/quarkus-web-bundler.tf                        @quarkiverse/quarkiverse-web-bundler
