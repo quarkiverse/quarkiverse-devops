@@ -111,7 +111,6 @@ terraform-scripts/quarkus-ngrok.tf                              @quarkiverse/qua
 terraform-scripts/quarkus-observability-minecraft.tf            @quarkiverse/quarkiverse-observability-minecraft
 terraform-scripts/quarkus-oidc-proxy.tf                         @quarkiverse/quarkiverse-oidc-proxy
 terraform-scripts/quarkus-omnifaces.tf                          @quarkiverse/quarkiverse-omnifaces
-terraform-scripts/quarkus-open-feature.tf                       @quarkiverse/quarkiverse-open-feature
 terraform-scripts/quarkus-openapi-generator.tf                  @quarkiverse/quarkiverse-openapi-generator
 terraform-scripts/quarkus-opencv.tf                             @quarkiverse/quarkiverse-opencv
 terraform-scripts/quarkus-openfga-client.tf                     @quarkiverse/quarkiverse-openfga-client
