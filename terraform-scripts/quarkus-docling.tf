@@ -46,7 +46,8 @@ variable "os_jvm_combos" {
   }))
   default = [
     { os = "ubuntu-latest", java_version = 17 },
-    { os = "ubuntu-latest", java_version = 21 }
+    { os = "ubuntu-latest", java_version = 21 },
+    { os = "ubuntu-latest", java_version = 25 }
   ]
 }
 
