@@ -29,6 +29,7 @@ override.tf.json
 # example: *tfplan*
 
 .idea/
+*.iml
 .DS_Store
 
 # Eclipse
