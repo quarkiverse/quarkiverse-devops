@@ -33,3 +33,33 @@ resource "github_team_membership" "quarkus_wiremock" {
   username = each.value
   role     = "maintainer"
 }
+
+# Protect main branch using a ruleset
+resource "github_repository_ruleset" "quarkus_UNIQUE_NAME" {
+  name        = "main"
+  repository  = github_repository.quarkus_wiremock.name
+  target      = "branch"
+  enforcement = "active"
+
+  conditions {
+    ref_name {
+      include = ["~DEFAULT_BRANCH"]
+      exclude = []
+    }
+  }
+
+  bypass_actors {
+    actor_id    = data.github_app.quarkiverse_ci.id
+    actor_type  = "Integration"
+    bypass_mode = "always"
+  }
+
+  rules {
+    # Prevent force push
+    non_fast_forward = true
+    # Require pull request reviews before merging
+    pull_request {
+
+    }
+  }
+}
