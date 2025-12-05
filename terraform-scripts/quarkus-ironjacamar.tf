@@ -1,9 +1,10 @@
 # Create repository
 resource "github_repository" "quarkus_ironjacamar" {
   name                   = "quarkus-ironjacamar"
-  description            = "IronJacamar is an implementation of the Jakarta Connector Architecture specification"
+  description            = "IronJacamar is an implementation of the Jakarta Connectors Architecture (JCA) specification"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-ironjacamar/dev/index.html"
   allow_update_branch    = true
+  allow_auto_merge       = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
