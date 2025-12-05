@@ -35,7 +35,7 @@ resource "github_team_membership" "quarkus_wiremock" {
 }
 
 # Protect main branch using a ruleset
-resource "github_repository_ruleset" "quarkus_UNIQUE_NAME" {
+resource "github_repository_ruleset" "quarkus_wiremock" {
   name        = "main"
   repository  = github_repository.quarkus_wiremock.name
   target      = "branch"
