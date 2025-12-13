@@ -41,7 +41,7 @@ resource "github_team_membership" "quarkus_rabbitmq_client" {
   role     = "maintainer"
 }
 
-resource "github_repository_ruleset" "quarkus_datafaker" {
+resource "github_repository_ruleset" "quarkus_rabbitmq_client" {
   name        = "main"
   repository  = github_repository.quarkus_rabbitmq_client.name
   target      = "branch"
