@@ -4,6 +4,9 @@ resource "github_repository" "quarkus_redoc" {
   description            = "OpenAPI/Swagger-generated API Reference Documentation"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-redoc/dev"
   allow_update_branch    = true
+  allow_auto_merge       = true
+  allow_merge_commit     = false
+  allow_squash_merge     = false
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
