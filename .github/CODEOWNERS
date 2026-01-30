@@ -82,6 +82,7 @@ terraform-scripts/quarkus-kerberos.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-kiota.tf                              @quarkiverse/quarkiverse-kiota
 terraform-scripts/quarkus-kubevirt.tf                           @quarkiverse/quarkiverse-kubevirt
 terraform-scripts/quarkus-langchain4j.tf                        @quarkiverse/quarkiverse-langchain4j
+terraform-scripts/quarkus-libpostal.tf                          @quarkiverse/quarkiverse-libpostal
 terraform-scripts/quarkus-logging-cloudwatch.tf                 @quarkiverse/quarkiverse-logging-cloudwatch
 terraform-scripts/quarkus-logging-kafka.tf                      @quarkiverse/quarkiverse-logging-kafka
 terraform-scripts/quarkus-logging-json.tf                       @quarkiverse/quarkiverse-logging-json
