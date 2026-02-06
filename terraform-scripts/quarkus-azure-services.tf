@@ -4,6 +4,7 @@ resource "github_repository" "quarkus_azure_services" {
   description            = "Quarkus extensions for Azure services"
   archive_on_destroy     = true
   delete_branch_on_merge = true
+  has_discussions        = true
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "quarkus", "azure"]
