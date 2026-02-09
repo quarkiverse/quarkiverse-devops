@@ -51,6 +51,17 @@ variable "os_jvm_combos" {
   ]
 }
 
+variable "os_jvm_native_combos" {
+  type = list(object({
+    os           = string
+    java_version = number
+  }))
+  default = [
+    { os = "ubuntu-latest", java_version = 21 },
+    { os = "ubuntu-latest", java_version = 25 }
+  ]
+}
+
 # Protect main branch using a ruleset
 resource "github_repository_ruleset" "quarkus_docling" {
   name        = "main"
@@ -90,6 +101,13 @@ resource "github_repository_ruleset" "quarkus_docling" {
         for_each = var.os_jvm_combos
         content {
           context = "Build on ${required_check.value.os} - ${required_check.value.java_version}"
+        }
+      }
+
+      dynamic "required_check" {
+        for_each = var.os_jvm_native_combos
+        content {
+          context = "Build native on ${required_check.value.os} - ${required_check.value.java_version}"
         }
       }
     }
