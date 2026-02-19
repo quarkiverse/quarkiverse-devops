@@ -1,4 +1,5 @@
 terraform-scripts/main.tf                                       @quarkiverse/quarkiverse-owners
+terraform-scripts/quarkus-aesh.tf                               @quarkiverse/quarkiverse-aesh
 terraform-scripts/quarkus-amazon-alexa.tf                       @quarkiverse/quarkiverse-amazon-alexa
 terraform-scripts/quarkus-amazon-services.tf                    @quarkiverse/quarkiverse-amazon-services
 terraform-scripts/quarkus-antivirus.tf                          @quarkiverse/quarkiverse-antivirus
