@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_logging_logback" {
 resource "github_team" "quarkus_logging_logback" {
   name                      = "quarkiverse-logging-logback"
   description               = "Quarkiverse team for the logback Logging extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

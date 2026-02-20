@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_sa_token" {
 resource "github_team" "quarkus_sa_token" {
   name                      = "quarkiverse-sa-token"
   description               = "sa-token team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

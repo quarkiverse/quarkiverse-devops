@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_tekton" {
 resource "github_team" "quarkus_tekton" {
   name                      = "quarkiverse-tekton"
   description               = "Quarkiverse team for the tekton extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

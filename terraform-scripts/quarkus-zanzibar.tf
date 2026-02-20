@@ -16,7 +16,6 @@ resource "github_repository" "quarkus_zanzibar" {
 resource "github_team" "quarkus_zanzibar" {
   name                      = "quarkiverse-zanzibar"
   description               = "Quarkiverse team for the zanzibar Quarkus extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

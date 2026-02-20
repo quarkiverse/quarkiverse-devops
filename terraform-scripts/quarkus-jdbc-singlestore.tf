@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_jdbc_singlestore" {
 resource "github_team" "quarkus_jdbc_singlestore" {
   name                      = "quarkiverse-jdbc-singlestore"
   description               = "jdbc-singlestore team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

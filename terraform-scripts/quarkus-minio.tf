@@ -19,7 +19,6 @@ resource "github_repository" "quarkus_minio" {
 resource "github_team" "quarkus_minio" {
   name                      = "quarkiverse-minio"
   description               = "Quarkiverse team for the minio extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

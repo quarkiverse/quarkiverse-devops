@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_datafaker" {
 resource "github_team" "quarkus_datafaker" {
   name                      = "quarkiverse-datafaker"
   description               = "datafaker team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

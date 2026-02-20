@@ -16,7 +16,6 @@ resource "github_repository" "quarkus_groovy" {
 resource "github_team" "quarkus_groovy" {
   name                      = "quarkiverse-groovy"
   description               = "groovy team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

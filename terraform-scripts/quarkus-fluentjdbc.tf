@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_fluentjdbc" {
 resource "github_team" "quarkus_fluentjdbc" {
   name                      = "quarkiverse-fluentjdbc"
   description               = "fluentjdbc team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

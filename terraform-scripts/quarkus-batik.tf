@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_batik" {
 resource "github_team" "quarkus_batik" {
   name                      = "quarkiverse-batik"
   description               = "batik team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

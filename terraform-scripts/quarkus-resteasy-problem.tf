@@ -20,7 +20,6 @@ resource "github_repository" "quarkus_resteasy_problem" {
 resource "github_team" "quarkus_resteasy_problem" {
   name                      = "quarkiverse-resteasy-problem"
   description               = "resteasy-problem team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

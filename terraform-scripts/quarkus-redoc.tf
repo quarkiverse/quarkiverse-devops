@@ -18,7 +18,6 @@ resource "github_repository" "quarkus_redoc" {
 resource "github_team" "quarkus_redoc" {
   name                      = "quarkiverse-redoc"
   description               = "redoc team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

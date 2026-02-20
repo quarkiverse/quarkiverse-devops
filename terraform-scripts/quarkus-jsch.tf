@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_jsch" {
 resource "github_team" "quarkus_jsch" {
   name                      = "quarkiverse-jsch"
   description               = "Quarkiverse team for the JSch extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_omnifaces" {
 resource "github_team" "quarkus_omnifaces" {
   name                      = "quarkiverse-omnifaces"
   description               = "omnifaces team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

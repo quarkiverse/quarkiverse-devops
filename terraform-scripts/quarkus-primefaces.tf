@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_primefaces" {
 resource "github_team" "quarkus_primefaces" {
   name                      = "quarkiverse-primefaces"
   description               = "primefaces team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

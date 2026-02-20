@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_authzed_client" {
 resource "github_team" "quarkus_authzed_client" {
   name                      = "quarkiverse-authzed-client"
   description               = "authzed-client team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

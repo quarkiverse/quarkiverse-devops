@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_grpc_zero" {
 resource "github_team" "quarkus_grpc_zero" {
   name                      = "quarkiverse-grpc-zero"
   description               = "grpc-zero team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

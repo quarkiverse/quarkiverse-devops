@@ -18,7 +18,6 @@ resource "github_repository" "quarkus_bucket4j" {
 resource "github_team" "quarkus_bucket4j" {
   name                      = "quarkiverse-bucket4j"
   description               = "bucket4j team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

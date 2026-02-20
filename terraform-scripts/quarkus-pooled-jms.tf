@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_pooled_jms" {
 resource "github_team" "quarkus_pooled_jms" {
   name                      = "quarkiverse-pooled-jms"
   description               = "pooled-jms team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

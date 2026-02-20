@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_logging_cloudwatch" {
 resource "github_team" "quarkus_logging_cloudwatch" {
   name                      = "quarkiverse-logging-cloudwatch"
   description               = "Quarkiverse team for the logging-cloudwatch extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

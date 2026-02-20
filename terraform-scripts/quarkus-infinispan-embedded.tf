@@ -16,7 +16,6 @@ resource "github_repository" "quarkus_infinispan_embedded" {
 resource "github_team" "quarkus_infinispan_embedded" {
   name                      = "quarkiverse-infinispan-embedded"
   description               = "infinispan-embedded team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

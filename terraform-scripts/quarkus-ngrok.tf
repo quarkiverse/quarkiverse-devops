@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_ngrok" {
 resource "github_team" "quarkus_ngrok" {
   name                      = "quarkiverse-ngrok"
   description               = "ngrok team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

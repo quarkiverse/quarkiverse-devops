@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_jackson_jq" {
 resource "github_team" "quarkus_jackson_jq" {
   name                      = "quarkiverse-jackson-jq"
   description               = "Quarkiverse team for the Jackson JQ extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_mdns" {
 resource "github_team" "quarkus_mdns" {
   name                      = "quarkiverse-mdns"
   description               = "mdns team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

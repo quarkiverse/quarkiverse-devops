@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_easy_retrofit" {
 resource "github_team" "quarkus_easy_retrofit" {
   name                      = "quarkiverse-easy-retrofit"
   description               = "easy-retrofit team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

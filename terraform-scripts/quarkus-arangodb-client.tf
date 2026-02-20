@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_arangodb_client" {
 resource "github_team" "quarkus_arangodb_client" {
   name                      = "quarkiverse-arangodb-client"
   description               = "arangodb-client team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

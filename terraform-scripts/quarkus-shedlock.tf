@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_shedlock" {
 resource "github_team" "quarkus_shedlock" {
   name                      = "quarkiverse-shedlock"
   description               = "shedlock team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

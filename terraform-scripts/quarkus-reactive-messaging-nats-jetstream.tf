@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_reactive_messaging_nats_jetstream" {
 resource "github_team" "quarkus_reactive_messaging_nats_jetstream" {
   name                      = "quarkiverse-reactive-messaging-nats-jetstream"
   description               = "Quarkiverse team for the Reactive Messaging NATS.io JetStream extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

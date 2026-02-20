@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_barcode" {
 resource "github_team" "quarkus_barcode" {
   name                      = "quarkiverse-barcode"
   description               = "barcode team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

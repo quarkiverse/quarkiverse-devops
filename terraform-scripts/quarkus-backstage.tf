@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_backstage" {
 resource "github_team" "quarkus_backstage" {
   name                      = "quarkiverse-backstage"
   description               = "backstage team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

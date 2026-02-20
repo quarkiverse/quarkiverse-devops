@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_openfga_client" {
 resource "github_team" "quarkus_openfga_client" {
   name                      = "quarkiverse-openfga-client"
   description               = "Quarkiverse team for the openfga-client extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

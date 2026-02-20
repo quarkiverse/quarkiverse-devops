@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_azure_services" {
 resource "github_team" "quarkus_azure_services" {
   name                      = "quarkiverse-azure-services"
   description               = "Quarkiverse team for the Azure services extensions"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

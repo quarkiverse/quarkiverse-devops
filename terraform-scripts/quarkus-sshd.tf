@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_sshd" {
 resource "github_team" "quarkus_sshd" {
   name                      = "quarkiverse-sshd"
   description               = "sshd team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_hivemq_client" {
 resource "github_team" "quarkus_hivemq_client" {
   name                      = "quarkiverse-hivemq-client"
   description               = "Quarkiverse team for the hivemq_client extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

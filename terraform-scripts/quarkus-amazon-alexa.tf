@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_amazon_alexa" {
 resource "github_team" "quarkus_amazon_alexa" {
   name                      = "quarkiverse-amazon-alexa"
   description               = "Quarkiverse team for the Amazon Alexa extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

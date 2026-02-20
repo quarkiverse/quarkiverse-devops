@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_cert_manager" {
 resource "github_team" "quarkus_cert_manager" {
   name                      = "quarkiverse-cert-manager"
   description               = "cert-manager team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

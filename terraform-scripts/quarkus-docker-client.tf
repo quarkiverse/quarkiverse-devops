@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_docker_client" {
 resource "github_team" "quarkus_docker_client" {
   name                      = "quarkiverse-docker-client"
   description               = "docker-client team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

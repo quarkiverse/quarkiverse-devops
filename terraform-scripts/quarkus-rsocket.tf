@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_rsocket" {
 resource "github_team" "quarkus_rsocket" {
   name                      = "quarkiverse-rsocket"
   description               = "Quarkiverse team for the rsocket extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_file_vault" {
 resource "github_team" "quarkus_file_vault" {
   name                      = "quarkiverse-file-vault"
   description               = "Quarkiverse file-vault team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_qute_server_pages" {
 resource "github_team" "quarkus_qute_server_pages" {
   name                      = "quarkiverse-qute-web"
   description               = "qute-web team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

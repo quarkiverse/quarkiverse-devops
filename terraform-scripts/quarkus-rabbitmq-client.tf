@@ -21,7 +21,6 @@ resource "github_repository" "quarkus_rabbitmq_client" {
 resource "github_team" "quarkus_rabbitmq_client" {
   name                      = "quarkiverse-rabbitmq-client"
   description               = "Quarkiverse team for the rabbitmq-client extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_reactive_messaging_http" {
 resource "github_team" "quarkus_reactive_messaging_http" {
   name                      = "quarkiverse-reactive-messaging-http"
   description               = "Quarkiverse team for the Reactive Messaging HTTP extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

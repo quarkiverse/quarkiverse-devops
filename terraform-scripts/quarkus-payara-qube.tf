@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_payara_qube" {
 resource "github_team" "quarkus_payara_qube" {
   name                      = "quarkiverse-payara-qube"
   description               = "payara-qube team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

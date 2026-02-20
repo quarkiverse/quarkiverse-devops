@@ -16,7 +16,6 @@ resource "github_repository" "quarkus_flow" {
 resource "github_team" "quarkus_flow" {
   name                      = "quarkiverse-flow"
   description               = "flow team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }
@@ -41,7 +40,6 @@ resource "github_team_membership" "quarkus_flow" {
 resource "github_team" "quarkus_flow_triage" {
   name                      = "quarkiverse-flow-triage"
   description               = "triage flow team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

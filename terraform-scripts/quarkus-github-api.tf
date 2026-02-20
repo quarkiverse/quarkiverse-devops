@@ -20,7 +20,6 @@ resource "github_repository" "quarkus_github_api" {
 resource "github_team" "quarkus_github_api" {
   name                      = "quarkiverse-github-api"
   description               = "Quarkiverse team for the GitHub API extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

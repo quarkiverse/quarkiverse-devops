@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_scala" {
 resource "github_team" "quarkus_scala" {
   name                      = "quarkiverse-scala"
   description               = "Quarkiverse team for the scala extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

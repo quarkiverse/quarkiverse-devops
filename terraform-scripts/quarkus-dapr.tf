@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_dapr" {
 resource "github_team" "quarkus_dapr" {
   name                      = "quarkiverse-dapr"
   description               = "dapr team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

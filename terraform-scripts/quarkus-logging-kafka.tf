@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_logging_kafka" {
 resource "github_team" "quarkus_logging_kafka" {
   name                      = "quarkiverse-logging-kafka"
   description               = "Quarkiverse team for the logging-kafka extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

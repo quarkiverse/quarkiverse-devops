@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_homeassistant" {
 resource "github_team" "quarkus_homeassistant" {
   name                      = "quarkiverse-homeassistant"
   description               = "HomeAssistant team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

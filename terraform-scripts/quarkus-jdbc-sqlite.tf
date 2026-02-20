@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_jdbc_sqlite" {
 resource "github_team" "quarkus_jdbc_sqlite" {
   name                      = "quarkiverse-jdbc-sqlite"
   description               = "jdbc-sqlite team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

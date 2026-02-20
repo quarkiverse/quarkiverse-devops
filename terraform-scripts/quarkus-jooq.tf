@@ -19,7 +19,6 @@ resource "github_repository" "quarkus_jooq" {
 resource "github_team" "quarkus_jooq" {
   name                      = "quarkiverse-jooq"
   description               = "Quarkiverse team for the jooq extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

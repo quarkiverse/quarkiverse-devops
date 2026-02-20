@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_pdfbox" {
 resource "github_team" "quarkus_pdfbox" {
   name                      = "quarkiverse-pdfbox"
   description               = "pdfbox team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

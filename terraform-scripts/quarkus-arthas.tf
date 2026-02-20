@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_arthas" {
 resource "github_team" "quarkus_arthas" {
   name                      = "quarkiverse-arthas"
   description               = "arthas team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

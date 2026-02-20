@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_artemis" {
 resource "github_team" "quarkus_artemis" {
   name                      = "quarkiverse-artemis"
   description               = "Quarkiverse team for the Artemis extensions"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

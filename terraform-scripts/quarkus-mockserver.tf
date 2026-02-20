@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_mockserver" {
 resource "github_team" "quarkus_mockserver" {
   name                      = "quarkiverse-mockserver"
   description               = "mockserver team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

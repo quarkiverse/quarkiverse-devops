@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_shardingsphere_jdbc" {
 resource "github_team" "quarkus_shardingsphere_jdbc" {
   name                      = "quarkiverse-shardingsphere-jdbc"
   description               = "Quarkiverse team for the Sharding Sphere JDBC extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -17,7 +17,6 @@ resource "github_repository" "quarkus_kiota" {
 resource "github_team" "quarkus_kiota" {
   name                      = "quarkiverse-kiota"
   description               = "kiota team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

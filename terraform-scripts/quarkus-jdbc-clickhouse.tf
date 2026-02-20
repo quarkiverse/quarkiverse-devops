@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_jdbc_clickhouse" {
 resource "github_team" "quarkus_jdbc_clickhouse" {
   name                      = "quarkiverse-jdbc-clickhouse"
   description               = "jdbc-clickhouse team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

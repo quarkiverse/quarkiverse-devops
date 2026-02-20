@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_embedded_postgresql" {
 resource "github_team" "quarkus_embedded_postgresql" {
   name                      = "quarkiverse-embedded-postgresql"
   description               = "embedded-postgresql team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

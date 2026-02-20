@@ -20,7 +20,6 @@ resource "github_repository" "quarkus_logging_splunk" {
 resource "github_team" "quarkus_logging_splunk" {
   name                      = "quarkiverse-logging-splunk"
   description               = "Quarkiverse team for the logging_splunk extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

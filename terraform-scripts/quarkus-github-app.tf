@@ -16,7 +16,6 @@ resource "github_repository" "quarkus_github_app" {
 resource "github_team" "quarkus_github_app" {
   name                      = "quarkiverse-github-app"
   description               = "Quarkiverse team for the GitHub App extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

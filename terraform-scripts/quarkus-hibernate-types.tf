@@ -20,7 +20,6 @@ resource "github_repository" "quarkus_hibernate_types" {
 resource "github_team" "quarkus_hibernate_types" {
   name                      = "quarkiverse-hibernate-types"
   description               = "Quarkiverse team for the hibernate_types extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

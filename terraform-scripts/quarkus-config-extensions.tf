@@ -13,7 +13,6 @@ resource "github_repository" "quarkus_config_extensions" {
 resource "github_team" "quarkus_config_extensions" {
   name                      = "quarkiverse-config-extensions"
   description               = "Quarkiverse team for the config-extensions extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

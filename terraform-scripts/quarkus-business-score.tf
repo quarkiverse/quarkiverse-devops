@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_business_score" {
 resource "github_team" "quarkus_business_score" {
   name                      = "quarkiverse-business-score"
   description               = "business-score team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -24,7 +24,6 @@ resource "github_repository" "quarkus_operator_sdk" {
 resource "github_team" "quarkus_operator_sdk" {
   name                      = "quarkiverse-operator-sdk"
   description               = "Quarkiverse team for the operator-sdk extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

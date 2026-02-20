@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_jmx" {
 resource "github_team" "quarkus_jmx" {
   name                      = "quarkiverse-jmx"
   description               = "jmx team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_logging_json" {
 resource "github_team" "quarkus_logging_json" {
   name                      = "quarkiverse-logging-json"
   description               = "Quarkiverse team for the logging-json extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

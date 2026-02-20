@@ -14,7 +14,6 @@ resource "github_repository" "quarkus_couchbase" {
 resource "github_team" "quarkus_couchbase" {
   name                      = "quarkiverse-couchbase"
   description               = "couchbase team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

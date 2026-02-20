@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_jdiameter" {
 resource "github_team" "quarkus_jdiameter" {
   name                      = "quarkiverse-jdiameter"
   description               = "jdiameter team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

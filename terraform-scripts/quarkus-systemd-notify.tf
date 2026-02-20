@@ -15,7 +15,6 @@ resource "github_repository" "quarkus_systemd_notify" {
 resource "github_team" "quarkus_systemd_notify" {
   name                      = "quarkiverse-systemd-notify"
   description               = "systemd-notify team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

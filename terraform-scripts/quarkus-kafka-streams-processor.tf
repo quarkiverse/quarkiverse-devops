@@ -16,7 +16,6 @@ resource "github_repository" "quarkus_kafka_streams_processor" {
 resource "github_team" "quarkus_kafka_streams_processor" {
   name                      = "quarkiverse-kafka-streams-processor"
   description               = "kafka-streams-processor team"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }

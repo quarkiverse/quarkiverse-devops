@@ -20,7 +20,6 @@ resource "github_repository" "quarkus_kerberos" {
 resource "github_team" "quarkus_kerberos" {
   name                      = "quarkiverse-kerberos"
   description               = "Quarkiverse team for the kerberos extension"
-  create_default_maintainer = false
   privacy                   = "closed"
   parent_team_id            = data.github_team.quarkiverse_members.id
 }
