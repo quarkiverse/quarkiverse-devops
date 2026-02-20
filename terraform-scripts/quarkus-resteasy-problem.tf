@@ -10,7 +10,6 @@ resource "github_repository" "quarkus_resteasy_problem" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  has_downloads          = true
   has_wiki               = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "rest-problem", "resteasy", "exception-handling", "rfc7807", "rfc9457"]
