@@ -14,10 +14,10 @@ resource "github_repository" "quarkus_flow" {
 ###### Maintainers Team #############
 # Create team
 resource "github_team" "quarkus_flow" {
-  name                      = "quarkiverse-flow"
-  description               = "flow team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-flow"
+  description    = "flow team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -38,10 +38,10 @@ resource "github_team_membership" "quarkus_flow" {
 ###### Triage Team #############
 # Create triage team
 resource "github_team" "quarkus_flow_triage" {
-  name                      = "quarkiverse-flow-triage"
-  description               = "triage flow team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-flow-triage"
+  description    = "triage flow team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

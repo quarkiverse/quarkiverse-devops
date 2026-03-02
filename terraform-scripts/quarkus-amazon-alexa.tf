@@ -11,10 +11,10 @@ resource "github_repository" "quarkus_amazon_alexa" {
 
 # Create team
 resource "github_team" "quarkus_amazon_alexa" {
-  name                      = "quarkiverse-amazon-alexa"
-  description               = "Quarkiverse team for the Amazon Alexa extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-amazon-alexa"
+  description    = "Quarkiverse team for the Amazon Alexa extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

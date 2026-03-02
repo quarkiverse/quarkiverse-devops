@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_apache_pinot" {
 
 # Create team
 resource "github_team" "quarkus_apache_pinot" {
-  name                      = "quarkiverse-pinot"
-  description               = "Quarkiverse team for the Apache Pinot extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-pinot"
+  description    = "Quarkiverse team for the Apache Pinot extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

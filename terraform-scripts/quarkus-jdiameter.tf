@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_jdiameter" {
 
 # Create team
 resource "github_team" "quarkus_jdiameter" {
-  name                      = "quarkiverse-jdiameter"
-  description               = "jdiameter team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-jdiameter"
+  description    = "jdiameter team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

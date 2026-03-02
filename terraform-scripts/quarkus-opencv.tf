@@ -18,10 +18,10 @@ resource "github_repository" "quarkus_opencv" {
 
 # Create team
 resource "github_team" "quarkus_opencv" {
-  name                      = "quarkiverse-opencv"
-  description               = "Quarkiverse team for the opencv extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-opencv"
+  description    = "Quarkiverse team for the opencv extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

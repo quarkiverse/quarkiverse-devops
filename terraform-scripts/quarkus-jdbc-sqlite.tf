@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_jdbc_sqlite" {
 
 # Create team
 resource "github_team" "quarkus_jdbc_sqlite" {
-  name                      = "quarkiverse-jdbc-sqlite"
-  description               = "jdbc-sqlite team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-jdbc-sqlite"
+  description    = "jdbc-sqlite team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

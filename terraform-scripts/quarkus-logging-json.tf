@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_logging_json" {
 
 # Create team
 resource "github_team" "quarkus_logging_json" {
-  name                      = "quarkiverse-logging-json"
-  description               = "Quarkiverse team for the logging-json extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-logging-json"
+  description    = "Quarkiverse team for the logging-json extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

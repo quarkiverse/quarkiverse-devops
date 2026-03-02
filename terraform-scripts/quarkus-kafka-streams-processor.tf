@@ -14,10 +14,10 @@ resource "github_repository" "quarkus_kafka_streams_processor" {
 
 # Create team
 resource "github_team" "quarkus_kafka_streams_processor" {
-  name                      = "quarkiverse-kafka-streams-processor"
-  description               = "kafka-streams-processor team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-kafka-streams-processor"
+  description    = "kafka-streams-processor team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

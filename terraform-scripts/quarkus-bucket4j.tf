@@ -16,10 +16,10 @@ resource "github_repository" "quarkus_bucket4j" {
 
 # Create team
 resource "github_team" "quarkus_bucket4j" {
-  name                      = "quarkiverse-bucket4j"
-  description               = "bucket4j team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-bucket4j"
+  description    = "bucket4j team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

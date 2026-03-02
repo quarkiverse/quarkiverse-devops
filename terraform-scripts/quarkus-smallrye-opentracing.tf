@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_smallrye_opentracing" {
 
 # Create team
 resource "github_team" "quarkus_smallrye_opentracing" {
-  name                      = "quarkiverse-smallrye-opentracing"
-  description               = "smallrye-opentracing team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-smallrye-opentracing"
+  description    = "smallrye-opentracing team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

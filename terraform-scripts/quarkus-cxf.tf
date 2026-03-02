@@ -21,10 +21,10 @@ resource "github_repository" "quarkus_cxf" {
 
 # Create team
 resource "github_team" "quarkus_cxf" {
-  name                      = "quarkiverse-cxf"
-  description               = "Quarkiverse team for the CXF extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-cxf"
+  description    = "Quarkiverse team for the CXF extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

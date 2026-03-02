@@ -19,10 +19,10 @@ resource "github_repository" "quarkus_logging_manager" {
 
 # Create team
 resource "github_team" "quarkus_logging_manager" {
-  name                      = "quarkiverse-logging-manager"
-  description               = "Quarkiverse team for the logging-manager extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-logging-manager"
+  description    = "Quarkiverse team for the logging-manager extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

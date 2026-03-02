@@ -18,10 +18,10 @@ resource "github_repository" "quarkus_hibernate_types" {
 
 # Create team
 resource "github_team" "quarkus_hibernate_types" {
-  name                      = "quarkiverse-hibernate-types"
-  description               = "Quarkiverse team for the hibernate_types extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-hibernate-types"
+  description    = "Quarkiverse team for the hibernate_types extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

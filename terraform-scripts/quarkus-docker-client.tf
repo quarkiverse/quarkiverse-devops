@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_docker_client" {
 
 # Create team
 resource "github_team" "quarkus_docker_client" {
-  name                      = "quarkiverse-docker-client"
-  description               = "docker-client team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-docker-client"
+  description    = "docker-client team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

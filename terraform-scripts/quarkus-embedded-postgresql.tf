@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_embedded_postgresql" {
 
 # Create team
 resource "github_team" "quarkus_embedded_postgresql" {
-  name                      = "quarkiverse-embedded-postgresql"
-  description               = "embedded-postgresql team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-embedded-postgresql"
+  description    = "embedded-postgresql team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

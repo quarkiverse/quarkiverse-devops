@@ -14,10 +14,10 @@ resource "github_repository" "quarkus_groovy" {
 
 # Create team
 resource "github_team" "quarkus_groovy" {
-  name                      = "quarkiverse-groovy"
-  description               = "groovy team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-groovy"
+  description    = "groovy team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

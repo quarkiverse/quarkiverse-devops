@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_amazon_services" {
 
 # Create team
 resource "github_team" "quarkus_amazon_services" {
-  name                      = "quarkiverse-amazon-services"
-  description               = "Quarkiverse team for the Amazon Services extensions"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-amazon-services"
+  description    = "Quarkiverse team for the Amazon Services extensions"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

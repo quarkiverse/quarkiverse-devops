@@ -11,10 +11,10 @@ resource "github_repository" "quarkus_microprofile" {
 
 # Create team
 resource "github_team" "quarkus_microprofile" {
-  name                      = "quarkiverse-microprofile"
-  description               = "Quarkiverse team for the microprofile extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-microprofile"
+  description    = "Quarkiverse team for the microprofile extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

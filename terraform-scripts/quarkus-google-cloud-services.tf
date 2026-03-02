@@ -14,10 +14,10 @@ resource "github_repository" "quarkus_google_cloud_services" {
 
 # Create team
 resource "github_team" "quarkus_google_cloud_services" {
-  name                      = "quarkiverse-google-cloud-services"
-  description               = "Quarkiverse team for the Google Cloud Services extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-google-cloud-services"
+  description    = "Quarkiverse team for the Google Cloud Services extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

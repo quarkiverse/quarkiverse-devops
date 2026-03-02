@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_qute_server_pages" {
 
 # Create team
 resource "github_team" "quarkus_qute_server_pages" {
-  name                      = "quarkiverse-qute-web"
-  description               = "qute-web team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-qute-web"
+  description    = "qute-web team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

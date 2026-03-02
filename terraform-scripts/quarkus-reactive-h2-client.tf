@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_reactive_h2_client" {
 
 # Create team
 resource "github_team" "quarkus_reactive_h2_client" {
-  name                      = "quarkiverse-reactive-h2-client"
-  description               = "reactive-h2-client team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-reactive-h2-client"
+  description    = "reactive-h2-client team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_neo4j" {
 
 # Create team
 resource "github_team" "quarkus_neo4j" {
-  name                      = "quarkiverse-neo4j"
-  description               = "Quarkiverse team for the Neo4j extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-neo4j"
+  description    = "Quarkiverse team for the Neo4j extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

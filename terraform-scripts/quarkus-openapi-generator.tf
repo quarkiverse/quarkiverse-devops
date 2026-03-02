@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_openapi_generator" {
 
 # Create team
 resource "github_team" "quarkus_openapi_generator" {
-  name                      = "quarkiverse-openapi-generator"
-  description               = "openapi-generator team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-openapi-generator"
+  description    = "openapi-generator team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

@@ -11,10 +11,10 @@ resource "github_repository" "quarkus_hibernate_search_extras" {
 
 # Create team
 resource "github_team" "quarkus_hibernate_search_extras" {
-  name                      = "quarkiverse-hibernate-search-extras"
-  description               = "Quarkiverse team for the Hibernate Search Extras extensions"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-hibernate-search-extras"
+  description    = "Quarkiverse team for the Hibernate Search Extras extensions"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

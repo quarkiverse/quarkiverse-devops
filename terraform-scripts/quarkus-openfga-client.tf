@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_openfga_client" {
 
 # Create team
 resource "github_team" "quarkus_openfga_client" {
-  name                      = "quarkiverse-openfga-client"
-  description               = "Quarkiverse team for the openfga-client extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-openfga-client"
+  description    = "Quarkiverse team for the openfga-client extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

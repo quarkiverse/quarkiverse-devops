@@ -12,10 +12,10 @@ resource "github_repository" "quarkus_cert_manager" {
 
 # Create team
 resource "github_team" "quarkus_cert_manager" {
-  name                      = "quarkiverse-cert-manager"
-  description               = "cert-manager team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-cert-manager"
+  description    = "cert-manager team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

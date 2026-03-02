@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_antora" {
 
 # Create team
 resource "github_team" "quarkus_antora" {
-  name                      = "quarkiverse-antora"
-  description               = "antora team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-antora"
+  description    = "antora team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

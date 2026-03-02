@@ -11,10 +11,10 @@ resource "github_repository" "quarkus_reactive_messaging_http" {
 
 # Create team
 resource "github_team" "quarkus_reactive_messaging_http" {
-  name                      = "quarkiverse-reactive-messaging-http"
-  description               = "Quarkiverse team for the Reactive Messaging HTTP extension"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-reactive-messaging-http"
+  description    = "Quarkiverse team for the Reactive Messaging HTTP extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

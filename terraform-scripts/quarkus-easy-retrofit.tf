@@ -13,10 +13,10 @@ resource "github_repository" "quarkus_easy_retrofit" {
 
 # Create team
 resource "github_team" "quarkus_easy_retrofit" {
-  name                      = "quarkiverse-easy-retrofit"
-  description               = "easy-retrofit team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-easy-retrofit"
+  description    = "easy-retrofit team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
