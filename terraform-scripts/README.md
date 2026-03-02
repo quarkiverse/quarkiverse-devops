@@ -40,10 +40,10 @@ resource "github_repository" "quarkus_UNIQUE_NAME" {
 
 # Create team
 resource "github_team" "quarkus_UNIQUE_NAME" {
-  name                      = "quarkiverse-DASHED-NAME"
-  description               = "DASHED-NAME team"
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-DASHED-NAME"
+  description    = "DASHED-NAME team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
