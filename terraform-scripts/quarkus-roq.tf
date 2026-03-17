@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_statiq" {
   name                   = "quarkus-roq"
   description            = "The Roq Static Site Generator allows to easily create a static website or blog using Quarkus super-powers."
-  homepage_url           = "https://iamroq.com"
+  homepage_url           = "https://iamroq.dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
@@ -13,7 +13,7 @@ resource "github_repository" "quarkus_statiq" {
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
   pages {
-    cname      = "iamroq.com"
+    cname      = "iamroq.dev"
     build_type = "workflow"
     source {
       branch = "main"
