@@ -28,6 +28,11 @@ public class RemoveYq {
 """, "");
             fileContents = fileContents.replace("""
       - name: Install yq
+        uses: dcarbone/install-yq-action@v1.1.1
+
+""", "");
+            fileContents = fileContents.replace("""
+      - name: Install yq
         uses: dcarbone/install-yq-action@v1.0.1
 
 """, "");
