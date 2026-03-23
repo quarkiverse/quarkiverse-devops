@@ -23,17 +23,17 @@ public class RemoveYq {
 """, "");
             fileContents = fileContents.replace("""
       - name: Install yq
-        run: dcarbone/install-yq-action@v1.3.1
+        uses: dcarbone/install-yq-action@v1.3.1
 
 """, "");
             fileContents = fileContents.replace("""
       - name: Install yq
-        run: dcarbone/install-yq-action@v1.0.1
+        uses: dcarbone/install-yq-action@v1.0.1
 
 """, "");
             fileContents = fileContents.replace("""
       - name: Install yq
-        run: dcarbone/install-yq-action@v1
+        uses: dcarbone/install-yq-action@v1
 
 """, "");
             Files.writeString(workflowFile, fileContents);
