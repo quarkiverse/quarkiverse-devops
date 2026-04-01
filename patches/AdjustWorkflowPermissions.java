@@ -39,6 +39,10 @@ public class AdjustWorkflowPermissions {
     private static void insertPermissions(Path workflowFile, String permissions, String before) throws IOException {
         if (Files.exists(workflowFile)) {
             String fileContents = Files.readString(workflowFile);
+            if (fileContents.contains(permissions)) {
+                // If content already exists, skip
+                return;
+            }
             // Add the content before the 'concurrency:' section
             fileContents = fileContents.replace(before, permissions + "\n" + before);
             // Write the contents back to the file
