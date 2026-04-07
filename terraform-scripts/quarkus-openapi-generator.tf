@@ -34,14 +34,6 @@ resource "github_team_membership" "quarkus_openapi_generator" {
   role     = "maintainer"
 }
 
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_openapi_generator" {
-  for_each = { for app in [local.applications.lgtm] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_openapi_generator.name
-}
-
 # Add an admin collaborator to this repository
 resource "github_repository_collaborator" "quarkus_openapi_generator" {
   repository = github_repository.quarkus_openapi_generator.name
