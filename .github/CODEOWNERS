@@ -59,7 +59,6 @@ terraform-scripts/quarkus-homeassistant.tf                      @quarkiverse/qua
 terraform-scripts/quarkus-infinispan-embedded.tf                @quarkiverse/quarkiverse-infinispan-embedded
 terraform-scripts/quarkus-itext.tf                              @quarkiverse/quarkiverse-itext
 terraform-scripts/quarkus-jackson-jq.tf                         @quarkiverse/quarkiverse-jackson-jq
-terraform-scripts/quarkus-jaeger.tf                             @quarkiverse/quarkiverse-jaeger
 terraform-scripts/quarkus-jasperreports.tf                      @quarkiverse/quarkiverse-jasperreports
 terraform-scripts/quarkus-jberet.tf                             @quarkiverse/quarkiverse-jberet
 terraform-scripts/quarkus-jdbc-clickhouse.tf                    @quarkiverse/quarkiverse-jdbc-clickhouse
