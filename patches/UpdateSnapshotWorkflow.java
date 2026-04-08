@@ -50,13 +50,12 @@ public class UpdateSnapshotWorkflow {
                   watch:
                     types: [started]
 
+                permissions:
+                  contents: read
+
                 concurrency:
                   group: ${{ github.workflow }}-${{ github.ref }}
                   cancel-in-progress: true
-
-                defaults:
-                  run:
-                    shell: bash
 
                 jobs:
                   build:
