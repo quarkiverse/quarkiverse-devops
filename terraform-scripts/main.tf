@@ -52,4 +52,8 @@ locals {
     # https://issues.redhat.com/projects/GHQKIVERSE
     sync2jira_redhat = "60685343"
   }
+  secrets = {
+    # This secret is used by the GitHub Actions workflow to publish the generated website to Surge.sh
+    surge_token = "SURGE_TOKEN"
+  }
 }

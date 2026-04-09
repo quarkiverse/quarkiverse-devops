@@ -53,3 +53,11 @@ resource "github_repository_collaborator" "quarkus_statiq" {
   username   = each.value
   permission = "admin"
 }
+
+# Add organization secrets
+resource "github_actions_organization_secret_repository" "quarkus_statiq" {
+  for_each      = { for k in [local.secrets.surge_token] : k => k }
+  secret_name   = each.value
+  repository_id = github_repository.quarkus_statiq.repo_id
+}
+
