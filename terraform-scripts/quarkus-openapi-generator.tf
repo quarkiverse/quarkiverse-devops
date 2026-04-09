@@ -40,3 +40,9 @@ resource "github_repository_collaborator" "quarkus_openapi_generator" {
   username   = "ricardozanini"
   permission = "admin"
 }
+
+resource "github_actions_organization_secret_repository" "quarkus_openapi_generator" {
+  for_each      = { for k in [local.secrets.surge_token] : k => k }
+  secret_name   = each.value
+  repository_id = github_repository.quarkus_openapi_generator.repo_id
+}
