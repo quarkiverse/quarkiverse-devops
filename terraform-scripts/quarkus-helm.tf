@@ -11,11 +11,10 @@ resource "github_repository" "quarkus_helm" {
 
 # Create team
 resource "github_team" "quarkus_helm" {
-  name                      = "quarkiverse-helm"
-  description               = "Quarkiverse Helm team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-helm"
+  description    = "Quarkiverse Helm team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -27,7 +26,7 @@ resource "github_team_repository" "quarkus_helm" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_helm" {
-  for_each = { for tm in ["Sgitario"] : tm => tm }
+  for_each = { for tm in ["Sgitario", "cmoulliard", "xstefank"] : tm => tm }
   team_id  = github_team.quarkus_helm.id
   username = each.value
   role     = "maintainer"

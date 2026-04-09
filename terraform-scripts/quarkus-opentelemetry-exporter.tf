@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_opentelemetry_exporter" {
 
 # Create team
 resource "github_team" "quarkus_opentelemetry_exporter" {
-  name                      = "quarkiverse-opentelemetry-exporter"
-  description               = "opentelemetry-exporter team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-opentelemetry-exporter"
+  description    = "opentelemetry-exporter team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

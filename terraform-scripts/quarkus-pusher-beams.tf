@@ -12,11 +12,10 @@ resource "github_repository" "quarkus_pusher_beams" {
 
 # Create team
 resource "github_team" "quarkus_pusher_beams" {
-  name                      = "quarkiverse-pusher-beams"
-  description               = "Quarkus Pusher Beams team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-pusher-beams"
+  description    = "Quarkus Pusher Beams team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

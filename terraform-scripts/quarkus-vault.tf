@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_vault" {
 
 # Create team
 resource "github_team" "quarkus_vault" {
-  name                      = "quarkiverse-vault"
-  description               = "Quarkiverse team for the HashiCorp Vault extension"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-vault"
+  description    = "Quarkiverse team for the HashiCorp Vault extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

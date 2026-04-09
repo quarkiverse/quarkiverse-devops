@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_grpc_zero" {
 
 # Create team
 resource "github_team" "quarkus_grpc_zero" {
-  name                      = "quarkiverse-grpc-zero"
-  description               = "grpc-zero team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-grpc-zero"
+  description    = "grpc-zero team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

@@ -21,6 +21,26 @@ public class RemoveYq {
         run: sudo add-apt-repository ppa:rmescandon/yq && sudo apt update && sudo apt install yq -y
 
 """, "");
+            fileContents = fileContents.replace("""
+      - name: Install yq
+        uses: dcarbone/install-yq-action@v1.3.1
+
+""", "");
+            fileContents = fileContents.replace("""
+      - name: Install yq
+        uses: dcarbone/install-yq-action@v1.1.1
+
+""", "");
+            fileContents = fileContents.replace("""
+      - name: Install yq
+        uses: dcarbone/install-yq-action@v1.0.1
+
+""", "");
+            fileContents = fileContents.replace("""
+      - name: Install yq
+        uses: dcarbone/install-yq-action@v1
+
+""", "");
             Files.writeString(workflowFile, fileContents);
         }
     }

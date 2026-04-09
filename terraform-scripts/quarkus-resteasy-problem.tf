@@ -10,7 +10,6 @@ resource "github_repository" "quarkus_resteasy_problem" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  has_downloads          = true
   has_wiki               = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "rest-problem", "resteasy", "exception-handling", "rfc7807", "rfc9457"]
@@ -18,11 +17,10 @@ resource "github_repository" "quarkus_resteasy_problem" {
 
 # Create team
 resource "github_team" "quarkus_resteasy_problem" {
-  name                      = "quarkiverse-resteasy-problem"
-  description               = "resteasy-problem team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-resteasy-problem"
+  description    = "resteasy-problem team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

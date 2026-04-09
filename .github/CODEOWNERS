@@ -1,4 +1,5 @@
 terraform-scripts/main.tf                                       @quarkiverse/quarkiverse-owners
+terraform-scripts/quarkus-aesh.tf                               @quarkiverse/quarkiverse-aesh
 terraform-scripts/quarkus-amazon-alexa.tf                       @quarkiverse/quarkiverse-amazon-alexa
 terraform-scripts/quarkus-amazon-services.tf                    @quarkiverse/quarkiverse-amazon-services
 terraform-scripts/quarkus-antivirus.tf                          @quarkiverse/quarkiverse-antivirus
@@ -20,6 +21,7 @@ terraform-scripts/quarkus-bucket4j.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-business-score.tf                     @quarkiverse/quarkiverse-business-score
 terraform-scripts/quarkus-cert-manager.tf                       @quarkiverse/quarkiverse-cert-manager
 terraform-scripts/quarkus-chappie.tf                            @quarkiverse/quarkiverse-chappie
+terraform-scripts/quarkus-chicory.tf                            @quarkiverse/quarkiverse-chicory
 terraform-scripts/quarkus-ci-extensions.tf                      @quarkiverse/quarkiverse-ci-extensions
 terraform-scripts/quarkus-code-server.tf                        @quarkiverse/quarkiverse-code-server
 terraform-scripts/quarkus-config-extensions.tf                  @quarkiverse/quarkiverse-config-extensions
@@ -57,7 +59,6 @@ terraform-scripts/quarkus-homeassistant.tf                      @quarkiverse/qua
 terraform-scripts/quarkus-infinispan-embedded.tf                @quarkiverse/quarkiverse-infinispan-embedded
 terraform-scripts/quarkus-itext.tf                              @quarkiverse/quarkiverse-itext
 terraform-scripts/quarkus-jackson-jq.tf                         @quarkiverse/quarkiverse-jackson-jq
-terraform-scripts/quarkus-jaeger.tf                             @quarkiverse/quarkiverse-jaeger
 terraform-scripts/quarkus-jasperreports.tf                      @quarkiverse/quarkiverse-jasperreports
 terraform-scripts/quarkus-jberet.tf                             @quarkiverse/quarkiverse-jberet
 terraform-scripts/quarkus-jdbc-clickhouse.tf                    @quarkiverse/quarkiverse-jdbc-clickhouse
@@ -81,6 +82,7 @@ terraform-scripts/quarkus-kerberos.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-kiota.tf                              @quarkiverse/quarkiverse-kiota
 terraform-scripts/quarkus-kubevirt.tf                           @quarkiverse/quarkiverse-kubevirt
 terraform-scripts/quarkus-langchain4j.tf                        @quarkiverse/quarkiverse-langchain4j
+terraform-scripts/quarkus-libpostal.tf                          @quarkiverse/quarkiverse-libpostal
 terraform-scripts/quarkus-logging-cloudwatch.tf                 @quarkiverse/quarkiverse-logging-cloudwatch
 terraform-scripts/quarkus-logging-kafka.tf                      @quarkiverse/quarkiverse-logging-kafka
 terraform-scripts/quarkus-logging-json.tf                       @quarkiverse/quarkiverse-logging-json
@@ -121,7 +123,6 @@ terraform-scripts/quarkus-oras.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-pact.tf                               @quarkiverse/quarkiverse-pact
 terraform-scripts/quarkus-payara-qube.tf                        @quarkiverse/quarkiverse-payara-qube
 terraform-scripts/quarkus-pdfbox.tf                             @quarkiverse/quarkiverse-pdfbox
-terraform-scripts/quarkus-pinot.tf                              @quarkiverse/quarkiverse-pinot
 terraform-scripts/quarkus-playpen.tf                            @quarkiverse/quarkiverse-playpen
 terraform-scripts/quarkus-playwright.tf                         @quarkiverse/quarkiverse-playwright
 terraform-scripts/quarkus-poi.tf                                @quarkiverse/quarkiverse-poi
@@ -131,6 +132,8 @@ terraform-scripts/quarkus-prettytime.tf                         @quarkiverse/qua
 terraform-scripts/quarkus-primefaces.tf                         @quarkiverse/quarkiverse-primefaces
 terraform-scripts/quarkus-proxy-wasm.tf                         @quarkiverse/quarkiverse-proxy-wasm
 terraform-scripts/quarkus-pusher-beams.tf                       @quarkiverse/quarkiverse-pusher-beams
+terraform-scripts/quarkus-qdrant.tf                             @quarkiverse/quarkiverse-qdrant
+terraform-scripts/quarkus-qubit.tf                              @quarkiverse/quarkiverse-qubit
 terraform-scripts/quarkus-quickjs4j.tf                          @quarkiverse/quarkiverse-quickjs4j
 terraform-scripts/quarkus-quinoa.tf                             @quarkiverse/quarkiverse-quinoa
 terraform-scripts/quarkus-qute-web.tf                           @quarkiverse/quarkiverse-qute-web
@@ -140,6 +143,7 @@ terraform-scripts/quarkus-reactive-h2-client                    @quarkiverse/qua
 terraform-scripts/quarkus-reactive-mysql-pool-client            @quarkiverse/quarkiverse-reactive-mysql-pool-client
 terraform-scripts/quarkus-reactive-messaging-http.tf            @quarkiverse/quarkiverse-reactive-messaging-http
 terraform-scripts/quarkus-reactive-messaging-nats-jetstream.tf  @quarkiverse/quarkiverse-reactive-messaging-nats-jetstream
+terraform-scripts/quarkus-redoc.tf                              @quarkiverse/quarkiverse-redoc
 terraform-scripts/quarkus-renarde.tf                            @quarkiverse/quarkiverse-renarde
 terraform-scripts/quarkus-resteasy-problem.tf                   @quarkiverse/quarkiverse-resteasy-problem
 terraform-scripts/quarkus-roq.tf                                @quarkiverse/quarkiverse-roq
@@ -149,8 +153,9 @@ terraform-scripts/quarkus-scala3.tf                             @quarkiverse/qua
 terraform-scripts/quarkus-semantic-kernel.tf                    @quarkiverse/quarkiverse-semantic-kernel
 terraform-scripts/quarkus-shardingsphere-jdbc.tf                @quarkiverse/quarkiverse-shardingsphere-jdbc
 terraform-scripts/quarkus-shedlock.tf                           @quarkiverse/quarkiverse-shedlock
-terraform-scripts/quarkus-smallrye-opentracing.tf               @quarkiverse/quarkiverse-smallrye-opentracing
 terraform-scripts/quarkus-snappy.tf                             @quarkiverse/quarkiverse-snappy
+terraform-scripts/quarkus-solr.tf                               @quarkiverse/quarkiverse-solr
+terraform-scripts/quarkus-spdx.tf                               @quarkiverse/quarkiverse-spdx
 terraform-scripts/quarkus-spock.tf                              @quarkiverse/quarkiverse-spock
 terraform-scripts/quarkus-sshd.tf                               @quarkiverse/quarkiverse-sshd
 terraform-scripts/quarkus-systemd-notify.tf                     @quarkiverse/quarkiverse-systemd-notify

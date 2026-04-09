@@ -12,11 +12,10 @@ resource "github_repository" "quarkus_zookeeper_client" {
 
 # Create team
 resource "github_team" "quarkus_zookeeper_client" {
-  name                      = "quarkiverse-zookeeper-client"
-  description               = "zookeeper-client team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-zookeeper-client"
+  description    = "zookeeper-client team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

@@ -11,11 +11,10 @@ resource "github_repository" "quarkus_hibernate_search_extras" {
 
 # Create team
 resource "github_team" "quarkus_hibernate_search_extras" {
-  name                      = "quarkiverse-hibernate-search-extras"
-  description               = "Quarkiverse team for the Hibernate Search Extras extensions"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-hibernate-search-extras"
+  description    = "Quarkiverse team for the Hibernate Search Extras extensions"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -43,7 +42,7 @@ resource "github_repository_collaborator" "quarkus_hibernate_search_extras" {
 
 # Enable apps in repository
 resource "github_app_installation_repository" "quarkus_hibernate_search_extras" {
-  for_each = { for app in [local.applications.lgtm, local.applications.sync2jira_redhat] : app => app }
+  for_each = { for app in [local.applications.sync2jira_redhat] : app => app }
   # The installation id of the app (in the organization).
   installation_id = each.value
   repository      = github_repository.quarkus_hibernate_search_extras.name

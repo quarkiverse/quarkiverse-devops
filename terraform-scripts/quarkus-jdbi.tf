@@ -12,11 +12,10 @@ resource "github_repository" "quarkus_jdbi" {
 
 # Create team
 resource "github_team" "quarkus_jdbi" {
-  name                      = "quarkiverse-jdbi"
-  description               = "jdbi team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-jdbi"
+  description    = "jdbi team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -34,11 +33,4 @@ resource "github_team_membership" "quarkus_jdbi" {
   role     = "maintainer"
 }
 
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_jdbi" {
-  for_each = { for app in [local.applications.lgtm] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_jdbi.name
-}
 

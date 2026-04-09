@@ -14,11 +14,10 @@ resource "github_repository" "quarkus_opensearch" {
 
 # Create team
 resource "github_team" "quarkus_opensearch" {
-  name                      = "quarkiverse-opensearch"
-  description               = "opensearch team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-opensearch"
+  description    = "opensearch team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

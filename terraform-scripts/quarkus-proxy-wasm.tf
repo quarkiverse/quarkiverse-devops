@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_proxy_wasm" {
 
 # Create team
 resource "github_team" "quarkus_proxy_wasm" {
-  name                      = "quarkiverse-proxy-wasm"
-  description               = "proxy-wasm team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-proxy-wasm"
+  description    = "proxy-wasm team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

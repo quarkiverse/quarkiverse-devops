@@ -7,15 +7,17 @@ PR_TITLE=
 PR_BODY=
 JBANG_SCRIPT=
 FILTER_REPOS=.
+FORMAT_SOURCES=true
 
 # This script is used to patch all Quarkiverse repositories
-while getopts "b:t:m:j:f:" OPT; do
+while getopts "b:t:m:j:f:s:" OPT; do
   case "$OPT" in
   "b") BRANCH_NAME=$OPTARG ;;
   "t") PR_TITLE=$OPTARG ;;
   "m") PR_BODY=$OPTARG ;;
   "j") JBANG_SCRIPT=$OPTARG ;;
   "f") FILTER_REPOS=$OPTARG ;;
+  "s") FORMAT_SOURCES=false ;;
   "?") exit -1 ;;
   esac
 done
@@ -65,8 +67,13 @@ gh repo list quarkiverse --jq '.[].nameWithOwner' --topic quarkus-extension --js
     apply_patch $repo
     # Check if there are changes in the git repository
     if [[ -n $(git status -s) ]]; then
-      # Invoke formatter
-      mvn clean process-sources
+      if [ "$FORMAT_SOURCES" = true ]; then
+        echo "Formatting sources in $repo"
+        # Invoke formatter
+        mvn clean process-sources
+      else
+        echo "Skipping source formatting in $repo"
+      fi
       # Commit the changes
       git add . && git commit -m "$PR_TITLE"
       # Push the changes

@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_semantic_kernel" {
 
 # Create team
 resource "github_team" "quarkus_semantic_kernel" {
-  name                      = "quarkiverse-semantic-kernel"
-  description               = "semantic-kernel team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-semantic-kernel"
+  description    = "semantic-kernel team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

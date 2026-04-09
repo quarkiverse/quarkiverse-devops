@@ -12,11 +12,10 @@ resource "github_repository" "quarkus_jpastreamer" {
 
 # Create team
 resource "github_team" "quarkus_jpastreamer" {
-  name                      = "quarkiverse-jpastreamer"
-  description               = "jpastreamer team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-jpastreamer"
+  description    = "jpastreamer team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

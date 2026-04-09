@@ -14,7 +14,7 @@ terraform {
     }
   }
 
-  required_version = "~> 1.13.0"
+  required_version = "~> 1.14.0"
 }
 
 provider "github" {}
@@ -37,8 +37,6 @@ locals {
   # Installation IDs installed in the Quarkiverse organization
   # These applications are enabled on a per-repository basis
   applications = {
-    # LGTM - https://github.com/marketplace/lgtm
-    lgtm = "24341616"
     # Renovate - https://github.com/marketplace/renovate
     renovate = "34650047"
     # This enables a webhook to send events from these repositories
@@ -53,5 +51,9 @@ locals {
     # https://github.com/fedora-infra/webhook-to-fedora-messaging/
     # https://issues.redhat.com/projects/GHQKIVERSE
     sync2jira_redhat = "60685343"
+  }
+  secrets = {
+    # This secret is used by the GitHub Actions workflow to publish the generated website to Surge.sh
+    surge_token = "SURGE_TOKEN"
   }
 }

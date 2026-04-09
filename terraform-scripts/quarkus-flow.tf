@@ -8,17 +8,19 @@ resource "github_repository" "quarkus_flow" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
+  has_projects           = true
+
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai", "langchain4j"]
 }
 
+###### Maintainers Team #############
 # Create team
 resource "github_team" "quarkus_flow" {
-  name                      = "quarkiverse-flow"
-  description               = "flow team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-flow"
+  description    = "flow team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -35,6 +37,31 @@ resource "github_team_membership" "quarkus_flow" {
   username = each.value
   role     = "maintainer"
 }
+
+###### Triage Team #############
+# Create triage team
+resource "github_team" "quarkus_flow_triage" {
+  name           = "quarkiverse-flow-triage"
+  description    = "triage flow team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
+}
+
+# Add team to repository
+resource "github_team_repository" "quarkus_flow_triage" {
+  team_id    = github_team.quarkus_flow_triage.id
+  repository = github_repository.quarkus_flow.name
+  permission = "triage"
+}
+
+# Add users to the team
+resource "github_team_membership" "quarkus_flow_triage" {
+  for_each = { for tm in ["wmedvede", "gmunozfe", "domhanak", "mcruzdev", "fantonangeli", "lornakelly", "kumaradityaraj", "dgutierr", "baldimir", "handreyrc"] : tm => tm }
+  team_id  = github_team.quarkus_flow_triage.id
+  username = each.value
+  role     = "member"
+}
+###### End Triage Team #############
 
 # Protect main branch using a ruleset
 resource "github_repository_ruleset" "quarkus_flow" {

@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_statiq" {
   name                   = "quarkus-roq"
   description            = "The Roq Static Site Generator allows to easily create a static website or blog using Quarkus super-powers."
-  homepage_url           = "https://iamroq.com"
+  homepage_url           = "https://iamroq.dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
@@ -13,7 +13,7 @@ resource "github_repository" "quarkus_statiq" {
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
   pages {
-    cname      = "iamroq.com"
+    cname      = "iamroq.dev"
     build_type = "workflow"
     source {
       branch = "main"
@@ -25,11 +25,10 @@ resource "github_repository" "quarkus_statiq" {
 
 # Create team
 resource "github_team" "quarkus_statiq" {
-  name                      = "quarkiverse-roq"
-  description               = "roq team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-roq"
+  description    = "roq team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -54,3 +53,11 @@ resource "github_repository_collaborator" "quarkus_statiq" {
   username   = each.value
   permission = "admin"
 }
+
+# Add organization secrets
+resource "github_actions_organization_secret_repository" "quarkus_statiq" {
+  for_each      = { for k in [local.secrets.surge_token] : k => k }
+  secret_name   = each.value
+  repository_id = github_repository.quarkus_statiq.repo_id
+}
+

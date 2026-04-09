@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_antivirus" {
 
 # Create team
 resource "github_team" "quarkus_antivirus" {
-  name                      = "quarkiverse-antivirus"
-  description               = "antivirus team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-antivirus"
+  description    = "antivirus team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

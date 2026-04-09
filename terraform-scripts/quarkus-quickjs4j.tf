@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_quickjs4j" {
 
 # Create team
 resource "github_team" "quarkus_quickjs4j" {
-  name                      = "quarkiverse-quickjs4j"
-  description               = "quickjs4j team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-quickjs4j"
+  description    = "quickjs4j team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

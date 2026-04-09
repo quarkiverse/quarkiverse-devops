@@ -12,11 +12,10 @@ resource "github_repository" "quarkus_reactive_mysql_pool_client" {
 
 # Create team
 resource "github_team" "quarkus_reactive_mysql_pool_client" {
-  name                      = "quarkiverse-reactive-mysql-pool-client"
-  description               = "reactive-mysql-pool-client team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-reactive-mysql-pool-client"
+  description    = "reactive-mysql-pool-client team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

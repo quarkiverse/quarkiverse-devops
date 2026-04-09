@@ -16,11 +16,10 @@ resource "github_repository" "quarkus_mapstruct" {
 
 # Create team
 resource "github_team" "quarkus_mapstruct" {
-  name                      = "quarkiverse-mapstruct"
-  description               = "mapstruct team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-mapstruct"
+  description    = "mapstruct team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

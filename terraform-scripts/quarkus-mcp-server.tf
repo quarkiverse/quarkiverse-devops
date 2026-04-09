@@ -13,11 +13,10 @@ resource "github_repository" "quarkus_mcp_server" {
 
 # Create team
 resource "github_team" "quarkus_mcp_server" {
-  name                      = "quarkiverse-mcp-server"
-  description               = "mcp-server team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-mcp-server"
+  description    = "mcp-server team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

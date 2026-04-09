@@ -17,11 +17,10 @@ resource "github_repository" "quarkus_maven_resolver" {
 
 # Create team
 resource "github_team" "quarkus_maven_resolver" {
-  name                      = "quarkiverse-maven-resolver"
-  description               = "Quarkiverse team for the maven resolver extension"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-maven-resolver"
+  description    = "Quarkiverse team for the maven resolver extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

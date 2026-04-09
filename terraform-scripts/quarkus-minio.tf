@@ -17,11 +17,10 @@ resource "github_repository" "quarkus_minio" {
 
 # Create team
 resource "github_team" "quarkus_minio" {
-  name                      = "quarkiverse-minio"
-  description               = "Quarkiverse team for the minio extension"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-minio"
+  description    = "Quarkiverse team for the minio extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -37,12 +36,4 @@ resource "github_team_membership" "quarkus_minio" {
   team_id  = github_team.quarkus_minio.id
   username = each.value
   role     = "maintainer"
-}
-
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_minio" {
-  for_each = { for app in [local.applications.lgtm] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_minio.name
 }

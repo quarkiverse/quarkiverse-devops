@@ -12,11 +12,10 @@ resource "github_repository" "quarkus_couchbase" {
 
 # Create team
 resource "github_team" "quarkus_couchbase" {
-  name                      = "quarkiverse-couchbase"
-  description               = "couchbase team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-couchbase"
+  description    = "couchbase team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
@@ -34,13 +33,6 @@ resource "github_team_membership" "quarkus_couchbase" {
   role     = "maintainer"
 }
 
-# Enable apps in repository
-resource "github_app_installation_repository" "quarkus_couchbase" {
-  for_each = { for app in [local.applications.lgtm] : app => app }
-  # The installation id of the app (in the organization).
-  installation_id = each.value
-  repository      = github_repository.quarkus_couchbase.name
-}
 
 
 

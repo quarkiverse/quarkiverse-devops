@@ -18,11 +18,10 @@ resource "github_repository" "quarkus_unleash" {
 
 # Create team
 resource "github_team" "quarkus_unleash" {
-  name                      = "quarkiverse-unleash"
-  description               = "Quarkiverse team for the unleash extension"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-unleash"
+  description    = "Quarkiverse team for the unleash extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

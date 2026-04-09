@@ -17,11 +17,10 @@ resource "github_repository" "quarkus_doma" {
 
 # Create team
 resource "github_team" "quarkus_doma" {
-  name                      = "quarkiverse-doma"
-  description               = "Quarkiverse team for the Doma extension"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-doma"
+  description    = "Quarkiverse team for the Doma extension"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

@@ -14,11 +14,10 @@ resource "github_repository" "quarkus_jasperreports" {
 
 # Create team
 resource "github_team" "quarkus_jasperreports" {
-  name                      = "quarkiverse-jasperreports"
-  description               = "jasperreports team"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-jasperreports"
+  description    = "jasperreports team"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository

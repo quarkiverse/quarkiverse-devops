@@ -4,6 +4,7 @@ resource "github_repository" "quarkus_azure_services" {
   description            = "Quarkus extensions for Azure services"
   archive_on_destroy     = true
   delete_branch_on_merge = true
+  has_discussions        = true
   has_issues             = true
   vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "quarkus", "azure"]
@@ -11,11 +12,10 @@ resource "github_repository" "quarkus_azure_services" {
 
 # Create team
 resource "github_team" "quarkus_azure_services" {
-  name                      = "quarkiverse-azure-services"
-  description               = "Quarkiverse team for the Azure services extensions"
-  create_default_maintainer = false
-  privacy                   = "closed"
-  parent_team_id            = data.github_team.quarkiverse_members.id
+  name           = "quarkiverse-azure-services"
+  description    = "Quarkiverse team for the Azure services extensions"
+  privacy        = "closed"
+  parent_team_id = data.github_team.quarkiverse_members.id
 }
 
 # Add team to repository
