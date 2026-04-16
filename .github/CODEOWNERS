@@ -41,6 +41,7 @@ terraform-scripts/quarkus-embedded-postgresql.tf                @quarkiverse/qua
 terraform-scripts/quarkus-flags.tf                              @quarkiverse/quarkiverse-flags
 terraform-scripts/quarkus-flow.tf                               @quarkiverse/quarkiverse-flow
 terraform-scripts/quarkus-fluentjdbc.tf                         @quarkiverse/quarkiverse-fluentjdbc
+terraform-scripts/quarkus-fluss.tf                              @quarkiverse/quarkiverse-fluss
 terraform-scripts/quarkus-file-vault.tf                         @quarkiverse/quarkiverse-file-vault
 terraform-scripts/quarkus-freemarker.tf                         @quarkiverse/quarkiverse-freemarker
 terraform-scripts/quarkus-fory.tf                               @quarkiverse/quarkiverse-fory
