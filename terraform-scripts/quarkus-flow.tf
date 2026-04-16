@@ -4,6 +4,7 @@ resource "github_repository" "quarkus_flow" {
   description            = "Workflow Runtime Engine based on CNCF Workflow Specification for Agentic Workflows"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-flow/dev"
   allow_update_branch    = true
+  allow_merge_commit     = false
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
