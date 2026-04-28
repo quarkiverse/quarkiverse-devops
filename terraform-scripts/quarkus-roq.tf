@@ -13,9 +13,11 @@ resource "github_repository" "quarkus_statiq" {
 }
 
 resource "github_repository_pages" "quarkus_statiq" {
-  repository = github_repository.quarkus_statiq.name
-  cname      = "iamroq.dev"
-  build_type = "workflow"
+  repository     = github_repository.quarkus_statiq.name
+  cname          = "iamroq.dev"
+  build_type     = "workflow"
+  https_enforced = true
+  public         = true
 }
 
 resource "github_repository_vulnerability_alerts" "quarkus_statiq" {
