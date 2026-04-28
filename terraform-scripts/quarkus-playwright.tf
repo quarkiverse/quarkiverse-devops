@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_playwright" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_playwright" {
+  repository = github_repository.quarkus_playwright.name
+  enabled    = true
 }
 
 # Create team

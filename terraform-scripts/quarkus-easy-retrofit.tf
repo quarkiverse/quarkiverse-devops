@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_easy_retrofit" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "http-client", "retrofit2"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_easy_retrofit" {
+  repository = github_repository.quarkus_easy_retrofit.name
+  enabled    = true
 }
 
 # Create team

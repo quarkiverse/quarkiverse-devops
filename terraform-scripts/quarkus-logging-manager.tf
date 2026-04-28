@@ -7,7 +7,6 @@ resource "github_repository" "quarkus_logging_manager" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
@@ -15,6 +14,11 @@ resource "github_repository" "quarkus_logging_manager" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_logging_manager" {
+  repository = github_repository.quarkus_logging_manager.name
+  enabled    = true
 }
 
 # Create team

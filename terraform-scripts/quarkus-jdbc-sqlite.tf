@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_jdbc_sqlite" {
   allow_update_branch    = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["jdbc", "sqlite", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jdbc_sqlite" {
+  repository = github_repository.quarkus_jdbc_sqlite.name
+  enabled    = true
 }
 
 # Create team

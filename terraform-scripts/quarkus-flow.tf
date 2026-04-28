@@ -10,8 +10,12 @@ resource "github_repository" "quarkus_flow" {
   has_issues             = true
   has_projects           = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai", "langchain4j"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_flow" {
+  repository = github_repository.quarkus_flow.name
+  enabled    = true
 }
 
 ###### Maintainers Team #############

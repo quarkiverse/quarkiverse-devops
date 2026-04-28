@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_omnifaces" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["faces", "jsf", "omnifaces", "quarkus-extension", "quarkus"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_omnifaces" {
+  repository = github_repository.quarkus_omnifaces.name
+  enabled    = true
 }
 
 # Create team

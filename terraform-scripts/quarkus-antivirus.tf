@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_antivirus" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "antivirus", "clamav", "virustotal", "security", "file"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_antivirus" {
+  repository = github_repository.quarkus_antivirus.name
+  enabled    = true
 }
 
 # Create team

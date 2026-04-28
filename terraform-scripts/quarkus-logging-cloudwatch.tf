@@ -5,8 +5,12 @@ resource "github_repository" "quarkus_logging_cloudwatch" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["cloudwatch", "quarkus-extension", "logging"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_logging_cloudwatch" {
+  repository = github_repository.quarkus_logging_cloudwatch.name
+  enabled    = true
 }
 
 # Create team

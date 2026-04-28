@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_angus_mail" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "mail", "smtp", "pop3", "imap", "quarkus"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_angus_mail" {
+  repository = github_repository.quarkus_angus_mail.name
+  enabled    = true
 }
 
 # Create team

@@ -7,7 +7,6 @@ resource "github_repository" "quarkus_mybatis" {
   has_issues             = true
   has_projects           = true
   #has_discussions        = true
-  vulnerability_alerts = true
 
   topics = ["quarkus-extension"]
 
@@ -16,6 +15,11 @@ resource "github_repository" "quarkus_mybatis" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_mybatis" {
+  repository = github_repository.quarkus_mybatis.name
+  enabled    = true
 }
 
 # Create team

@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_kafka_streams_processor" {
   delete_branch_on_merge = true
   has_issues             = true
   has_wiki               = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "kafka-streams", "resiliency"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_kafka_streams_processor" {
+  repository = github_repository.quarkus_kafka_streams_processor.name
+  enabled    = true
 }
 
 # Create team

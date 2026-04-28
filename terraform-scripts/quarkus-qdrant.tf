@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_qdrant" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "qdrant", "vector-database", "rest-client", "embedding"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_qdrant" {
+  repository = github_repository.quarkus_qdrant.name
+  enabled    = true
 }
 
 # Create team

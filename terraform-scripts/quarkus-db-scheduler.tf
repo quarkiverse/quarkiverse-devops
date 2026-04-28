@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_db_scheduler" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "quarkus", "scheduler", "database", "quarkiverse"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_db_scheduler" {
+  repository = github_repository.quarkus_db_scheduler.name
+  enabled    = true
 }
 
 # Create team

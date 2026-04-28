@@ -5,8 +5,12 @@ resource "github_repository" "quarkus_mfa" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "mfa", "authentication"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_mfa" {
+  repository = github_repository.quarkus_mfa.name
+  enabled    = true
 }
 
 # Create team

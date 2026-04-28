@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_tika" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "content-detection", "tika"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_tika" {
+  repository = github_repository.quarkus_tika.name
+  enabled    = true
 }
 
 # Create team

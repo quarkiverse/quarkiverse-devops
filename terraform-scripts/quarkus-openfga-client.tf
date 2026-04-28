@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_openfga_client" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["openfga", "zanzibar", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_openfga_client" {
+  repository = github_repository.quarkus_openfga_client.name
+  enabled    = true
 }
 
 # Create team

@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_chappie" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "ai", "chappie"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_chappie" {
+  repository = github_repository.quarkus_chappie.name
+  enabled    = true
 }
 
 # Create team

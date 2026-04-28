@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_langchain4j" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "llm", "ai", "langchain4j"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_langchain4j" {
+  repository = github_repository.quarkus_langchain4j.name
+  enabled    = true
 }
 
 # Create team

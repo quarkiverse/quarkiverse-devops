@@ -9,7 +9,6 @@ resource "github_repository" "quarkus_operator_sdk" {
   has_issues             = true
   has_projects           = true
   #has_discussions        = true
-  vulnerability_alerts = true
 
   topics = ["kubernetes", "sdk", "operator", "quarkus-extension"]
 
@@ -18,6 +17,11 @@ resource "github_repository" "quarkus_operator_sdk" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_operator_sdk" {
+  repository = github_repository.quarkus_operator_sdk.name
+  enabled    = true
 }
 
 # Create team

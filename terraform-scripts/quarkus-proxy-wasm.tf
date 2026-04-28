@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_proxy_wasm" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "proxy-wasm", "http-filters"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_proxy_wasm" {
+  repository = github_repository.quarkus_proxy_wasm.name
+  enabled    = true
 }
 
 # Create team

@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_mongock" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "mongock"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_mongock" {
+  repository = github_repository.quarkus_mongock.name
+  enabled    = true
 }
 
 # Create team

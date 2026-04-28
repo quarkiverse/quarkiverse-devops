@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_authzed_client" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "authzed", "fga"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_authzed_client" {
+  repository = github_repository.quarkus_authzed_client.name
+  enabled    = true
 }
 
 # Create team

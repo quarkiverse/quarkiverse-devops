@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_asyncapi" {
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "asyncapi"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_asyncapi" {
+  repository = github_repository.quarkus_asyncapi.name
+  enabled    = true
 }
 
 # Create team

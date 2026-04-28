@@ -6,10 +6,14 @@ resource "github_repository" "quarkus_google_cloud_services" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   has_wiki               = true
   homepage_url           = "https://docs.quarkiverse.io/quarkus-google-cloud-services/main/index.html"
   topics                 = ["gcp", "hacktoberfest", "quarkus", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_google_cloud_services" {
+  repository = github_repository.quarkus_google_cloud_services.name
+  enabled    = true
 }
 
 # Create team

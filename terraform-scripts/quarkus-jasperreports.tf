@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_jasperreports" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "jasperreports"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jasperreports" {
+  repository = github_repository.quarkus_jasperreports.name
+  enabled    = true
 }
 
 # Create team

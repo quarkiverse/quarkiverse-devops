@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_qute_server_pages" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "qute"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_qute_server_pages" {
+  repository = github_repository.quarkus_qute_server_pages.name
+  enabled    = true
 }
 
 # Create team

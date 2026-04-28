@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_groovy" {
   delete_branch_on_merge = true
   has_discussions        = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "groovy"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_groovy" {
+  repository = github_repository.quarkus_groovy.name
+  enabled    = true
 }
 
 # Create team

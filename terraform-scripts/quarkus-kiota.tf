@@ -9,8 +9,12 @@ resource "github_repository" "quarkus_kiota" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "kiota"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_kiota" {
+  repository = github_repository.quarkus_kiota.name
+  enabled    = true
 }
 
 # Create team

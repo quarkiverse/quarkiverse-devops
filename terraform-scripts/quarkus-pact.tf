@@ -9,8 +9,12 @@ resource "github_repository" "quarkus_pact" {
   allow_squash_merge     = false
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "pact", "consumer-driven-contract-testing"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_pact" {
+  repository = github_repository.quarkus_pact.name
+  enabled    = true
 }
 
 # Create team

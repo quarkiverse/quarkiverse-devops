@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_temporal" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "workflow"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_temporal" {
+  repository = github_repository.quarkus_temporal.name
+  enabled    = true
 }
 
 # Create team

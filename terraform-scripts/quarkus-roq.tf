@@ -9,7 +9,6 @@ resource "github_repository" "quarkus_statiq" {
   has_issues             = true
   has_projects           = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
 
   pages {
@@ -21,6 +20,10 @@ resource "github_repository" "quarkus_statiq" {
     }
   }
 
+}
+resource "github_repository_vulnerability_alerts" "quarkus_statiq" {
+  repository = github_repository.quarkus_statiq.name
+  enabled    = true
 }
 
 # Create team

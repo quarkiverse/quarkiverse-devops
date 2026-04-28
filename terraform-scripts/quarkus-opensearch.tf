@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_opensearch" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["elasticsearch", "opensearch", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_opensearch" {
+  repository = github_repository.quarkus_opensearch.name
+  enabled    = true
 }
 
 # Create team

@@ -6,7 +6,6 @@ resource "github_repository" "quarkus_micrometer_registry" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   homepage_url           = "https://docs.quarkiverse.io/quarkus-micrometer-registry/dev/index.html"
   topics                 = ["hacktoberfest", "quarkus-extension"]
 
@@ -15,6 +14,11 @@ resource "github_repository" "quarkus_micrometer_registry" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_micrometer_registry" {
+  repository = github_repository.quarkus_micrometer_registry.name
+  enabled    = true
 }
 
 # Create team

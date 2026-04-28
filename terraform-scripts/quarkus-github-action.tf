@@ -6,9 +6,13 @@ resource "github_repository" "quarkus_github_action" {
   delete_branch_on_merge = true
   has_issues             = true
   has_projects           = true
-  vulnerability_alerts   = true
   homepage_url           = "https://docs.quarkiverse.io/quarkus-github-action/dev/index.html"
   topics                 = ["quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_github_action" {
+  repository = github_repository.quarkus_github_action.name
+  enabled    = true
 }
 
 # Create team

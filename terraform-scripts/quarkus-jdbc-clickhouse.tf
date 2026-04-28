@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_jdbc_clickhouse" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["jdbc", "clickhouse", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jdbc_clickhouse" {
+  repository = github_repository.quarkus_jdbc_clickhouse.name
+  enabled    = true
 }
 
 # Create team

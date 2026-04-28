@@ -7,7 +7,6 @@ resource "github_repository" "quarkus_jjwt_jackson" {
   has_issues             = true
   has_projects           = true
   #has_discussions        = true
-  vulnerability_alerts = true
 
   topics = ["quarkus-extension"]
 
@@ -16,6 +15,11 @@ resource "github_repository" "quarkus_jjwt_jackson" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jjwt_jackson" {
+  repository = github_repository.quarkus_jjwt_jackson.name
+  enabled    = true
 }
 
 # Create team

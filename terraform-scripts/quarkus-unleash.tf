@@ -5,7 +5,6 @@ resource "github_repository" "quarkus_unleash" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   homepage_url           = "https://github.com/Unleash/unleash"
   topics                 = ["quarkus-extension"]
 
@@ -14,6 +13,11 @@ resource "github_repository" "quarkus_unleash" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_unleash" {
+  repository = github_repository.quarkus_unleash.name
+  enabled    = true
 }
 
 # Create team

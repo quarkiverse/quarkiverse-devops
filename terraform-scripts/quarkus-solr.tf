@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_solr" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "solr", "search"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_solr" {
+  repository = github_repository.quarkus_solr.name
+  enabled    = true
 }
 
 # Create team

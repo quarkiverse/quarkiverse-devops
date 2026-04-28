@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_rage4j" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "large-language-models", "llms", "continuous-integration", "ai", "llm-testing", "semantic-evaluation", "testing-library", "langchain4j", "openai"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_rage4j" {
+  repository = github_repository.quarkus_rage4j.name
+  enabled    = true
 }
 
 # Create team

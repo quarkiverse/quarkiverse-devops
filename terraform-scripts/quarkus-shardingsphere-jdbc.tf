@@ -5,8 +5,12 @@ resource "github_repository" "quarkus_shardingsphere_jdbc" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["middleware", "database", "distributed", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_shardingsphere_jdbc" {
+  repository = github_repository.quarkus_shardingsphere_jdbc.name
+  enabled    = true
 }
 
 # Create team

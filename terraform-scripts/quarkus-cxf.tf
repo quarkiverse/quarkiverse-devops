@@ -8,7 +8,6 @@ resource "github_repository" "quarkus_cxf" {
   has_issues             = true
   has_projects           = true
   has_discussions        = true
-  vulnerability_alerts   = true
 
   topics = ["quarkus-extension"]
 
@@ -17,6 +16,11 @@ resource "github_repository" "quarkus_cxf" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_cxf" {
+  repository = github_repository.quarkus_cxf.name
+  enabled    = true
 }
 
 # Create team

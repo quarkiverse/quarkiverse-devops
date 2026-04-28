@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_semantic_kernel" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "ai", "artificial-intelligence", "openai", "azure-openai", "hugging-face"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_semantic_kernel" {
+  repository = github_repository.quarkus_semantic_kernel.name
+  enabled    = true
 }
 
 # Create team

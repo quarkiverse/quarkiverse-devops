@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_reactive_messaging_nats_jetstream" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "nats", "jetstream", "reactive-messaging"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_reactive_messaging_nats_jetstream" {
+  repository = github_repository.quarkus_reactive_messaging_nats_jetstream.name
+  enabled    = true
 }
 
 # Create team

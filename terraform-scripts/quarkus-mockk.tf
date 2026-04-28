@@ -5,7 +5,6 @@ resource "github_repository" "quarkus_mockk" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   has_projects           = true
   topics                 = ["quarkus-extension"]
 
@@ -14,6 +13,11 @@ resource "github_repository" "quarkus_mockk" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_mockk" {
+  repository = github_repository.quarkus_mockk.name
+  enabled    = true
 }
 
 # Create team

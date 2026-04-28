@@ -5,8 +5,12 @@ resource "github_repository" "quarkus_jberet" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["java", "batch", "jsr-352", "quarkus-extension", "jberet"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jberet" {
+  repository = github_repository.quarkus_jberet.name
+  enabled    = true
 }
 
 # Create team

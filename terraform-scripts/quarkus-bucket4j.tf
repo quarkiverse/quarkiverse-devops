@@ -10,8 +10,12 @@ resource "github_repository" "quarkus_bucket4j" {
   delete_branch_on_merge = true
   has_discussions        = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_bucket4j" {
+  repository = github_repository.quarkus_bucket4j.name
+  enabled    = true
 }
 
 # Create team

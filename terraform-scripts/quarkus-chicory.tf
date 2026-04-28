@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_chicory" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["wasm", "chicory", "sandbox", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_chicory" {
+  repository = github_repository.quarkus_chicory.name
+  enabled    = true
 }
 
 # Create team

@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_mdns" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "mdns", "bonjour", "discovery"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_mdns" {
+  repository = github_repository.quarkus_mdns.name
+  enabled    = true
 }
 
 # Create team

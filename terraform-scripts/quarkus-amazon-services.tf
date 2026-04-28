@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_amazon_services" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_amazon_services" {
+  repository = github_repository.quarkus_amazon_services.name
+  enabled    = true
 }
 
 # Create team

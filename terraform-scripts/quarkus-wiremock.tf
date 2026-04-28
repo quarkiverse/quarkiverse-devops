@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_wiremock" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "wiremock"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_wiremock" {
+  repository = github_repository.quarkus_wiremock.name
+  enabled    = true
 }
 
 # Create team

@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_fluss" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "fluss", "smallrye", "reactive-messaging"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_fluss" {
+  repository = github_repository.quarkus_fluss.name
+  enabled    = true
 }
 
 # Create team

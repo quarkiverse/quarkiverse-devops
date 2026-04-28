@@ -9,12 +9,16 @@ resource "github_repository" "quarkus_fury" {
   archive_on_destroy          = true
   delete_branch_on_merge      = true
   has_issues                  = true
-  vulnerability_alerts        = true
   topics                      = ["quarkus-extension", "fory", "serialization"]
   merge_commit_message        = "PR_BODY"
   merge_commit_title          = "PR_TITLE"
   squash_merge_commit_message = "PR_BODY"
   squash_merge_commit_title   = "PR_TITLE"
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_fury" {
+  repository = github_repository.quarkus_fury.name
+  enabled    = true
 }
 
 # Create team

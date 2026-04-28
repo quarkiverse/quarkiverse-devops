@@ -11,8 +11,12 @@ resource "github_repository" "quarkus_resteasy_problem" {
   has_issues             = true
   has_discussions        = true
   has_wiki               = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "rest-problem", "resteasy", "exception-handling", "rfc7807", "rfc9457"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_resteasy_problem" {
+  repository = github_repository.quarkus_resteasy_problem.name
+  enabled    = true
 }
 
 # Create team

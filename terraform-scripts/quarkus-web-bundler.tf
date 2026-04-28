@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_web_assets" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "frontend", "web", "full-stack", "js", "scss", "sass", "bundle", "esbuild", "mvnpm", "webjars", "typescript", "javascript", "assets"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_web_assets" {
+  repository = github_repository.quarkus_web_assets.name
+  enabled    = true
 }
 
 # Create team

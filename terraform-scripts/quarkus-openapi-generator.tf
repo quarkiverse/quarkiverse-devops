@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_openapi_generator" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["openapi", "openapi-generator", "openapi-specification", "rest", "rest-client", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_openapi_generator" {
+  repository = github_repository.quarkus_openapi_generator.name
+  enabled    = true
 }
 
 # Create team

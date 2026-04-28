@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_playpen" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "operator", "kubernetes", "local-dev-k8s", "remote-dev-k8s"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_playpen" {
+  repository = github_repository.quarkus_playpen.name
+  enabled    = true
 }
 
 # Create team

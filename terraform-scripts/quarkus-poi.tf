@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_poi" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "poi", "excel", "word", "powerpoint"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_poi" {
+  repository = github_repository.quarkus_poi.name
+  enabled    = true
 }
 
 # Create team

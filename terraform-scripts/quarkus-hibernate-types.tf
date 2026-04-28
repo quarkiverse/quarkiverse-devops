@@ -6,7 +6,6 @@ resource "github_repository" "quarkus_hibernate_types" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "hibernate", "hibernate-types"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
@@ -14,6 +13,11 @@ resource "github_repository" "quarkus_hibernate_types" {
     owner      = "quarkiverse"
     repository = "quarkiverse-template"
   }
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_hibernate_types" {
+  repository = github_repository.quarkus_hibernate_types.name
+  enabled    = true
 }
 
 # Create team

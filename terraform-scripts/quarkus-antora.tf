@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_antora" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "antora", "documentation"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_antora" {
+  repository = github_repository.quarkus_antora.name
+  enabled    = true
 }
 
 # Create team

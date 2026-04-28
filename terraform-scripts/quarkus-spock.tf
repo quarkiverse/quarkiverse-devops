@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_spock" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "test", "spock", "junit"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_spock" {
+  repository = github_repository.quarkus_spock.name
+  enabled    = true
 }
 
 # Create team

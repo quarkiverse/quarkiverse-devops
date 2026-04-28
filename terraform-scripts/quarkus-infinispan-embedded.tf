@@ -8,8 +8,12 @@ resource "github_repository" "quarkus_infinispan_embedded" {
   delete_branch_on_merge = true
   has_discussions        = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "infinispan", "infinispan-embedded", "caching", "distributed-caching"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_infinispan_embedded" {
+  repository = github_repository.quarkus_infinispan_embedded.name
+  enabled    = true
 }
 
 # Create team

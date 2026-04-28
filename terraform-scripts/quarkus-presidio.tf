@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_presidio" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "presidio", "obfuscation"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_presidio" {
+  repository = github_repository.quarkus_presidio.name
+  enabled    = true
 }
 
 # Create team

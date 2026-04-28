@@ -5,8 +5,12 @@ resource "github_repository" "quarkus_logging_kafka" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["kafka", "logging", "quarkus", "quarkus-extension", "observability", "otel"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_logging_kafka" {
+  repository = github_repository.quarkus_logging_kafka.name
+  enabled    = true
 }
 
 # Create team

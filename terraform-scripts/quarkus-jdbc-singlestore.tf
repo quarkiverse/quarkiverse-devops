@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_jdbc_singlestore" {
   allow_update_branch    = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["jdbc", "singlestore", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jdbc_singlestore" {
+  repository = github_repository.quarkus_jdbc_singlestore.name
+  enabled    = true
 }
 
 # Create team

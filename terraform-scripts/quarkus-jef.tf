@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_jef" {
   delete_branch_on_merge = true
   has_issues             = true
   has_discussions        = true
-  vulnerability_alerts   = true
   topics                 = ["1-wire", "i2c", "serial", "spi", "quarkus-extension"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_jef" {
+  repository = github_repository.quarkus_jef.name
+  enabled    = true
 }
 
 # Create team

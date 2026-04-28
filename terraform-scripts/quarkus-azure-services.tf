@@ -6,8 +6,12 @@ resource "github_repository" "quarkus_azure_services" {
   delete_branch_on_merge = true
   has_discussions        = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "quarkus", "azure"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_azure_services" {
+  repository = github_repository.quarkus_azure_services.name
+  enabled    = true
 }
 
 # Create team

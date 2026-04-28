@@ -7,8 +7,12 @@ resource "github_repository" "quarkus_datafaker" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  vulnerability_alerts   = true
   topics                 = ["quarkus-extension", "datafaker"]
+}
+
+resource "github_repository_vulnerability_alerts" "quarkus_datafaker" {
+  repository = github_repository.quarkus_datafaker.name
+  enabled    = true
 }
 
 # Create team
