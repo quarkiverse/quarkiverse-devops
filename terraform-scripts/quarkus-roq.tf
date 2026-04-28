@@ -10,17 +10,14 @@ resource "github_repository" "quarkus_statiq" {
   has_projects           = true
   has_discussions        = true
   topics                 = ["quarkus-extension", "web", "static", "ssg", "site", "generator", "generate", "blog", "hacktoberfest"]
-
-  pages {
-    cname      = "iamroq.dev"
-    build_type = "workflow"
-    source {
-      branch = "main"
-      path   = "/"
-    }
-  }
-
 }
+
+resource "github_repository_pages" "quarkus_statiq" {
+  repository = github_repository.quarkus_statiq.name
+  cname      = "iamroq.dev"
+  build_type = "workflow"
+}
+
 resource "github_repository_vulnerability_alerts" "quarkus_statiq" {
   repository = github_repository.quarkus_statiq.name
   enabled    = true
