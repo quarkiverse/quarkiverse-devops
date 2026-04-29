@@ -60,7 +60,7 @@ resource "github_team_repository" "quarkus_flow_triage" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_flow_triage" {
-  for_each = { for tm in ["wmedvede", "gmunozfe", "domhanak", "mcruzdev", "fantonangeli", "lornakelly", "kumaradityaraj", "dgutierr", "baldimir", "handreyrc"] : tm => tm }
+  for_each = { for tm in ["wmedvede", "gmunozfe", "domhanak", "mcruzdev", "fantonangeli", "lornakelly", "kumaradityaraj", "dgutierr", "baldimir", "handreyrc", "cheryl7114"] : tm => tm }
   team_id  = github_team.quarkus_flow_triage.id
   username = each.value
   role     = "member"
