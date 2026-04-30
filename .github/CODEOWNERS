@@ -167,6 +167,7 @@ terraform-scripts/quarkus-temporal.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-tika.tf                               @quarkiverse/quarkiverse-tika
 terraform-scripts/quarkus-unleash.tf                            @quarkiverse/quarkiverse-unleash
 terraform-scripts/quarkus-vault.tf                              @quarkiverse/quarkiverse-vault
+terraform-scripts/quarkus-verifiable-credentials.tf             @quarkiverse/quarkiverse-verifiable-credentials
 terraform-scripts/quarkus-web-bundler.tf                        @quarkiverse/quarkiverse-web-bundler
 terraform-scripts/quarkus-wiremock.tf                           @quarkiverse/quarkiverse-wiremock
 terraform-scripts/quarkus-zanzibar.tf                           @quarkiverse/quarkiverse-zanzibar
