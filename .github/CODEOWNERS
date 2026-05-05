@@ -58,6 +58,7 @@ terraform-scripts/quarkus-hibernate-search-extras.tf            @quarkiverse/qua
 terraform-scripts/quarkus-hibernate-types.tf                    @quarkiverse/quarkiverse-hibernate-types
 terraform-scripts/quarkus-hivemq-client.tf                      @quarkiverse/quarkiverse-hivemq-client
 terraform-scripts/quarkus-homeassistant.tf                      @quarkiverse/quarkiverse-homeassistant
+terraform-scripts/quarkus-http-problem.tf                       @quarkiverse/quarkiverse-http-problem
 terraform-scripts/quarkus-infinispan-embedded.tf                @quarkiverse/quarkiverse-infinispan-embedded
 terraform-scripts/quarkus-itext.tf                              @quarkiverse/quarkiverse-itext
 terraform-scripts/quarkus-jackson-jq.tf                         @quarkiverse/quarkiverse-jackson-jq
@@ -147,7 +148,6 @@ terraform-scripts/quarkus-reactive-messaging-http.tf            @quarkiverse/qua
 terraform-scripts/quarkus-reactive-messaging-nats-jetstream.tf  @quarkiverse/quarkiverse-reactive-messaging-nats-jetstream
 terraform-scripts/quarkus-redoc.tf                              @quarkiverse/quarkiverse-redoc
 terraform-scripts/quarkus-renarde.tf                            @quarkiverse/quarkiverse-renarde
-terraform-scripts/quarkus-resteasy-problem.tf                   @quarkiverse/quarkiverse-resteasy-problem
 terraform-scripts/quarkus-roq.tf                                @quarkiverse/quarkiverse-roq
 terraform-scripts/quarkus-rsocket.tf                            @quarkiverse/quarkiverse-rsocket
 terraform-scripts/quarkus-sa-token.tf                           @quarkiverse/quarkiverse-sa-token
