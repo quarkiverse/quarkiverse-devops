@@ -76,6 +76,7 @@ terraform-scripts/quarkus-jgrapht.tf                            @quarkiverse/qua
 terraform-scripts/quarkus-jjwt-jackson.tf                       @quarkiverse/quarkiverse-jjwt-jackson
 terraform-scripts/quarkus-jmx.tf                                @quarkiverse/quarkiverse-jmx
 terraform-scripts/quarkus-jnosql.tf                             @quarkiverse/quarkiverse-jnosql
+terraform-scripts/quarkus-jokes.tf                              @quarkiverse/quarkiverse-jokes
 terraform-scripts/quarkus-jooq.tf                               @quarkiverse/quarkiverse-jooq
 terraform-scripts/quarkus-jpastreamer.tf                        @quarkiverse/quarkiverse-jpastreamer
 terraform-scripts/quarkus-jsch.tf                               @quarkiverse/quarkiverse-jsch
