@@ -108,59 +108,31 @@ jobs:
 
       - name: Post PR comment
         if: steps.pr.outputs.tf_changed == 'true' && always()
-        uses: actions/github-script@v9
-        env:
-          PR_NUMBER: ${{ steps.pr.outputs.number }}
+        uses: quarkusio/action-helpers@main
         with:
+          action: maintain-one-comment
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const prNumber = parseInt(process.env.PR_NUMBER, 10);
-
-            // 1. Retrieve existing bot comments for the PR
-            const { data: comments } = await github.rest.issues.listComments({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-            })
-            const botComment = comments.find(comment => {
-              return comment.user.type === 'Bot' && comment.body.includes('Terraform Format and Style')
-            })
-
-            // 2. Prepare format of the comment
-            const output = `#### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
-            #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
+          body: |
+            <!-- Sticky Pull Request Comment -->
+            #### Terraform Initialization ⚙️`${{ steps.init.outcome }}`
+            #### Terraform Validation 🤖`${{ steps.validate.outcome }}`
             <details><summary>Validation Output</summary>
 
-            \`\`\`\n
+            ```
             ${{ steps.validate.outputs.stdout }}
-            \`\`\`
+            ```
 
             </details>
 
-            #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
+            #### Terraform Plan 📖`${{ steps.plan.outcome }}`
 
-            \`\`\`terraform\n
+            ```terraform
             ${{ env.PLAN_RESULTS }}
-            \`\`\`
+            ```
 
-            *Action: \`${{ github.event_name }}\`, Workflow: \`${{ github.workflow }}\`*`;
-
-            // 3. If we have a comment, update it, otherwise create a new one
-            if (botComment) {
-              github.rest.issues.updateComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                comment_id: botComment.id,
-                body: output
-              })
-            } else {
-              github.rest.issues.createComment({
-                issue_number: prNumber,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                body: output
-              })
-            }
+            *Action: `${{ github.event_name }}`, Workflow: `${{ github.workflow }}`*
+          body-marker: '<!-- Sticky Pull Request Comment -->'
+          pr-number: ${{ steps.pr.outputs.number }}
 
       - name: Set final status
         if: steps.pr.outputs.tf_changed == 'true' && always()
