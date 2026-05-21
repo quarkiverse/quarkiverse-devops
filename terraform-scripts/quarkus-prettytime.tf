@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_prettytime" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  topics                 = ["quarkus-extension", "prettytime"]
+  topics                 = ["quarkus-extension", "prettytime", "ocpsoft"]
 
   # Do not use the template below in new repositories. This is kept for backward compatibility with existing repositories
   template {
