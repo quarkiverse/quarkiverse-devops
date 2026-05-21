@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_systemd_notify" {
   name                   = "quarkus-systemd-notify"
-  description            = "This project demonstrates integrating systemd-notify with Quarkus"
+  description            = "This extension enables integrating systemd-notify with Quarkus"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
