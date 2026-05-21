@@ -31,6 +31,20 @@ jobs:
           tf_count=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- terraform-scripts/ | wc -l | tr -d ' ')
           echo "tf_changed=$( [ "$tf_count" -gt 0 ] && echo true || echo false )" >> $GITHUB_OUTPUT
 
+      - name: Save PR metadata
+        run: |
+          mkdir -p /tmp/pr-meta
+          echo "${{ github.event.pull_request.number }}" > /tmp/pr-meta/pr_number
+          echo "${{ github.event.pull_request.head.sha }}" > /tmp/pr-meta/head_sha
+          echo "${{ steps.files.outputs.tf_changed }}" > /tmp/pr-meta/tf_changed
+
+      - name: Upload PR metadata
+        uses: actions/upload-artifact@v7
+        with:
+          name: terraform-pr-meta
+          path: /tmp/pr-meta/
+          retention-days: 1
+
   terraform_fmt:
     name: "Terraform Format"
     runs-on: ubuntu-latest
@@ -53,16 +67,6 @@ jobs:
 
       - name: Terraform Format
         run: terraform fmt -check
-
-      - name: Save PR number
-        run: echo "${{ github.event.pull_request.number }}" > "${{ runner.temp }}/pr_number"
-
-      - name: Upload PR metadata
-        uses: actions/upload-artifact@v7
-        with:
-          name: terraform-pr-meta
-          path: ${{ runner.temp }}/pr_number
-          retention-days: 1
 
       - name: Upload Terraform scripts
         uses: actions/upload-artifact@v7

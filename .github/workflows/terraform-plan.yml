@@ -10,6 +10,7 @@ permissions:
   issues: write
   contents: read
   pull-requests: write
+  statuses: write
   actions: read
 
 jobs:
@@ -28,11 +29,43 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Read PR number
+      - name: Read PR metadata
         id: pr
-        run: echo "number=$(cat pr_number)" >> $GITHUB_OUTPUT
+        run: |
+          echo "number=$(cat pr_number)" >> $GITHUB_OUTPUT
+          echo "head_sha=$(cat head_sha)" >> $GITHUB_OUTPUT
+          echo "tf_changed=$(cat tf_changed)" >> $GITHUB_OUTPUT
+
+      - name: Skip if no Terraform changes
+        if: steps.pr.outputs.tf_changed != 'true'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ steps.pr.outputs.head_sha }}',
+              state: 'success',
+              context: 'Terraform Plan',
+              description: 'No Terraform files changed'
+            });
+
+      - name: Set pending status
+        if: steps.pr.outputs.tf_changed == 'true'
+        uses: actions/github-script@v9
+        with:
+          script: |
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ steps.pr.outputs.head_sha }}',
+              state: 'pending',
+              context: 'Terraform Plan',
+              description: 'Running terraform plan...'
+            });
 
       - name: Download Terraform scripts
+        if: steps.pr.outputs.tf_changed == 'true'
         uses: actions/download-artifact@v8
         with:
           name: terraform-pr-scripts
@@ -41,22 +74,26 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Terraform
+        if: steps.pr.outputs.tf_changed == 'true'
         uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: "1.14.0"
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Terraform Init
+        if: steps.pr.outputs.tf_changed == 'true'
         id: init
         working-directory: ./terraform-scripts
         run: terraform init
 
       - name: Terraform Validate
+        if: steps.pr.outputs.tf_changed == 'true'
         id: validate
         working-directory: ./terraform-scripts
         run: terraform validate -no-color
 
       - name: Terraform Plan
+        if: steps.pr.outputs.tf_changed == 'true'
         id: plan
         working-directory: ./terraform-scripts
         run: |
@@ -65,8 +102,9 @@ jobs:
           echo 'EOF' >> $GITHUB_ENV
         continue-on-error: true
 
-      - uses: actions/github-script@v9
-        if: always()
+      - name: Post PR comment
+        if: steps.pr.outputs.tf_changed == 'true' && always()
+        uses: actions/github-script@v9
         env:
           PR_NUMBER: ${{ steps.pr.outputs.number }}
         with:
@@ -119,6 +157,24 @@ jobs:
                 body: output
               })
             }
+
+      - name: Set final status
+        if: steps.pr.outputs.tf_changed == 'true' && always()
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const planOutcome = '${{ steps.plan.outcome }}';
+            const initOutcome = '${{ steps.init.outcome }}';
+            const validateOutcome = '${{ steps.validate.outcome }}';
+            const failed = [planOutcome, initOutcome, validateOutcome].includes('failure');
+            await github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: '${{ steps.pr.outputs.head_sha }}',
+              state: failed ? 'failure' : 'success',
+              context: 'Terraform Plan',
+              description: failed ? 'Terraform plan failed' : 'Terraform plan succeeded'
+            });
 
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
