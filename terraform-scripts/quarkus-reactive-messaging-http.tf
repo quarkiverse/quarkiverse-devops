@@ -25,7 +25,7 @@ resource "github_team" "quarkus_reactive_messaging_http" {
 resource "github_team_repository" "quarkus_reactive_messaging_http" {
   team_id    = github_team.quarkus_reactive_messaging_http.id
   repository = github_repository.quarkus_reactive_messaging_http.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

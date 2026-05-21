@@ -27,7 +27,7 @@ resource "github_team" "quarkus_arangodb_client" {
 resource "github_team_repository" "quarkus_arangodb_client" {
   team_id    = github_team.quarkus_arangodb_client.id
   repository = github_repository.quarkus_arangodb_client.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

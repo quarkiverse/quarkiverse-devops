@@ -26,7 +26,7 @@ resource "github_team" "quarkus_mockserver" {
 resource "github_team_repository" "quarkus_mockserver" {
   team_id    = github_team.quarkus_mockserver.id
   repository = github_repository.quarkus_mockserver.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -27,7 +27,7 @@ resource "github_team" "quarkus_quickjs4j" {
 resource "github_team_repository" "quarkus_quickjs4j" {
   team_id    = github_team.quarkus_quickjs4j.id
   repository = github_repository.quarkus_quickjs4j.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -25,7 +25,7 @@ resource "github_team" "quarkus_logging_cloudwatch" {
 resource "github_team_repository" "quarkus_logging_cloudwatch" {
   team_id    = github_team.quarkus_logging_cloudwatch.id
   repository = github_repository.quarkus_logging_cloudwatch.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -33,7 +33,7 @@ resource "github_team" "quarkus_micrometer_registry" {
 resource "github_team_repository" "quarkus_micrometer_registry" {
   team_id    = github_team.quarkus_micrometer_registry.id
   repository = github_repository.quarkus_micrometer_registry.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

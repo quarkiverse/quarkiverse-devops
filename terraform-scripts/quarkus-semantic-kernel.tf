@@ -27,7 +27,7 @@ resource "github_team" "quarkus_semantic_kernel" {
 resource "github_team_repository" "quarkus_semantic_kernel" {
   team_id    = github_team.quarkus_semantic_kernel.id
   repository = github_repository.quarkus_semantic_kernel.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

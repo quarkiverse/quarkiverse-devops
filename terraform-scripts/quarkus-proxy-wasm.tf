@@ -27,7 +27,7 @@ resource "github_team" "quarkus_proxy_wasm" {
 resource "github_team_repository" "quarkus_proxy_wasm" {
   team_id    = github_team.quarkus_proxy_wasm.id
   repository = github_repository.quarkus_proxy_wasm.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

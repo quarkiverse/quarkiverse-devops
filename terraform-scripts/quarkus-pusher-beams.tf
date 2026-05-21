@@ -26,7 +26,7 @@ resource "github_team" "quarkus_pusher_beams" {
 resource "github_team_repository" "quarkus_pusher_beams" {
   team_id    = github_team.quarkus_pusher_beams.id
   repository = github_repository.quarkus_pusher_beams.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

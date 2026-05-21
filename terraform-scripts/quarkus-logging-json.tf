@@ -26,7 +26,7 @@ resource "github_team" "quarkus_logging_json" {
 resource "github_team_repository" "quarkus_logging_json" {
   team_id    = github_team.quarkus_logging_json.id
   repository = github_repository.quarkus_logging_json.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

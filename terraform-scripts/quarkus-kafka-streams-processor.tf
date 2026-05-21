@@ -28,7 +28,7 @@ resource "github_team" "quarkus_kafka_streams_processor" {
 resource "github_team_repository" "quarkus_kafka_streams_processor" {
   team_id    = github_team.quarkus_kafka_streams_processor.id
   repository = github_repository.quarkus_kafka_streams_processor.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

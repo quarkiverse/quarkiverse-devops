@@ -32,7 +32,7 @@ resource "github_team" "quarkus_kerberos" {
 resource "github_team_repository" "quarkus_kerberos" {
   team_id    = github_team.quarkus_kerberos.id
   repository = github_repository.quarkus_kerberos.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

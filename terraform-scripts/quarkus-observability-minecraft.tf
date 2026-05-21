@@ -27,7 +27,7 @@ resource "github_team" "quarkus_observability_minecraft" {
 resource "github_team_repository" "quarkus_observability_minecraft" {
   team_id    = github_team.quarkus_observability_minecraft.id
   repository = github_repository.quarkus_observability_minecraft.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

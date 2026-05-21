@@ -25,7 +25,7 @@ resource "github_team" "quarkus_jgrapht" {
 resource "github_team_repository" "quarkus_jgrapht" {
   team_id    = github_team.quarkus_jgrapht.id
   repository = github_repository.quarkus_jgrapht.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

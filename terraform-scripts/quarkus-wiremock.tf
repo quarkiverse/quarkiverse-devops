@@ -26,7 +26,7 @@ resource "github_team" "quarkus_wiremock" {
 resource "github_team_repository" "quarkus_wiremock" {
   team_id    = github_team.quarkus_wiremock.id
   repository = github_repository.quarkus_wiremock.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

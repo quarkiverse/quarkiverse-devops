@@ -27,7 +27,7 @@ resource "github_team" "quarkus_jnosql" {
 resource "github_team_repository" "quarkus_jnosql" {
   team_id    = github_team.quarkus_jnosql.id
   repository = github_repository.quarkus_jnosql.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

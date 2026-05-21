@@ -26,7 +26,7 @@ resource "github_team" "quarkus_jdbc_sqlite" {
 resource "github_team_repository" "quarkus_jdbc_sqlite" {
   team_id    = github_team.quarkus_jdbc_sqlite.id
   repository = github_repository.quarkus_jdbc_sqlite.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

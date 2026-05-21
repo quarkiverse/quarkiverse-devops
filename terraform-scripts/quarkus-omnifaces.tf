@@ -27,7 +27,7 @@ resource "github_team" "quarkus_omnifaces" {
 resource "github_team_repository" "quarkus_omnifaces" {
   team_id    = github_team.quarkus_omnifaces.id
   repository = github_repository.quarkus_omnifaces.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

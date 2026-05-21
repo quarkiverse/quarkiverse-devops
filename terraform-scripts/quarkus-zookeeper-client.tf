@@ -26,7 +26,7 @@ resource "github_team" "quarkus_zookeeper_client" {
 resource "github_team_repository" "quarkus_zookeeper_client" {
   team_id    = github_team.quarkus_zookeeper_client.id
   repository = github_repository.quarkus_zookeeper_client.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

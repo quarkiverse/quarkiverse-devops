@@ -28,7 +28,7 @@ resource "github_team" "quarkus_groovy" {
 resource "github_team_repository" "quarkus_groovy" {
   team_id    = github_team.quarkus_groovy.id
   repository = github_repository.quarkus_groovy.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -27,7 +27,7 @@ resource "github_team" "quarkus_openapi_generator" {
 resource "github_team_repository" "quarkus_openapi_generator" {
   team_id    = github_team.quarkus_openapi_generator.id
   repository = github_repository.quarkus_openapi_generator.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

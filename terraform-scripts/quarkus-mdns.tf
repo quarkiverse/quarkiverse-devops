@@ -27,7 +27,7 @@ resource "github_team" "quarkus_mdns" {
 resource "github_team_repository" "quarkus_mdns" {
   team_id    = github_team.quarkus_mdns.id
   repository = github_repository.quarkus_mdns.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

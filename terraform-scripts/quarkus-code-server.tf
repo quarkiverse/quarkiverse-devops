@@ -27,7 +27,7 @@ resource "github_team" "quarkus_code_server" {
 resource "github_team_repository" "quarkus_code_server" {
   team_id    = github_team.quarkus_code_server.id
   repository = github_repository.quarkus_code_server.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

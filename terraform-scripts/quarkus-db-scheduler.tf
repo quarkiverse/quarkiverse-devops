@@ -27,7 +27,7 @@ resource "github_team" "quarkus_db_scheduler" {
 resource "github_team_repository" "quarkus_db_scheduler" {
   team_id    = github_team.quarkus_db_scheduler.id
   repository = github_repository.quarkus_db_scheduler.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -27,7 +27,7 @@ resource "github_team" "quarkus_antivirus" {
 resource "github_team_repository" "quarkus_antivirus" {
   team_id    = github_team.quarkus_antivirus.id
   repository = github_repository.quarkus_antivirus.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

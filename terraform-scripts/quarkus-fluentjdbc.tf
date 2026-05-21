@@ -27,7 +27,7 @@ resource "github_team" "quarkus_fluentjdbc" {
 resource "github_team_repository" "quarkus_fluentjdbc" {
   team_id    = github_team.quarkus_fluentjdbc.id
   repository = github_repository.quarkus_fluentjdbc.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -26,7 +26,7 @@ resource "github_team" "quarkus_jpastreamer" {
 resource "github_team_repository" "quarkus_jpastreamer" {
   team_id    = github_team.quarkus_jpastreamer.id
   repository = github_repository.quarkus_jpastreamer.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

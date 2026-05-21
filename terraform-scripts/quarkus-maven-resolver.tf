@@ -31,7 +31,7 @@ resource "github_team" "quarkus_maven_resolver" {
 resource "github_team_repository" "quarkus_maven_resolver" {
   team_id    = github_team.quarkus_maven_resolver.id
   repository = github_repository.quarkus_maven_resolver.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

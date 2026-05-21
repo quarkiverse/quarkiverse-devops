@@ -26,7 +26,7 @@ resource "github_team" "quarkus_cert_manager" {
 resource "github_team_repository" "quarkus_cert_manager" {
   team_id    = github_team.quarkus_cert_manager.id
   repository = github_repository.quarkus_cert_manager.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

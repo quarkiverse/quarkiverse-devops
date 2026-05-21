@@ -32,7 +32,7 @@ resource "github_team" "quarkus_logging_splunk" {
 resource "github_team_repository" "quarkus_logging_splunk" {
   team_id    = github_team.quarkus_logging_splunk.id
   repository = github_repository.quarkus_logging_splunk.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

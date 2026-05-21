@@ -27,7 +27,7 @@ resource "github_team" "quarkus_opentelemetry_exporter" {
 resource "github_team_repository" "quarkus_opentelemetry_exporter" {
   team_id    = github_team.quarkus_opentelemetry_exporter.id
   repository = github_repository.quarkus_opentelemetry_exporter.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -25,7 +25,7 @@ resource "github_team" "quarkus_microprofile" {
 resource "github_team_repository" "quarkus_microprofile" {
   team_id    = github_team.quarkus_microprofile.id
   repository = github_repository.quarkus_microprofile.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

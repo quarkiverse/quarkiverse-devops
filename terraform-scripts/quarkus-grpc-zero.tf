@@ -27,7 +27,7 @@ resource "github_team" "quarkus_grpc_zero" {
 resource "github_team_repository" "quarkus_grpc_zero" {
   team_id    = github_team.quarkus_grpc_zero.id
   repository = github_repository.quarkus_grpc_zero.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

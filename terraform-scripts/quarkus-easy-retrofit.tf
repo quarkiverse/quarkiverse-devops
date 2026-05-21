@@ -27,7 +27,7 @@ resource "github_team" "quarkus_easy_retrofit" {
 resource "github_team_repository" "quarkus_easy_retrofit" {
   team_id    = github_team.quarkus_easy_retrofit.id
   repository = github_repository.quarkus_easy_retrofit.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

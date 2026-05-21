@@ -36,7 +36,7 @@ resource "github_team" "quarkus_operator_sdk" {
 resource "github_team_repository" "quarkus_operator_sdk" {
   team_id    = github_team.quarkus_operator_sdk.id
   repository = github_repository.quarkus_operator_sdk.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

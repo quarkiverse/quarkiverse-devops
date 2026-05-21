@@ -26,7 +26,7 @@ resource "github_team" "quarkus_reactive_h2_client" {
 resource "github_team_repository" "quarkus_reactive_h2_client" {
   team_id    = github_team.quarkus_reactive_h2_client.id
   repository = github_repository.quarkus_reactive_h2_client.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

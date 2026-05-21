@@ -26,7 +26,7 @@ resource "github_team" "quarkus_dashbuilder" {
 resource "github_team_repository" "quarkus_dashbuilder" {
   team_id    = github_team.quarkus_dashbuilder.id
   repository = github_repository.quarkus_dashbuilder.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

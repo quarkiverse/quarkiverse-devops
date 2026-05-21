@@ -27,7 +27,7 @@ resource "github_team" "quarkus_jdiameter" {
 resource "github_team_repository" "quarkus_jdiameter" {
   team_id    = github_team.quarkus_jdiameter.id
   repository = github_repository.quarkus_jdiameter.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

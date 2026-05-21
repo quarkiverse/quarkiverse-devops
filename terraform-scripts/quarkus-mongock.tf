@@ -27,7 +27,7 @@ resource "github_team" "quarkus_mongock" {
 resource "github_team_repository" "quarkus_mongock" {
   team_id    = github_team.quarkus_mongock.id
   repository = github_repository.quarkus_mongock.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

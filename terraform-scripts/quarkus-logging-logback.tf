@@ -25,7 +25,7 @@ resource "github_team" "quarkus_logging_logback" {
 resource "github_team_repository" "quarkus_logging_logback" {
   team_id    = github_team.quarkus_logging_logback.id
   repository = github_repository.quarkus_logging_logback.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

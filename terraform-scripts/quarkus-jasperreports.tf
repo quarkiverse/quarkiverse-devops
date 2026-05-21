@@ -28,7 +28,7 @@ resource "github_team" "quarkus_jasperreports" {
 resource "github_team_repository" "quarkus_jasperreports" {
   team_id    = github_team.quarkus_jasperreports.id
   repository = github_repository.quarkus_jasperreports.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -32,7 +32,7 @@ resource "github_team" "quarkus_hibernate_types" {
 resource "github_team_repository" "quarkus_hibernate_types" {
   team_id    = github_team.quarkus_hibernate_types.id
   repository = github_repository.quarkus_hibernate_types.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

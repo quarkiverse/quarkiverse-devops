@@ -26,7 +26,7 @@ resource "github_team" "quarkus_jdbc_clickhouse" {
 resource "github_team_repository" "quarkus_jdbc_clickhouse" {
   team_id    = github_team.quarkus_jdbc_clickhouse.id
   repository = github_repository.quarkus_jdbc_clickhouse.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

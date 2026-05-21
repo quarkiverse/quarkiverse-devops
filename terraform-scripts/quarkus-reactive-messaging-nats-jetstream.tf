@@ -26,7 +26,7 @@ resource "github_team" "quarkus_reactive_messaging_nats_jetstream" {
 resource "github_team_repository" "quarkus_reactive_messaging_nats_jetstream" {
   team_id    = github_team.quarkus_reactive_messaging_nats_jetstream.id
   repository = github_repository.quarkus_reactive_messaging_nats_jetstream.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

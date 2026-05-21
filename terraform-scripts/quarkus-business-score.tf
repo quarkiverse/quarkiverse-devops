@@ -27,7 +27,7 @@ resource "github_team" "quarkus_business_score" {
 resource "github_team_repository" "quarkus_business_score" {
   team_id    = github_team.quarkus_business_score.id
   repository = github_repository.quarkus_business_score.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -30,7 +30,7 @@ resource "github_team" "quarkus_mapstruct" {
 resource "github_team_repository" "quarkus_mapstruct" {
   team_id    = github_team.quarkus_mapstruct.id
   repository = github_repository.quarkus_mapstruct.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

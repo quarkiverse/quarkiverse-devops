@@ -25,7 +25,7 @@ resource "github_team" "quarkus_logging_kafka" {
 resource "github_team_repository" "quarkus_logging_kafka" {
   team_id    = github_team.quarkus_logging_kafka.id
   repository = github_repository.quarkus_logging_kafka.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

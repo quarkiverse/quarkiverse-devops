@@ -27,7 +27,7 @@ resource "github_team" "quarkus_embedded_postgresql" {
 resource "github_team_repository" "quarkus_embedded_postgresql" {
   team_id    = github_team.quarkus_embedded_postgresql.id
   repository = github_repository.quarkus_embedded_postgresql.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -28,7 +28,7 @@ resource "github_team" "quarkus_opensearch" {
 resource "github_team_repository" "quarkus_opensearch" {
   team_id    = github_team.quarkus_opensearch.id
   repository = github_repository.quarkus_opensearch.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

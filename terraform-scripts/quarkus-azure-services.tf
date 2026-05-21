@@ -26,7 +26,7 @@ resource "github_team" "quarkus_azure_services" {
 resource "github_team_repository" "quarkus_azure_services" {
   team_id    = github_team.quarkus_azure_services.id
   repository = github_repository.quarkus_azure_services.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

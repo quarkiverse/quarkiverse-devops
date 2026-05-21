@@ -25,7 +25,7 @@ resource "github_team" "quarkus_hibernate_search_extras" {
 resource "github_team_repository" "quarkus_hibernate_search_extras" {
   team_id    = github_team.quarkus_hibernate_search_extras.id
   repository = github_repository.quarkus_hibernate_search_extras.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

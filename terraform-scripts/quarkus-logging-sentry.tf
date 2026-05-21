@@ -26,7 +26,7 @@ resource "github_team" "quarkus_logging_sentry" {
 resource "github_team_repository" "quarkus_logging_sentry" {
   team_id    = github_team.quarkus_logging_sentry.id
   repository = github_repository.quarkus_logging_sentry.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

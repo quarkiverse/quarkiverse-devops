@@ -33,7 +33,7 @@ resource "github_team" "quarkus_logging_manager" {
 resource "github_team_repository" "quarkus_logging_manager" {
   team_id    = github_team.quarkus_logging_manager.id
   repository = github_repository.quarkus_logging_manager.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

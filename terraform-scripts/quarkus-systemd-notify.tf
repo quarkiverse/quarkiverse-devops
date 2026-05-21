@@ -27,7 +27,7 @@ resource "github_team" "quarkus_systemd_notify" {
 resource "github_team_repository" "quarkus_systemd_notify" {
   team_id    = github_team.quarkus_systemd_notify.id
   repository = github_repository.quarkus_systemd_notify.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

@@ -28,7 +28,7 @@ resource "github_team" "quarkus_openid_ssf" {
 resource "github_team_repository" "quarkus_openid_ssf" {
   team_id    = github_team.quarkus_openid_ssf.id
   repository = github_repository.quarkus_openid_ssf.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

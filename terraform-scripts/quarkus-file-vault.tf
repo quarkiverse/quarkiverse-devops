@@ -25,7 +25,7 @@ resource "github_team" "quarkus_file_vault" {
 resource "github_team_repository" "quarkus_file_vault" {
   team_id    = github_team.quarkus_file_vault.id
   repository = github_repository.quarkus_file_vault.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

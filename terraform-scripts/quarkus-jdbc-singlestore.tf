@@ -27,7 +27,7 @@ resource "github_team" "quarkus_jdbc_singlestore" {
 resource "github_team_repository" "quarkus_jdbc_singlestore" {
   team_id    = github_team.quarkus_jdbc_singlestore.id
   repository = github_repository.quarkus_jdbc_singlestore.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

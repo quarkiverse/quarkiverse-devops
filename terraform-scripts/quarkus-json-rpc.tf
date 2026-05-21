@@ -27,7 +27,7 @@ resource "github_team" "quarkus_json_rpc" {
 resource "github_team_repository" "quarkus_json_rpc" {
   team_id    = github_team.quarkus_json_rpc.id
   repository = github_repository.quarkus_json_rpc.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

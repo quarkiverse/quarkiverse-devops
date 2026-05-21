@@ -31,7 +31,7 @@ resource "github_team" "quarkus_freemarker" {
 resource "github_team_repository" "quarkus_freemarker" {
   team_id    = github_team.quarkus_freemarker.id
   repository = github_repository.quarkus_freemarker.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

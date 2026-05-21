@@ -26,7 +26,7 @@ resource "github_team" "quarkus_qute_server_pages" {
 resource "github_team_repository" "quarkus_qute_server_pages" {
   team_id    = github_team.quarkus_qute_server_pages.id
   repository = github_repository.quarkus_qute_server_pages.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

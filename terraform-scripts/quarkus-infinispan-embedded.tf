@@ -28,7 +28,7 @@ resource "github_team" "quarkus_infinispan_embedded" {
 resource "github_team_repository" "quarkus_infinispan_embedded" {
   team_id    = github_team.quarkus_infinispan_embedded.id
   repository = github_repository.quarkus_infinispan_embedded.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

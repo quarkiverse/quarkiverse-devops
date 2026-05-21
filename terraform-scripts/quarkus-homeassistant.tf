@@ -27,7 +27,7 @@ resource "github_team" "quarkus_homeassistant" {
 resource "github_team_repository" "quarkus_homeassistant" {
   team_id    = github_team.quarkus_homeassistant.id
   repository = github_repository.quarkus_homeassistant.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team

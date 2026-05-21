@@ -28,7 +28,7 @@ resource "github_team" "quarkus_verifiable_credentials" {
 resource "github_team_repository" "quarkus_verifiable_credentials" {
   team_id    = github_team.quarkus_verifiable_credentials.id
   repository = github_repository.quarkus_verifiable_credentials.name
-  permission = "maintain"
+  permission = "push"
 }
 
 # Add users to the team
