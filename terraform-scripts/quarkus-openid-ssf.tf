@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_openid_ssf" {
   name                   = "quarkus-openid-ssf"
   description            = "Quarkus Extensions supporting the Shared Signals Framework (SSF)"
-  homepage_url           = "https://docs.quarkiverse.io/quarkus-ssf/dev"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-openid-ssf/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
