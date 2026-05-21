@@ -65,7 +65,8 @@ jobs:
               sha: '${{ steps.pr.outputs.head_sha }}',
               state: 'pending',
               context: 'Terraform Plan',
-              description: 'Running terraform plan...'
+              description: 'Running terraform plan...',
+              target_url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
             });
 
       - name: Download Terraform scripts
@@ -149,7 +150,8 @@ jobs:
               sha: '${{ steps.pr.outputs.head_sha }}',
               state: failed ? 'failure' : 'success',
               context: 'Terraform Plan',
-              description: failed ? 'Terraform plan failed' : 'Terraform plan succeeded'
+              description: failed ? 'Terraform plan failed' : 'Terraform plan succeeded',
+              target_url: '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}'
             });
 
       - name: Terraform Plan Status
