@@ -20,7 +20,7 @@ IMPORTANT: Because the VCS is the single source of truth, you can't apply terraf
 
 New repositories are submitted via Pull Requests to the root directory in this repository.
 
-IMPORTANT: The branch must be created in the same repository, it won't work in a separate fork (`@quarkiverse/quarkiverse-members` should be able to create new branches here)
+TIP: Pull Requests from forks are supported. The CI will run format checks on the PR and then run `terraform plan` in a separate workflow with access to the required credentials.
 
 1. Add a new `.tf` script in the `terraform-scripts/` directory with the following structure: 
 
