@@ -122,7 +122,7 @@ jobs:
 
       - name: Post PR comment
         if: steps.pr.outputs.tf_changed == 'true' && always()
-        uses: quarkusio/action-helpers@main
+        uses: gastaldi/action-helpers@patch-2
         with:
           action: maintain-one-comment
           github-token: ${{ secrets.GITHUB_TOKEN }}
