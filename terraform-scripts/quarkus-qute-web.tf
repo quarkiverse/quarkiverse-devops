@@ -1,5 +1,5 @@
 # Create repository
-resource "github_repository" "quarkus_qute_server_pages" {
+resource "github_repository" "quarkus_qute_web" {
   name                   = "quarkus-qute-web"
   description            = "Automatically expose Qute templates via HTTP"
   allow_update_branch    = true
@@ -9,13 +9,13 @@ resource "github_repository" "quarkus_qute_server_pages" {
   topics                 = ["quarkus-extension", "qute"]
 }
 
-resource "github_repository_vulnerability_alerts" "quarkus_qute_server_pages" {
-  repository = github_repository.quarkus_qute_server_pages.name
+resource "github_repository_vulnerability_alerts" "quarkus_qute_web" {
+  repository = github_repository.quarkus_qute_web.name
   enabled    = true
 }
 
 # Create team
-resource "github_team" "quarkus_qute_server_pages" {
+resource "github_team" "quarkus_qute_web" {
   name           = "quarkiverse-qute-web"
   description    = "qute-web team"
   privacy        = "closed"
@@ -23,16 +23,16 @@ resource "github_team" "quarkus_qute_server_pages" {
 }
 
 # Add team to repository
-resource "github_team_repository" "quarkus_qute_server_pages" {
-  team_id    = github_team.quarkus_qute_server_pages.id
-  repository = github_repository.quarkus_qute_server_pages.name
+resource "github_team_repository" "quarkus_qute_web" {
+  team_id    = github_team.quarkus_qute_web.id
+  repository = github_repository.quarkus_qute_web.name
   permission = "push"
 }
 
 # Add users to the team
-resource "github_team_membership" "quarkus_qute_server_pages" {
+resource "github_team_membership" "quarkus_qute_web" {
   for_each = { for tm in ["mkouba", "ia3andy"] : tm => tm }
-  team_id  = github_team.quarkus_qute_server_pages.id
+  team_id  = github_team.quarkus_qute_web.id
   username = each.value
   role     = "maintainer"
 }

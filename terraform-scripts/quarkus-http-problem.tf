@@ -1,5 +1,5 @@
 # Create repository
-resource "github_repository" "quarkus_resteasy_problem" {
+resource "github_repository" "quarkus_http_problem" {
   name                   = "quarkus-http-problem"
   description            = "Unified error responses for Quarkus REST APIs via Problem Details for HTTP APIs (RFC9457 & RFC7807)"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-http-problem/dev"
@@ -14,13 +14,13 @@ resource "github_repository" "quarkus_resteasy_problem" {
   topics                 = ["quarkus-extension", "http-problem", "resteasy", "exception-handling", "rfc7807", "rfc9457", "rest-api"]
 }
 
-resource "github_repository_vulnerability_alerts" "quarkus_resteasy_problem" {
-  repository = github_repository.quarkus_resteasy_problem.name
+resource "github_repository_vulnerability_alerts" "quarkus_http_problem" {
+  repository = github_repository.quarkus_http_problem.name
   enabled    = true
 }
 
 # Create team
-resource "github_team" "quarkus_resteasy_problem" {
+resource "github_team" "quarkus_http_problem" {
   name           = "quarkiverse-http-problem"
   description    = "http-problem team"
   privacy        = "closed"
@@ -28,16 +28,16 @@ resource "github_team" "quarkus_resteasy_problem" {
 }
 
 # Add team to repository
-resource "github_team_repository" "quarkus_resteasy_problem" {
-  team_id    = github_team.quarkus_resteasy_problem.id
-  repository = github_repository.quarkus_resteasy_problem.name
+resource "github_team_repository" "quarkus_http_problem" {
+  team_id    = github_team.quarkus_http_problem.id
+  repository = github_repository.quarkus_http_problem.name
   permission = "push"
 }
 
 # Add users to the team
-resource "github_team_membership" "quarkus_resteasy_problem" {
+resource "github_team_membership" "quarkus_http_problem" {
   for_each = { for tm in ["lwitkowski", "pazkooda"] : tm => tm }
-  team_id  = github_team.quarkus_resteasy_problem.id
+  team_id  = github_team.quarkus_http_problem.id
   username = each.value
   role     = "maintainer"
 }

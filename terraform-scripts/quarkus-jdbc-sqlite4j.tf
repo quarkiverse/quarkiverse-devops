@@ -1,5 +1,5 @@
 # Create repository
-resource "github_repository" "quarkus_sqlite4j" {
+resource "github_repository" "quarkus_jdbc_sqlite4j" {
   name                   = "quarkus-jdbc-sqlite4j"
   description            = "SQLite driver for Quarkus with Agroal in pure Java built on SQLite4j"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-sqlite4j/dev"
@@ -10,13 +10,13 @@ resource "github_repository" "quarkus_sqlite4j" {
   topics                 = ["jdbc", "sqlite", "quarkus-extension"]
 }
 
-resource "github_repository_vulnerability_alerts" "quarkus_sqlite4j" {
-  repository = github_repository.quarkus_sqlite4j.name
+resource "github_repository_vulnerability_alerts" "quarkus_jdbc_sqlite4j" {
+  repository = github_repository.quarkus_jdbc_sqlite4j.name
   enabled    = true
 }
 
 # Create team
-resource "github_team" "quarkus_sqlite4j" {
+resource "github_team" "quarkus_jdbc_sqlite4j" {
   name           = "quarkiverse-jdbc-sqlite4j"
   description    = "sqlite4j team"
   privacy        = "closed"
@@ -24,16 +24,16 @@ resource "github_team" "quarkus_sqlite4j" {
 }
 
 # Add team to repository
-resource "github_team_repository" "quarkus_sqlite4j" {
-  team_id    = github_team.quarkus_sqlite4j.id
-  repository = github_repository.quarkus_sqlite4j.name
+resource "github_team_repository" "quarkus_jdbc_sqlite4j" {
+  team_id    = github_team.quarkus_jdbc_sqlite4j.id
+  repository = github_repository.quarkus_jdbc_sqlite4j.name
   permission = "push"
 }
 
 # Add users to the team
-resource "github_team_membership" "quarkus_sqlite4j" {
+resource "github_team_membership" "quarkus_jdbc_sqlite4j" {
   for_each = { for tm in ["andreaTP"] : tm => tm }
-  team_id  = github_team.quarkus_sqlite4j.id
+  team_id  = github_team.quarkus_jdbc_sqlite4j.id
   username = each.value
   role     = "maintainer"
 }
