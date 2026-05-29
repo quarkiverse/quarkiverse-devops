@@ -86,7 +86,7 @@ resource "github_repository_ruleset" "quarkus_langfuse" {
 
   bypass_actors {
     actor_type  = "RepositoryRole"
-    actor_id    = 2
+    actor_id    = 4
     bypass_mode = "always"
   }
 
