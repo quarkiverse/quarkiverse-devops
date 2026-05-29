@@ -95,7 +95,6 @@ jobs:
         if: steps.pr.outputs.tf_changed == 'true'
         uses: hashicorp/setup-terraform@v4
         with:
-          terraform_version: "1.14.0"
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
       - name: Terraform Init
