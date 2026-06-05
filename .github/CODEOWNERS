@@ -130,6 +130,7 @@ terraform-scripts/quarkus-oras.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-pact.tf                               @quarkiverse/quarkiverse-pact
 terraform-scripts/quarkus-payara-qube.tf                        @quarkiverse/quarkiverse-payara-qube
 terraform-scripts/quarkus-pdfbox.tf                             @quarkiverse/quarkiverse-pdfbox
+terraform-scripts/quarkus-pi4j.tf                               @quarkiverse/quarkiverse-pi4j
 terraform-scripts/quarkus-playpen.tf                            @quarkiverse/quarkiverse-playpen
 terraform-scripts/quarkus-playwright.tf                         @quarkiverse/quarkiverse-playwright
 terraform-scripts/quarkus-poi.tf                                @quarkiverse/quarkiverse-poi
