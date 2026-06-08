@@ -23,6 +23,7 @@ terraform-scripts/quarkus-cert-manager.tf                       @quarkiverse/qua
 terraform-scripts/quarkus-chappie.tf                            @quarkiverse/quarkiverse-chappie
 terraform-scripts/quarkus-chicory.tf                            @quarkiverse/quarkiverse-chicory
 terraform-scripts/quarkus-ci-extensions.tf                      @quarkiverse/quarkiverse-ci-extensions
+terraform-scripts/quarkus-clock.tf                              @quarkiverse/quarkiverse-clock
 terraform-scripts/quarkus-code-server.tf                        @quarkiverse/quarkiverse-code-server
 terraform-scripts/quarkus-config-extensions.tf                  @quarkiverse/quarkiverse-config-extensions
 terraform-scripts/quarkus-couchbase.tf                          @quarkiverse/quarkiverse-couchbase
