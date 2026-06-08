@@ -102,6 +102,7 @@ terraform-scripts/quarkus-maven-resolver.tf                     @quarkiverse/qua
 terraform-scripts/quarkus-mcp-server.tf                         @quarkiverse/quarkiverse-mcp-server
 terraform-scripts/quarkus-mcp-servers.tf                        @quarkiverse/quarkiverse-mcp-servers
 terraform-scripts/quarkus-mdns.tf                               @quarkiverse/quarkiverse-mdns
+terraform-scripts/quarkus-messaging-pgmq.tf                     @quarkiverse/quarkiverse-messaging-pgmq
 terraform-scripts/quarkus-mfa.tf                                @quarkiverse/quarkiverse-mfa
 terraform-scripts/quarkus-micrometer-registry.tf                @quarkiverse/quarkiverse-micrometer-registry
 terraform-scripts/quarkus-microprofile.tf                       @quarkiverse/quarkiverse-microprofile
