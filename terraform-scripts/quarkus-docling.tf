@@ -60,7 +60,6 @@ variable "os_jvm_native_combos" {
     java_version = number
   }))
   default = [
-    { os = "ubuntu-latest", java_version = 21 },
     { os = "ubuntu-latest", java_version = 25 }
   ]
 }
