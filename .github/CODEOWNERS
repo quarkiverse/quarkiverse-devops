@@ -60,6 +60,7 @@ terraform-scripts/quarkus-hibernate-types.tf                    @quarkiverse/qua
 terraform-scripts/quarkus-hivemq-client.tf                      @quarkiverse/quarkiverse-hivemq-client
 terraform-scripts/quarkus-homeassistant.tf                      @quarkiverse/quarkiverse-homeassistant
 terraform-scripts/quarkus-http-problem.tf                       @quarkiverse/quarkiverse-http-problem
+terraform-scripts/quarkus-http-idempotency.tf                   @quarkiverse/quarkiverse-http-idempotency
 terraform-scripts/quarkus-infinispan-embedded.tf                @quarkiverse/quarkiverse-infinispan-embedded
 terraform-scripts/quarkus-itext.tf                              @quarkiverse/quarkiverse-itext
 terraform-scripts/quarkus-jackson-jq.tf                         @quarkiverse/quarkiverse-jackson-jq
