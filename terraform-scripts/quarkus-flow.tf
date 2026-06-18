@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_flow" {
   name                   = "quarkus-flow"
-  description            = "Workflow Runtime Engine based on CNCF Workflow Specification for Agentic Workflows"
+  description            = "Workflow Runtime Engine based on the Serverless Workflow Specification (CNCF Sandbox project) for Agentic Workflows"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-flow/dev"
   allow_update_branch    = true
   allow_merge_commit     = false
