@@ -36,7 +36,7 @@ resource "github_team_repository" "quarkus_http_problem" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_http_problem" {
-  for_each = { for tm in ["lwitkowski", "pazkooda", "cescoffier", "geoand"] : tm => tm }
+  for_each = { for tm in ["lwitkowski", "pazkooda", "cescoffier", "geoand", "melloware"] : tm => tm }
   team_id  = github_team.quarkus_http_problem.id
   username = each.value
   role     = "maintainer"
