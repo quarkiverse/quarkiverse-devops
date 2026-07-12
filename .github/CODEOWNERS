@@ -163,6 +163,7 @@ terraform-scripts/quarkus-sa-token.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-scala3.tf                             @quarkiverse/quarkiverse-scala
 terraform-scripts/quarkus-semantic-kernel.tf                    @quarkiverse/quarkiverse-semantic-kernel
 terraform-scripts/quarkus-shardingsphere-jdbc.tf                @quarkiverse/quarkiverse-shardingsphere-jdbc
+terraform-scripts/quarkus-shim.tf                               @quarkiverse/quarkiverse-shim
 terraform-scripts/quarkus-shedlock.tf                           @quarkiverse/quarkiverse-shedlock
 terraform-scripts/quarkus-snappy.tf                             @quarkiverse/quarkiverse-snappy
 terraform-scripts/quarkus-solr.tf                               @quarkiverse/quarkiverse-solr
