@@ -18,6 +18,7 @@ terraform-scripts/quarkus-batik.tf                              @quarkiverse/qua
 terraform-scripts/quarkus-bon-jova-rockstar.tf                  @quarkiverse/quarkiverse-bon-jova-rockstar
 terraform-scripts/quarkus-bucket4j.tf                           @quarkiverse/quarkiverse-bucket4j
 terraform-scripts/quarkus-business-score.tf                     @quarkiverse/quarkiverse-business-score
+terraform-scripts/quarkus-camunda.tf                            @quarkiverse/quarkiverse-camunda
 terraform-scripts/quarkus-cert-manager.tf                       @quarkiverse/quarkiverse-cert-manager
 terraform-scripts/quarkus-chappie.tf                            @quarkiverse/quarkiverse-chappie
 terraform-scripts/quarkus-ci-extensions.tf                      @quarkiverse/quarkiverse-ci-extensions
@@ -181,5 +182,4 @@ terraform-scripts/quarkus-verifiable-credentials.tf             @quarkiverse/qua
 terraform-scripts/quarkus-web-bundler.tf                        @quarkiverse/quarkiverse-web-bundler
 terraform-scripts/quarkus-wiremock.tf                           @quarkiverse/quarkiverse-wiremock
 terraform-scripts/quarkus-zanzibar.tf                           @quarkiverse/quarkiverse-zanzibar
-terraform-scripts/quarkus-zeebe.tf                              @quarkiverse/quarkiverse-zeebe
 terraform-scripts/quarkus-zookeeper-client.tf                   @quarkiverse/quarkiverse-zookeeper-client
