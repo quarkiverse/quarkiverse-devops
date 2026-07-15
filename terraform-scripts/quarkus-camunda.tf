@@ -1,13 +1,13 @@
 # Create repository
 resource "github_repository" "quarkus_zeebe" {
-  name                   = "quarkus-zeebe"
-  description            = "Camunda Platform 8 (Zeebe) Quarkus extension"
+  name                   = "quarkus-camunda"
+  description            = "Camunda Platform Quarkus extension"
   homepage_url           = "https://camunda.com/platform"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
 
-  topics = ["camunda", "quarkus-extension", "zeebe"]
+  topics = ["camunda", "quarkus-extension"]
 }
 
 resource "github_repository_vulnerability_alerts" "quarkus_zeebe" {
@@ -17,8 +17,8 @@ resource "github_repository_vulnerability_alerts" "quarkus_zeebe" {
 
 # Create team
 resource "github_team" "quarkus_zeebe" {
-  name           = "quarkiverse-zeebe"
-  description    = "Quarkiverse team for the Camunda Zeebe Quarkus extension"
+  name           = "quarkiverse-camunda"
+  description    = "Quarkiverse team for the Camunda Quarkus extension"
   privacy        = "closed"
   parent_team_id = data.github_team.quarkiverse_members.id
 }
