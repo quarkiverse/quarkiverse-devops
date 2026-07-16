@@ -38,3 +38,11 @@ resource "github_team_membership" "quarkus_ironjacamar" {
   username = each.value
   role     = "maintainer"
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_ironjacamar" {
+  for_each = { for app in [local.applications.renovate] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_ironjacamar.name
+}
