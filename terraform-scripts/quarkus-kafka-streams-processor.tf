@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_kafka_streams_processor" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_kafka_streams_processor" {
-  for_each = { for tm in [ "amelliani1A", "Annlazar", "avolakas1A", "csemaan1A", "edeweerd1A", "fbauzac",
+  for_each = { for tm in ["amelliani1A", "Annlazar", "avolakas1A", "csemaan1A", "edeweerd1A", "fbauzac",
   "flazarus1A", "ivantchomgue1a", "lmartella1", "mbarbato1A", "pleidi1A", "rquinio1A", "vietk"] : tm => tm }
   team_id  = github_team.quarkus_kafka_streams_processor.id
   username = each.value
