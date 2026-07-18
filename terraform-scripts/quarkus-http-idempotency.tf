@@ -68,3 +68,11 @@ resource "github_repository_ruleset" "quarkus_http_idempotency" {
     }
   }
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_http_idempotency" {
+  for_each = { for app in [local.applications.renovate] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_http_idempotency.name
+}
