@@ -103,3 +103,11 @@ resource "github_actions_organization_secret_repository" "quarkus_flow" {
   secret_name   = each.value
   repository_id = github_repository.quarkus_flow.repo_id
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_flow" {
+  for_each = { for app in [local.applications.renovate] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_flow.name
+}
