@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_hibernate_specification" {
   name                   = "quarkus-hibernate-specification"
-  description            = "A cool description"
+  description            = "JPA Specification Builders"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-hibernate-specification/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
