@@ -108,6 +108,7 @@ resource "github_repository_ruleset" "quarkus_UNIQUE_NAME" {
 - `UNIQUE_NAME`: should be the extension name using underline (`_`) as separator (eg. `logging_sentry`)
 - `DASHED_NAME`: the same extension name using dashes (`-`) as separator (eg. `logging-sentry`)
 - `GITHUB_ID`: the Github user names that will have maintain access to the repository
+- `A cool description`: a short description of the extension
 
 2. Run `terraform plan` to check if the execution plan is expected.
 3. Add an entry in  the `.github/CODEOWNERS` file
