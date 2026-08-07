@@ -1,7 +1,7 @@
 # Create repository
 resource "github_repository" "quarkus_flow" {
   name                   = "quarkus-flow"
-  description            = "Workflow Runtime Engine based on the Serverless Workflow Specification (CNCF Sandbox project) for Agentic Workflows"
+  description            = "Workflow Runtime Engine based on the Open Workflow Specification (CNCF Sandbox project) for Agentic Workflows"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-flow/dev"
   allow_update_branch    = true
   allow_merge_commit     = false
@@ -10,7 +10,7 @@ resource "github_repository" "quarkus_flow" {
   has_issues             = true
   has_projects           = true
   has_discussions        = true
-  topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai", "langchain4j"]
+  topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai", "langchain4j", "open-workflow", "open-workflow-specification"]
 }
 
 resource "github_repository_vulnerability_alerts" "quarkus_flow" {
