@@ -45,6 +45,14 @@ resource "github_repository_collaborator" "quarkus_openapi_generator" {
   permission = "admin"
 }
 
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_openapi_generator" {
+  for_each = { for app in [local.applications.renovate] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_openapi_generator.name
+}
+
 resource "github_actions_organization_secret_repository" "quarkus_openapi_generator" {
   for_each      = { for k in [local.secrets.surge_token] : k => k }
   secret_name   = each.value
