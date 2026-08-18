@@ -31,9 +31,18 @@ resource "github_team_repository" "quarkus_cert_manager" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_cert_manager" {
-  for_each = { for tm in ["Sgitario"] : tm => tm }
+  for_each = { for tm in ["Sgitario", "cmoulliard"] : tm => tm }
   team_id  = github_team.quarkus_cert_manager.id
   username = each.value
   role     = "maintainer"
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_cert_manager" {
+  for_each = { for app in [local.applications.renovate] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_cert_manager.name
+}
+
 
