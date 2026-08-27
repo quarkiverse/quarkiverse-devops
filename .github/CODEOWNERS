@@ -51,6 +51,7 @@ terraform-scripts/quarkus-fx.tf                                 @quarkiverse/qua
 terraform-scripts/quarkus-github-api.tf                         @quarkiverse/quarkiverse-github-api
 terraform-scripts/quarkus-github-action.tf                      @quarkiverse/quarkiverse-github-action
 terraform-scripts/quarkus-github-app.tf                         @quarkiverse/quarkiverse-github-app
+terraform-scripts/quarkus-goblin.tf                             @quarkiverse/quarkiverse-goblin
 terraform-scripts/quarkus-google-cloud-services.tf              @quarkiverse/quarkiverse-google-cloud-services
 terraform-scripts/quarkus-groovy.tf                             @quarkiverse/quarkiverse-groovy
 terraform-scripts/quarkus-grpc-zero.tf                          @quarkiverse/quarkiverse-grpc-zero
