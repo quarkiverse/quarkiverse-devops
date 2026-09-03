@@ -80,6 +80,7 @@ terraform-scripts/quarkus-jef.tf                                @quarkiverse/qua
 terraform-scripts/quarkus-jgit.tf                               @quarkiverse/quarkiverse-jgit
 terraform-scripts/quarkus-jgrapht.tf                            @quarkiverse/quarkiverse-jgrapht
 terraform-scripts/quarkus-jjwt-jackson.tf                       @quarkiverse/quarkiverse-jjwt-jackson
+terraform-scripts/quarkus-jms.tf                                @quarkiverse/quarkiverse-jms
 terraform-scripts/quarkus-jmx.tf                                @quarkiverse/quarkiverse-jmx
 terraform-scripts/quarkus-jnosql.tf                             @quarkiverse/quarkiverse-jnosql
 terraform-scripts/quarkus-jokes.tf                              @quarkiverse/quarkiverse-jokes
