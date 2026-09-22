@@ -10,7 +10,7 @@ resource "github_repository" "quarkus_flow" {
   has_issues             = true
   has_projects           = true
   has_discussions        = true
-  topics                 = ["quarkus-extension", "workflows", "cncf", "specification", "agentic-workflows", "ai", "langchain4j", "open-workflow", "open-workflow-specification"]
+  topics                 = ["quarkus-extension", "workflow-engine", "workflows", "java", "quarkus", "cncf", "cloud-native", "agentic-workflows", "ai", "langchain4j", "open-workflow", "open-workflow-specification"]
 }
 
 resource "github_repository_vulnerability_alerts" "quarkus_flow" {

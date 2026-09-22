@@ -40,9 +40,9 @@ resource "github_team_membership" "quarkus_azure_services" {
 # Create CI environment variables
 resource "github_actions_environment_variable" "quarkus_azure_services" {
   for_each = {
-    "AZURE_CLIENT_ID"       = "5afa9765-4baa-416d-a8dd-636f79aa1705"
-    "AZURE_TENANT_ID"       = "63b290a9-485b-4dc9-a980-777b22108974"
-    "AZURE_SUBSCRIPTION_ID" = "2be34c77-b1be-4417-b4b7-5419ba89dfed"
+    "AZURE_CLIENT_ID"       = "113bfe24-3b5a-47fa-9e1a-924053c04e22"
+    "AZURE_TENANT_ID"       = "82fe215a-0af5-404a-9161-206e0bdad999"
+    "AZURE_SUBSCRIPTION_ID" = "c7844e91-b11d-4a7f-ac6f-996308fbcdb9"
   }
   repository    = github_repository.quarkus_azure_services.name
   environment   = "ci"
