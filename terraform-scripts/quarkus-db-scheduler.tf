@@ -32,7 +32,7 @@ resource "github_team_repository" "quarkus_db_scheduler" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_db_scheduler" {
-  for_each = { for tm in ["mkouba"] : tm => tm }
+  for_each = { for tm in ["mkouba", "Melloware"] : tm => tm }
   team_id  = github_team.quarkus_db_scheduler.id
   username = each.value
   role     = "maintainer"
