@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_http_idempotency" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_http_idempotency" {
-  for_each = { for tm in ["akil-rails", "lu1tr0n"] : tm => tm }
+  for_each = { for tm in ["lu1tr0n"] : tm => tm }
   team_id  = github_team.quarkus_http_idempotency.id
   username = each.value
   role     = "maintainer"
