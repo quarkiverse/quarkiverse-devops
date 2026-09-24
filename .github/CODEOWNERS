@@ -179,6 +179,7 @@ terraform-scripts/quarkus-sshd.tf                               @quarkiverse/qua
 terraform-scripts/quarkus-systemd-notify.tf                     @quarkiverse/quarkiverse-systemd-notify
 terraform-scripts/quarkus-tekton-client.tf                      @quarkiverse/quarkiverse-tekton-client
 terraform-scripts/quarkus-tekton.tf                             @quarkiverse/quarkiverse-tekton
+terraform-scripts/quarkus-telemetry-ai.tf                       @quarkiverse/quarkiverse-telemetry-ai
 terraform-scripts/quarkus-temporal.tf                           @quarkiverse/quarkiverse-temporal
 terraform-scripts/quarkus-tika.tf                               @quarkiverse/quarkiverse-tika
 terraform-scripts/quarkus-unleash.tf                            @quarkiverse/quarkiverse-unleash
