@@ -124,6 +124,7 @@ terraform-scripts/quarkus-multitenancy.tf                       @quarkiverse/qua
 terraform-scripts/quarkus-mybatis.tf                            @quarkiverse/quarkiverse-mybatis
 terraform-scripts/quarkus-nagios.tf                             @quarkiverse/quarkiverse-nagios
 terraform-scripts/quarkus-neo4j.tf                              @quarkiverse/quarkiverse-neo4j
+terraform-scripts/quarkus-network-faults.tf                     @quarkiverse/quarkiverse-network-faults
 terraform-scripts/quarkus-ngrok.tf                              @quarkiverse/quarkiverse-ngrok
 terraform-scripts/quarkus-observability-minecraft.tf            @quarkiverse/quarkiverse-observability-minecraft
 terraform-scripts/quarkus-oidc-proxy.tf                         @quarkiverse/quarkiverse-oidc-proxy
