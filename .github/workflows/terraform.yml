@@ -18,7 +18,7 @@ jobs:
     name: Check for Terraform Scripts change
     outputs:
       tf_changed: ${{ steps.files.outputs.tf_changed }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Check out code
         uses: actions/checkout@v6
@@ -47,7 +47,7 @@ jobs:
 
   terraform_fmt:
     name: "Terraform Format"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     if: needs.terraform_check.outputs.tf_changed == 'true'
     needs:
       - terraform_check
