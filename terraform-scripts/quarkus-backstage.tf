@@ -12,7 +12,7 @@ resource "github_repository" "quarkus_backstage" {
 
 resource "github_repository_vulnerability_alerts" "quarkus_backstage" {
   repository = github_repository.quarkus_backstage.name
-  enabled    = true
+  enabled    = false
 }
 
 # Create team
