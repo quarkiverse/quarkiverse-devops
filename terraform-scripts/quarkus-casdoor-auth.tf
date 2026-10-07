@@ -33,7 +33,7 @@ resource "github_team_repository" "quarkus_casdoor_auth" {
 
 # Add users to the team
 resource "github_team_membership" "quarkus_casdoor_auth" {
-  for_each = { for tm in ["raiki02"] : tm => tm }
+  for_each = { for tm in ["raiki02", "hsluoyz"] : tm => tm }
   team_id  = github_team.quarkus_casdoor_auth.id
   username = each.value
   role     = "maintainer"
