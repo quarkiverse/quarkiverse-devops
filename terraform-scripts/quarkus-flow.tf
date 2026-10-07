@@ -28,10 +28,13 @@ resource "github_team" "quarkus_flow" {
 }
 
 # Add team to repository
+# admin (rather than push) so the team can see repository security advisories
+# without being added to each one by hand: GitHub only grants that to owners,
+# security managers and the admin role.
 resource "github_team_repository" "quarkus_flow" {
   team_id    = github_team.quarkus_flow.id
   repository = github_repository.quarkus_flow.name
-  permission = "push"
+  permission = "admin"
 }
 
 # Add users to the team
