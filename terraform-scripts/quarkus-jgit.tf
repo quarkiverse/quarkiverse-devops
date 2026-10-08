@@ -58,6 +58,11 @@ resource "github_repository_ruleset" "quarkus_jgit" {
     bypass_mode = "always"
   }
 
+  bypass_actors {
+    actor_type  = "OrganizationAdmin"
+    bypass_mode = "always"
+  }
+
   rules {
     # Prevent force push
     non_fast_forward = true
