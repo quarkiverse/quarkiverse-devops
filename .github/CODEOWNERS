@@ -15,6 +15,7 @@ terraform-scripts/quarkus-azure-services.tf                     @quarkiverse/qua
 terraform-scripts/quarkus-backstage.tf                          @quarkiverse/quarkiverse-backstage
 terraform-scripts/quarkus-barcode.tf                            @quarkiverse/quarkiverse-barcode
 terraform-scripts/quarkus-batik.tf                              @quarkiverse/quarkiverse-batik
+terraform-scripts/quarkus-bazel.tf                              @quarkiverse/quarkiverse-bazel
 terraform-scripts/quarkus-bon-jova-rockstar.tf                  @quarkiverse/quarkiverse-bon-jova-rockstar
 terraform-scripts/quarkus-bucket4j.tf                           @quarkiverse/quarkiverse-bucket4j
 terraform-scripts/quarkus-business-score.tf                     @quarkiverse/quarkiverse-business-score
