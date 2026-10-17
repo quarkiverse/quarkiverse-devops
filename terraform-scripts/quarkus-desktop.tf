@@ -1,13 +1,13 @@
 # Create repository
 resource "github_repository" "quarkus_desktop" {
   name                   = "quarkus-desktop"
-  description            = "Build AWT and Swing desktop applications with Quarkus, native on Windows, Linux and macOS"
+  description            = "Build AWT, Swing and SWT desktop (GUI) applications, in JVM mode and as GraalVM native executables"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-desktop/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  topics                 = ["quarkus-extension", "desktop", "awt", "swing", "java2d", "gui", "graalvm", "native-image"]
+  topics                 = ["quarkus-extension", "desktop", "awt", "swing", "swt", "java2d", "gui", "graalvm", "native-image"]
 }
 
 # Enable vulnerability alerts
