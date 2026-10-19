@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_telemetry_ai" {
-  name                   = "quarkus-telemetry-ai"
+  name                   = "quarkus-ai-rca"
   description            = "LLM-powered root-cause analysis of distributed telemetry data using Quarkus, LangChain4j, and Grafana LGTM via MCP"
   allow_update_branch    = true
   archive_on_destroy     = true
@@ -16,8 +16,8 @@ resource "github_repository_vulnerability_alerts" "quarkus_telemetry_ai" {
 
 # Create team
 resource "github_team" "quarkus_telemetry_ai" {
-  name           = "quarkiverse-telemetry-ai"
-  description    = "telemetry-ai team"
+  name           = "quarkiverse-ai-rca"
+  description    = "ai-rca team"
   privacy        = "closed"
   parent_team_id = data.github_team.quarkiverse_members.id
 }
