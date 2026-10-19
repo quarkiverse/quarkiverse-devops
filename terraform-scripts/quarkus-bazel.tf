@@ -7,7 +7,7 @@ resource "github_repository" "quarkus_bazel" {
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
-  topics                 = ["quarkus-extension", "bazel", "bazel-rules", "bzlmod", "starlark", "build-tool"]
+  topics                 = ["bazel", "bazel-rules", "bzlmod", "starlark", "build-tool"]
 }
 
 # Enable vulnerability alerts
