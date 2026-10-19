@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_cert_manager" {
   name                   = "quarkus-cert-manager"
   description            = "Cert-Manager is an operator that generates certificates and issuers in Kubernetes/OpenShift"
-  homepage_url           = "https://dekorate.io/docs/cert-manager"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-certmanager/dev/index.html"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
