@@ -52,7 +52,7 @@ resource "github_repository_ruleset" "quarkus_rabbitmq_client" {
 
   conditions {
     ref_name {
-      include = ["~DEFAULT_BRANCH"]
+      include = ["~DEFAULT_BRANCH", "refs/heads/*.*.x"]
       exclude = []
     }
   }
@@ -69,6 +69,12 @@ resource "github_repository_ruleset" "quarkus_rabbitmq_client" {
     # Require pull request reviews before merging
     pull_request {
 
+    }
+    # Release PRs must have a CHANGELOG.md entry on main
+    required_status_checks {
+      required_check {
+        context = "Changelog entry"
+      }
     }
   }
 }
