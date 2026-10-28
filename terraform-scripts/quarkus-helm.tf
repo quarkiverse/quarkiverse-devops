@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_helm" {
   name                   = "quarkus-helm"
   description            = "Quarkus Extension to generate the Helm artifacts"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-helm/dev/index.html"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
