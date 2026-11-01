@@ -128,7 +128,6 @@ terraform-scripts/quarkus-mybatis.tf                            @quarkiverse/qua
 terraform-scripts/quarkus-nagios.tf                             @quarkiverse/quarkiverse-nagios
 terraform-scripts/quarkus-neo4j.tf                              @quarkiverse/quarkiverse-neo4j
 terraform-scripts/quarkus-network-capture.tf                    @quarkiverse/quarkiverse-network-capture
-terraform-scripts/quarkus-network-faults.tf                     @quarkiverse/quarkiverse-network-faults
 terraform-scripts/quarkus-ngrok.tf                              @quarkiverse/quarkiverse-ngrok
 terraform-scripts/quarkus-observability-minecraft.tf            @quarkiverse/quarkiverse-observability-minecraft
 terraform-scripts/quarkus-oidc-proxy.tf                         @quarkiverse/quarkiverse-oidc-proxy
@@ -169,6 +168,7 @@ terraform-scripts/quarkus-reactive-mysql-pool-client.tf         @quarkiverse/qua
 terraform-scripts/quarkus-redoc.tf                              @quarkiverse/quarkiverse-redoc
 terraform-scripts/quarkus-registry-protobuf.tf                  @quarkiverse/quarkiverse-registry-protobuf
 terraform-scripts/quarkus-renarde.tf                            @quarkiverse/quarkiverse-renarde
+terraform-scripts/quarkus-resiliency-testing.tf                 @quarkiverse/quarkiverse-resiliency-testing
 terraform-scripts/quarkus-roq.tf                                @quarkiverse/quarkiverse-roq
 terraform-scripts/quarkus-rsocket.tf                            @quarkiverse/quarkiverse-rsocket
 terraform-scripts/quarkus-sa-token.tf                           @quarkiverse/quarkiverse-sa-token

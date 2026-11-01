@@ -1,6 +1,6 @@
 # Create repository
 resource "github_repository" "quarkus_network_faults" {
-  name                   = "quarkus-network-faults"
+  name                   = "quarkus-resiliency-testing"
   description            = "Quarkus extension that lets developers verify what a request does when a dependency is down, unreachable, slow, hung, or dies mid-call"
   homepage_url           = "https://docs.quarkiverse.io/quarkus-network-faults/dev"
   allow_update_branch    = true
@@ -18,8 +18,8 @@ resource "github_repository_vulnerability_alerts" "quarkus_network_faults" {
 
 # Create team
 resource "github_team" "quarkus_network_faults" {
-  name           = "quarkiverse-network-faults"
-  description    = "network-faults team"
+  name           = "quarkiverse-resiliency-testing"
+  description    = "resiliency-testing team"
   privacy        = "closed"
   parent_team_id = data.github_team.quarkiverse_members.id
 }
