@@ -2,7 +2,7 @@
 resource "github_repository" "quarkus_network_faults" {
   name                   = "quarkus-resiliency-testing"
   description            = "Quarkus extension that lets developers verify what a request does when a dependency is down, unreachable, slow, hung, or dies mid-call"
-  homepage_url           = "https://docs.quarkiverse.io/quarkus-network-faults/dev"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-resiliency-testing/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
