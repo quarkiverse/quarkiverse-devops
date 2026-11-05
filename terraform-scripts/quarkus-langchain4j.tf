@@ -45,3 +45,11 @@ resource "github_repository_collaborator" "quarkus_langchain4j" {
   username   = each.value
   permission = "admin"
 }
+
+# Enable apps in repository
+resource "github_app_installation_repository" "quarkus_langchain4j" {
+  for_each = { for app in [local.applications.renovate] : app => app }
+  # The installation id of the app (in the organization).
+  installation_id = each.value
+  repository      = github_repository.quarkus_langchain4j.name
+}
