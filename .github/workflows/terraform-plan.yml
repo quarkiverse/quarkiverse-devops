@@ -122,6 +122,10 @@ jobs:
       - name: Post PR comment
         if: steps.pr.outputs.tf_changed == 'true' && always()
         uses: quarkusio/action-helpers@main
+        env:
+          # ubuntu-slim has no UTF-8 locale by default, which makes the JVM
+          # decode env vars (including the comment body) as US-ASCII
+          LANG: C.UTF-8
         with:
           action: maintain-one-comment
           github-token: ${{ secrets.GITHUB_TOKEN }}
