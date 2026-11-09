@@ -170,6 +170,7 @@ terraform-scripts/quarkus-redoc.tf                              @quarkiverse/qua
 terraform-scripts/quarkus-registry-protobuf.tf                  @quarkiverse/quarkiverse-registry-protobuf
 terraform-scripts/quarkus-renarde.tf                            @quarkiverse/quarkiverse-renarde
 terraform-scripts/quarkus-resiliency-testing.tf                 @quarkiverse/quarkiverse-resiliency-testing
+terraform-scripts/quarkus-roq-migrators.tf                      @quarkiverse/quarkiverse-roq-migrators
 terraform-scripts/quarkus-roq.tf                                @quarkiverse/quarkiverse-roq
 terraform-scripts/quarkus-rsocket.tf                            @quarkiverse/quarkiverse-rsocket
 terraform-scripts/quarkus-sa-token.tf                           @quarkiverse/quarkiverse-sa-token
