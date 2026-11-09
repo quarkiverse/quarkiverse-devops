@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_freemarker" {
   name                   = "quarkus-freemarker"
   description            = "Quarkus Freemarker Extension"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-freemarker/dev"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
