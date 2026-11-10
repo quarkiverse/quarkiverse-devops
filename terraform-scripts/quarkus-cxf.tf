@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_cxf" {
   name                   = "quarkus-cxf"
   description            = "Quarkus CXF Extension to support SOAP based web services."
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-cxf/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
