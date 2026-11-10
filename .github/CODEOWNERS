@@ -181,6 +181,7 @@ terraform-scripts/quarkus-shedlock.tf                           @quarkiverse/qua
 terraform-scripts/quarkus-shim.tf                               @quarkiverse/quarkiverse-shim
 terraform-scripts/quarkus-snappy.tf                             @quarkiverse/quarkiverse-snappy
 terraform-scripts/quarkus-solr.tf                               @quarkiverse/quarkiverse-solr
+terraform-scripts/quarkus-sonify.tf                             @quarkiverse/quarkiverse-sonify
 terraform-scripts/quarkus-spdx.tf                               @quarkiverse/quarkiverse-spdx
 terraform-scripts/quarkus-spock.tf                              @quarkiverse/quarkiverse-spock
 terraform-scripts/quarkus-sshd.tf                               @quarkiverse/quarkiverse-sshd
