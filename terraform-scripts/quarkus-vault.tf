@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_vault" {
   name                   = "quarkus-vault"
   description            = "Quarkus HashiCorp Vault extension"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-vault/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
