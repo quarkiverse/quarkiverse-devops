@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_openapi_generator" {
   name                   = "quarkus-openapi-generator"
   description            = "OpenAPI Generator - REST Client Generator"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-openapi-generator/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
