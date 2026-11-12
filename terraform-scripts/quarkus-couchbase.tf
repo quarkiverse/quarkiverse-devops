@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_couchbase" {
   name                   = "quarkus-couchbase"
   description            = "Couchbase is an award-winning distributed NoSQL cloud database."
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-couchbase/dev"
   allow_update_branch    = true
   archive_on_destroy     = true
   delete_branch_on_merge = true
