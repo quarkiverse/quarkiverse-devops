@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_renarde" {
   name                   = "quarkus-renarde"
   description            = "Server-side Web Framework with Qute templating, magic/easier controllers, auth, reverse-routing"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-renarde/dev"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
