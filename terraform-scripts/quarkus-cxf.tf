@@ -47,6 +47,14 @@ resource "github_team_membership" "quarkus_cxf" {
   role     = "maintainer"
 }
 
+# Add outside collaborators to the repository
+resource "github_repository_collaborator" "quarkus_cxf" {
+  for_each   = { for tm in ["ppalaga-agent"] : tm => tm }
+  repository = github_repository.quarkus_cxf.name
+  username   = each.value
+  permission = "triage"
+}
+
 # Enable apps in repository
 resource "github_app_installation_repository" "quarkus_cxf" {
   for_each = { for app in [local.applications.renovate] : app => app }
