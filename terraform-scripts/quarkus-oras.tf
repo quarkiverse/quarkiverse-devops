@@ -47,7 +47,7 @@ resource "github_repository_ruleset" "quarkus_oras" {
 
   conditions {
     ref_name {
-      include = ["~DEFAULT_BRANCH"]
+      include = ["~DEFAULT_BRANCH", "refs/heads/*.*.x"]
       exclude = []
     }
   }
