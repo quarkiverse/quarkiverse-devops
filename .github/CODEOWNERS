@@ -109,6 +109,7 @@ terraform-scripts/quarkus-logging-splunk.tf                     @quarkiverse/qua
 terraform-scripts/quarkus-lucene.tf                             @quarkiverse/quarkiverse-lucene
 terraform-scripts/quarkus-mailpit.tf                            @quarkiverse/quarkiverse-mailpit
 terraform-scripts/quarkus-mapstruct.tf                          @quarkiverse/quarkiverse-mapstruct
+terraform-scripts/quarkus-mateu.tf                              @quarkiverse/quarkiverse-mateu
 terraform-scripts/quarkus-maven-resolver.tf                     @quarkiverse/quarkiverse-maven-resolver
 terraform-scripts/quarkus-mcp-server.tf                         @quarkiverse/quarkiverse-mcp-server
 terraform-scripts/quarkus-mcp-server-examples.tf                @quarkiverse/quarkiverse-mcp-server-examples
