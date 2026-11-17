@@ -121,6 +121,7 @@ terraform-scripts/quarkus-microprofile.tf                       @quarkiverse/qua
 terraform-scripts/quarkus-minio.tf                              @quarkiverse/quarkiverse-minio
 terraform-scripts/quarkus-mockerver.tf                          @quarkiverse/quarkiverse-mockserver
 terraform-scripts/quarkus-mockk.tf                              @quarkiverse/quarkiverse-mockk
+terraform-scripts/quarkus-modulith.tf                           @quarkiverse/quarkiverse-modulith
 terraform-scripts/quarkus-moneta.tf                             @quarkiverse/quarkiverse-moneta
 terraform-scripts/quarkus-mongodb.tf                            @quarkiverse/quarkiverse-mongodb
 terraform-scripts/quarkus-mongock.tf                            @quarkiverse/quarkiverse-mongock
