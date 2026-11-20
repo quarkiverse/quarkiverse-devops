@@ -2,6 +2,7 @@
 resource "github_repository" "quarkus_mybatis" {
   name                   = "quarkus-mybatis"
   description            = "Quarkus MyBatis Extension"
+  homepage_url           = "https://docs.quarkiverse.io/quarkus-mybatis/dev"
   archive_on_destroy     = true
   delete_branch_on_merge = true
   has_issues             = true
